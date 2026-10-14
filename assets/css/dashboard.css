@@ -1,0 +1,440 @@
+/* ===================================================================
+   RoadNest RV & Motorhome Care - Dashboard Stylesheet
+   Covers: Owner Portal & Admin Dashboard
+   =================================================================== */
+
+.dashboard-wrapper {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--rn-body-bg);
+}
+
+/* Sidebar */
+.dashboard-sidebar {
+  width: 280px;
+  background-color: var(--rn-surface);
+  border-right: 1px solid var(--rn-border);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  transition: all var(--rn-transition-base);
+  z-index: 1020;
+}
+
+.sidebar-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--rn-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 1rem 0.75rem;
+  margin: 0;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.sidebar-item {
+  margin-bottom: 0.35rem;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-family: var(--rn-font-heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--rn-text-muted);
+  text-decoration: none;
+  transition: all var(--rn-transition-fast);
+}
+
+.sidebar-link i {
+  font-size: 1.15rem;
+  width: 22px;
+  text-align: center;
+  color: var(--rn-text-light);
+  transition: color var(--rn-transition-fast);
+}
+
+.sidebar-link:hover,
+.sidebar-link.active {
+  background-color: var(--rn-surface-alt);
+  color: var(--rn-accent);
+}
+
+.sidebar-link:hover i,
+.sidebar-link.active i {
+  color: var(--rn-accent);
+}
+
+.sidebar-link .badge-counter {
+  margin-left: auto;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background-color: var(--rn-accent-light);
+  color: var(--rn-accent);
+}
+
+.sidebar-footer {
+  padding: 1.25rem;
+  border-top: 1px solid var(--rn-border);
+  background-color: var(--rn-surface-alt);
+}
+
+/* Main Content Area */
+.dashboard-main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+.dashboard-topbar {
+  height: 70px;
+  background-color: var(--rn-surface);
+  border-bottom: 1px solid var(--rn-border);
+  padding: 0 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1010;
+}
+
+.dashboard-content {
+  padding: 2rem 1.75rem;
+  flex-grow: 1;
+}
+
+/* Stats Metric Cards */
+.metric-card {
+  background-color: var(--rn-surface);
+  border: 1px solid var(--rn-border);
+  border-radius: 14px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all var(--rn-transition-base);
+}
+
+.metric-card:hover {
+  border-color: var(--rn-accent);
+  box-shadow: var(--rn-shadow-sm);
+  transform: translateY(-2px);
+}
+
+.metric-val {
+  font-family: var(--rn-font-heading);
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--rn-text-main);
+  line-height: 1.2;
+}
+
+.metric-title {
+  font-size: 0.875rem;
+  color: var(--rn-text-muted);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.metric-trend {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.metric-icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background-color: var(--rn-accent-light);
+  color: var(--rn-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+/* Vehicle Showcase Card */
+.vehicle-showcase-card {
+  background-color: var(--rn-surface);
+  border: 1px solid var(--rn-border);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--rn-shadow-sm);
+}
+
+.vehicle-img-thumb {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.telemetry-gauge {
+  background-color: var(--rn-surface-alt);
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.telemetry-val {
+  font-family: var(--rn-font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--rn-text-main);
+}
+
+.telemetry-lbl {
+  font-size: 0.775rem;
+  color: var(--rn-text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Maintenance History Timeline */
+.maintenance-timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.maintenance-timeline::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 7px;
+  width: 2px;
+  background-color: var(--rn-border);
+}
+
+.timeline-entry {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -2rem;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--rn-surface);
+  border: 3px solid var(--rn-accent);
+}
+
+.timeline-card {
+  background-color: var(--rn-surface);
+  border: 1px solid var(--rn-border);
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+/* Appointment Wizard */
+.wizard-steps {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.wizard-steps::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  right: 40px;
+  height: 2px;
+  background-color: var(--rn-border);
+  z-index: 1;
+}
+
+.wizard-step-node {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.wizard-step-circle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: var(--rn-surface);
+  border: 2px solid var(--rn-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-family: var(--rn-font-heading);
+  margin: 0 auto 0.5rem;
+  color: var(--rn-text-muted);
+  transition: all var(--rn-transition-fast);
+}
+
+.wizard-step-node.active .wizard-step-circle {
+  background-color: var(--rn-accent);
+  border-color: var(--rn-accent);
+  color: #ffffff;
+}
+
+.wizard-step-node.completed .wizard-step-circle {
+  background-color: #10b981;
+  border-color: #10b981;
+  color: #ffffff;
+}
+
+.wizard-step-label {
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: var(--rn-text-muted);
+}
+
+.wizard-step-node.active .wizard-step-label {
+  color: var(--rn-text-main);
+  font-weight: 700;
+}
+
+/* Status Badges */
+.status-pill {
+  font-family: var(--rn-font-heading);
+  font-size: 0.775rem;
+  font-weight: 700;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.status-pill::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.status-requested {
+  background: rgba(100, 116, 139, 0.15);
+  color: #64748b;
+}
+.status-requested::before { background: #64748b; }
+
+.status-confirmed {
+  background: rgba(2, 132, 199, 0.15);
+  color: #0284c7;
+}
+.status-confirmed::before { background: #0284c7; }
+
+.status-in-service {
+  background: rgba(245, 158, 11, 0.15);
+  color: #f59e0b;
+}
+.status-in-service::before { background: #f59e0b; }
+
+.status-completed {
+  background: rgba(16, 185, 129, 0.15);
+  color: #10b981;
+}
+.status-completed::before { background: #10b981; }
+
+.status-ready {
+  background: rgba(139, 92, 246, 0.15);
+  color: #8b5cf6;
+}
+.status-ready::before { background: #8b5cf6; }
+
+.status-cancelled {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+}
+.status-cancelled::before { background: #ef4444; }
+
+/* Responsive Tables */
+.table-rn {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.table-rn th {
+  background-color: var(--rn-surface-alt);
+  color: var(--rn-text-muted);
+  font-family: var(--rn-font-heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--rn-border);
+}
+
+.table-rn td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--rn-border);
+  vertical-align: middle;
+  font-size: 0.925rem;
+  color: var(--rn-text-main);
+  background-color: var(--rn-surface);
+}
+
+.table-rn tr:hover td {
+  background-color: var(--rn-surface-alt);
+}
+
+/* RTL Adjustments for Dashboard */
+[dir="rtl"] .dashboard-sidebar {
+  border-right: none;
+  border-left: 1px solid var(--rn-border);
+}
+
+[dir="rtl"] .sidebar-link .badge-counter {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+[dir="rtl"] .maintenance-timeline {
+  padding-left: 0;
+  padding-right: 2rem;
+}
+
+[dir="rtl"] .maintenance-timeline::before {
+  left: auto;
+  right: 7px;
+}
+
+[dir="rtl"] .timeline-dot {
+  left: auto;
+  right: -2rem;
+}
+
+/* Mobile Sidebar Drawer */
+@media (max-width: 991px) {
+  .dashboard-sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -280px;
+  }
+  .dashboard-sidebar.show {
+    left: 0;
+  }
+  [dir="rtl"] .dashboard-sidebar {
+    left: auto;
+    right: -280px;
+  }
+  [dir="rtl"] .dashboard-sidebar.show {
+    right: 0;
+  }
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Warranty Status & Coverage Claims | RoadNest Owner Portal</title>
+  <meta name="description" content="Track your RV extended warranty coverage, active claims, deductible balances, and manufacturer warranty expiration dates.">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+</head>
+<body>
+
+  <div class="dashboard-wrapper">
+    <!-- Sidebar -->
+    <aside class="dashboard-sidebar">
+      <div class="sidebar-header">
+        <a class="navbar-brand text-decoration-none" href="../index.html">
+          <div class="brand-icon" style="width: 36px; height: 36px; font-size: 1.1rem;"><i class="fas fa-caravan"></i></div>
+          <div>
+            <span class="fw-bold fs-5">RoadNest</span>
+            <span class="brand-text-sub">Owner Portal</span>
+          </div>
+        </a>
+      </div>
+
+      <ul class="sidebar-menu">
+        <li class="sidebar-item"><a href="index.html" class="sidebar-link"><i class="fas fa-tachometer-alt"></i> Overview</a></li>
+        <li class="sidebar-item"><a href="book-service.html" class="sidebar-link"><i class="fas fa-calendar-plus"></i> Book Service</a></li>
+        <li class="sidebar-item"><a href="appointments.html" class="sidebar-link"><i class="fas fa-calendar-check"></i> Appointments <span class="badge-counter">1</span></a></li>
+        <li class="sidebar-item"><a href="my-rv.html" class="sidebar-link"><i class="fas fa-shuttle-van"></i> My RV Specs</a></li>
+        <li class="sidebar-item"><a href="maintenance.html" class="sidebar-link"><i class="fas fa-history"></i> Maintenance History</a></li>
+        <li class="sidebar-item"><a href="warranty.html" class="sidebar-link active"><i class="fas fa-shield-alt"></i> Warranty Status</a></li>
+        <li class="sidebar-item"><a href="invoices.html" class="sidebar-link"><i class="fas fa-file-invoice-dollar"></i> Invoices</a></li>
+        <li class="sidebar-item"><a href="notifications.html" class="sidebar-link"><i class="fas fa-bell"></i> Notifications</a></li>
+        <li class="sidebar-item"><a href="profile.html" class="sidebar-link"><i class="fas fa-user-cog"></i> Profile</a></li>
+        <li class="sidebar-item"><a href="settings.html" class="sidebar-link"><i class="fas fa-sliders-h"></i> Settings</a></li>
+      </ul>
+
+      <div class="sidebar-footer">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="d-flex align-items-center gap-2">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&auto=format&fit=crop&q=80" alt="John Davis" class="rounded-circle" style="width: 36px; height: 36px; object-fit: cover;">
+            <div>
+              <div class="fw-bold small">John Davis</div>
+              <small class="text-muted" style="font-size: 0.75rem;">Adventurer 35F</small>
+            </div>
+          </div>
+          <a href="../login.html" class="text-danger small" title="Logout"><i class="fas fa-sign-out-alt fs-5"></i></a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="dashboard-main">
+      <header class="dashboard-topbar">
+        <div class="d-flex align-items-center gap-3">
+          <button class="btn btn-outline-navy btn-sm d-lg-none" id="sidebarToggleBtn" aria-label="Toggle sidebar menu">
+            <i class="fas fa-bars"></i>
+          </button>
+          <h4 class="mb-0 fw-bold">Active Warranty Coverage</h4>
+        </div>
+
+        <div class="d-flex align-items-center gap-2">
+          <button class="rtl-pill rtl-toggle-btn"><span class="rtl-label">RTL</span></button>
+          <button class="utility-btn theme-toggle-btn"><i class="fas fa-moon"></i></button>
+          <button class="btn btn-accent btn-sm" data-bs-toggle="modal" data-bs-target="#newClaimModal">
+            <i class="fas fa-file-signature"></i> File Warranty Claim
+          </button>
+        </div>
+      </header>
+
+      <div class="dashboard-content">
+        <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 gap-3">
+          <div>
+            <h2 class="fw-bold mb-1">Warranty & Claims Center</h2>
+            <p class="text-muted mb-0">RoadNest is an authorized direct-billing service facility for Good Sam and Winnebago factory warranties.</p>
+          </div>
+        </div>
+
+        <!-- Primary Warranty Policy Card -->
+        <div class="card p-4 p-md-5 border rounded-4 bg-white shadow-sm mb-4">
+          <div class="row align-items-center g-4">
+            <div class="col-md-8">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <span class="status-pill status-completed fs-6 py-2 px-3">
+                  <i class="fas fa-shield-check me-1"></i> Policy Active
+                </span>
+                <span class="badge bg-light text-dark border">Deductible: $100.00</span>
+              </div>
+              <h3 class="fw-bold mb-1">Good Sam Extended Service Plan (Platinum Mechanical)</h3>
+              <p class="text-muted small mb-3">Policy Number: <strong>GS-8849-CO-2024</strong> • Vehicle: <strong>2024 Winnebago Adventurer 35F</strong></p>
+
+              <div class="row g-3 small">
+                <div class="col-sm-4">
+                  <div class="text-muted">Effective Date:</div>
+                  <strong>November 14, 2024</strong>
+                </div>
+                <div class="col-sm-4">
+                  <div class="text-muted">Expiration Date:</div>
+                  <strong class="text-primary">November 14, 2027</strong>
+                </div>
+                <div class="col-sm-4">
+                  <div class="text-muted">Remaining Coverage:</div>
+                  <strong class="text-success">13 Months Active</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 text-md-end border-start-md pt-3 pt-md-0">
+              <div class="p-3 bg-light-subtle rounded-3 border text-center">
+                <div class="display-6 fw-bold text-success mb-1">$0.00</div>
+                <small class="text-muted fw-bold text-uppercase">Out of Pocket on Approved Claims</small>
+                <div class="mt-2 small text-muted">Direct shop billing pre-authorized</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Covered Components Grid -->
+        <div class="card p-4 border rounded-4 bg-white shadow-sm mb-4">
+          <h5 class="fw-bold mb-3"><i class="fas fa-list-check text-warning me-2"></i>Covered Mechanical & Habitat Components</h5>
+          <div class="row g-3">
+            <div class="col-md-4">
+              <div class="p-3 bg-light-subtle rounded-3 border">
+                <div class="fw-bold text-success mb-1"><i class="fas fa-check-circle me-1"></i> Slide-Out Systems</div>
+                <small class="text-muted">Hydraulic cylinders, Lippert electric motors, gear racks & tracks.</small>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="p-3 bg-light-subtle rounded-3 border">
+                <div class="fw-bold text-success mb-1"><i class="fas fa-check-circle me-1"></i> Air Conditioning & Heat</div>
+                <small class="text-muted">Rooftop AC compressors, heat pumps, control boards & propane furnaces.</small>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="p-3 bg-light-subtle rounded-3 border">
+                <div class="fw-bold text-success mb-1"><i class="fas fa-check-circle me-1"></i> Auxiliary Generator</div>
+                <small class="text-muted">Cummins Onan internal engine components, stator, rotor & carburetor.</small>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="p-3 bg-light-subtle rounded-3 border">
+                <div class="fw-bold text-success mb-1"><i class="fas fa-check-circle me-1"></i> 120V Inverter & Electrical</div>
+                <small class="text-muted">Pure sine wave inverter, converter/charger & automated transfer switch.</small>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="p-3 bg-light-subtle rounded-3 border">
+                <div class="fw-bold text-success mb-1"><i class="fas fa-check-circle me-1"></i> Water Heaters & Plumbing</div>
+                <small class="text-muted">Dometic Atwood water heater tanks, Shurflo 12V pump & holding tank valves.</small>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="p-3 bg-light-subtle rounded-3 border">
+                <div class="fw-bold text-success mb-1"><i class="fas fa-check-circle me-1"></i> Appliances & Leveling</div>
+                <small class="text-muted">Norcold/Dometic RV refrigerator cooling units and hydraulic leveling jacks.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Claim Modal -->
+  <div class="modal fade" id="newClaimModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold">Submit Warranty Claim Pre-Authorization</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form onsubmit="event.preventDefault(); alert('Claim pre-authorization submitted! Our warranty manager will review your policy coverage.'); bootstrap.Modal.getInstance(document.getElementById('newClaimModal')).hide();">
+            <div class="mb-3">
+              <label class="form-label">Component Failure</label>
+              <input type="text" class="form-control" required placeholder="e.g. Living room slide-out motor grinding">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Symptom Description</label>
+              <textarea class="form-control" rows="3" required placeholder="Provide details of when the issue occurred..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-accent w-100">Submit to Warranty Dept</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

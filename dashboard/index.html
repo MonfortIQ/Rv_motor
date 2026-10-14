@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Owner Dashboard Overview | RoadNest RV Care</title>
+  <meta name="description" content="RoadNest RV Owner Maintenance Dashboard. Monitor real-time vehicle telematics, maintenance history, upcoming appointments, and warranty status.">
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <!-- Font Awesome 6.5.2 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+</head>
+<body>
+
+  <div class="dashboard-wrapper">
+    <!-- Sidebar -->
+    <aside class="dashboard-sidebar">
+      <div class="sidebar-header">
+        <a class="navbar-brand text-decoration-none" href="../index.html">
+          <div class="brand-icon" style="width: 36px; height: 36px; font-size: 1.1rem;"><i class="fas fa-caravan"></i></div>
+          <div>
+            <span class="fw-bold fs-5">RoadNest</span>
+            <span class="brand-text-sub">Owner Portal</span>
+          </div>
+        </a>
+      </div>
+
+      <ul class="sidebar-menu">
+        <li class="sidebar-item">
+          <a href="index.html" class="sidebar-link active">
+            <i class="fas fa-tachometer-alt"></i> Overview
+          </a>
+        </li>
+        <li class="sidebar-item">
+          <a href="book-service.html" class="sidebar-link">
+            <i class="fas fa-calendar-plus"></i> Book Service
+          </a>
+        </li>
+        <li class="sidebar-item">
+          <a href="appointments.html" class="sidebar-link">
+            <i class="fas fa-calendar-check"></i> Appointments
+            <span class="badge-counter">1</span>
+          </a>
+        </li>
+        <li class="sidebar-item">
+          <a href="my-rv.html" class="sidebar-link">
+            <i class="fas fa-shuttle-van"></i> My RV Specs
+          </a>
+        </li>
+        <li class="sidebar-item">
+          <a href="maintenance.html" class="sidebar-link">
+            <i class="fas fa-history"></i> Maintenance History
+          </a>
+        </li>
+        <li class="sidebar-item">
+          <a href="warranty.html" class="sidebar-link">
+            <i class="fas fa-shield-alt"></i> Warranty Status
+          </a>
+        </li>
+        <li class="sidebar-item">
+          <a href="invoices.html" class="sidebar-link">
+            <i class="fas fa-file-invoice-dollar"></i> Invoices
+          </a>
+        </li>
+        <li class="sidebar-item">
+          <a href="notifications.html" class="sidebar-link">
+            <i class="fas fa-bell"></i> Notifications
+            <span class="badge-counter">2</span>
+          </a>
+        </li>
+        <li class="sidebar-item">
+          <a href="profile.html" class="sidebar-link">
+            <i class="fas fa-user-cog"></i> Profile
+          </a>
+        </li>
+        <li class="sidebar-item">
+          <a href="settings.html" class="sidebar-link">
+            <i class="fas fa-sliders-h"></i> Settings
+          </a>
+        </li>
+      </ul>
+
+      <div class="sidebar-footer">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="d-flex align-items-center gap-2">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&auto=format&fit=crop&q=80" alt="John Davis" class="rounded-circle" style="width: 36px; height: 36px; object-fit: cover;">
+            <div>
+              <div class="fw-bold small">John Davis</div>
+              <small class="text-muted" style="font-size: 0.75rem;">Adventurer 35F</small>
+            </div>
+          </div>
+          <a href="../login.html" class="text-danger small" title="Logout"><i class="fas fa-sign-out-alt fs-5"></i></a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="dashboard-main">
+      <!-- Topbar -->
+      <header class="dashboard-topbar">
+        <div class="d-flex align-items-center gap-3">
+          <button class="btn btn-outline-navy btn-sm d-lg-none" id="sidebarToggleBtn" aria-label="Toggle sidebar menu">
+            <i class="fas fa-bars"></i>
+          </button>
+          <h4 class="mb-0 fw-bold d-none d-sm-block">Vehicle Maintenance Center</h4>
+        </div>
+
+        <div class="d-flex align-items-center gap-2">
+          <!-- RTL Toggle -->
+          <button class="rtl-pill rtl-toggle-btn"><span class="rtl-label">RTL</span></button>
+          <!-- Theme Toggle -->
+          <button class="utility-btn theme-toggle-btn"><i class="fas fa-moon"></i></button>
+
+          <!-- Book Service Quick Button -->
+          <a href="book-service.html" class="btn btn-accent btn-sm d-none d-md-inline-flex">
+            <i class="fas fa-calendar-plus"></i> Book Service
+          </a>
+
+          <!-- Return to site -->
+          <a href="../index.html" class="btn btn-outline-navy btn-sm" title="Website Home">
+            <i class="fas fa-globe"></i>
+          </a>
+        </div>
+      </header>
+
+      <!-- Content Body -->
+      <div class="dashboard-content">
+        <!-- Welcome Greeting & Quick Status -->
+        <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 gap-3">
+          <div>
+            <h2 class="fw-bold mb-1">Welcome back, John!</h2>
+            <p class="text-muted mb-0">Your 2024 Winnebago Adventurer 35F is in <strong class="text-success">Optimal Condition (94% Health)</strong>.</p>
+          </div>
+          <div class="d-flex gap-2">
+            <a href="book-service.html" class="btn btn-accent"><i class="fas fa-wrench"></i> Schedule Bay Slot</a>
+            <a href="maintenance.html" class="btn btn-outline-navy"><i class="fas fa-history"></i> Maintenance History</a>
+            <a href="warranty.html" class="btn btn-outline-navy d-none d-xl-inline-flex"><i class="fas fa-shield-alt"></i> Warranty Status</a>
+            <a href="maintenance.html" class="btn btn-outline-navy"><i class="fas fa-download"></i> Export Records</a>
+          </div>
+        </div>
+
+        <!-- Metric KPI Cards -->
+        <div class="row g-3 mb-4">
+          <div class="col-sm-6 col-xl-3">
+            <div class="metric-card">
+              <div>
+                <div class="metric-title">Next Scheduled Service</div>
+                <div class="metric-val">Nov 15, 2026</div>
+                <div class="metric-trend text-muted small"><i class="fas fa-tachometer-alt me-1"></i>In 1,550 miles</div>
+              </div>
+              <div class="metric-icon-wrap"><i class="fas fa-calendar-alt"></i></div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-xl-3">
+            <div class="metric-card">
+              <div>
+                <div class="metric-title">Upcoming Appointment</div>
+                <div class="metric-val text-primary" style="font-size: 1.5rem;">Confirmed</div>
+                <div class="metric-trend text-success small"><i class="fas fa-check-circle me-1"></i>Bay 4 (Denver Facility)</div>
+              </div>
+              <div class="metric-icon-wrap" style="background: rgba(26, 86, 219, 0.12); color: #1a56db;"><i class="fas fa-clock"></i></div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-xl-3">
+            <div class="metric-card">
+              <div>
+                <div class="metric-title">Warranty Protection</div>
+                <div class="metric-val text-success" style="font-size: 1.5rem;">Active</div>
+                <div class="metric-trend text-muted small"><i class="fas fa-shield-alt me-1"></i>Exp: Nov 2027 (Good Sam)</div>
+              </div>
+              <div class="metric-icon-wrap" style="background: rgba(16, 185, 129, 0.12); color: #10b981;"><i class="fas fa-shield-check"></i></div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-xl-3">
+            <div class="metric-card">
+              <div>
+                <div class="metric-title">Outstanding Balance</div>
+                <div class="metric-val text-success">$0.00</div>
+                <div class="metric-trend text-success small"><i class="fas fa-check me-1"></i>All 4 Invoices Settled</div>
+              </div>
+              <div class="metric-icon-wrap" style="background: rgba(245, 158, 11, 0.12); color: #f59e0b;"><i class="fas fa-receipt"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vehicle Showcase Card & Health Radar Chart -->
+        <div class="row g-4 mb-4">
+          <!-- Primary Vehicle Card -->
+          <div class="col-lg-7">
+            <div class="vehicle-showcase-card h-100">
+              <div class="position-relative">
+                <img src="https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?w=900&auto=format&fit=crop&q=80" alt="2024 Winnebago Adventurer 35F" class="vehicle-img-thumb">
+                <span class="position-absolute top-0 end-0 m-3 badge bg-success px-3 py-2 fw-bold">Primary Rig</span>
+              </div>
+              <div class="p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                  <div>
+                    <h3 class="fw-bold mb-1">2024 Winnebago Adventurer 35F</h3>
+                    <div class="text-muted small">Ford F-53 7.3L V8 Godzilla Gas Chassis • VIN: 1F66F5DN8P0A19842</div>
+                  </div>
+                  <a href="my-rv.html" class="btn btn-outline-navy btn-sm">Full Specs &rarr;</a>
+                </div>
+
+                <!-- Live Telemetry Gauges -->
+                <div class="row g-2 mb-3">
+                  <div class="col-3">
+                    <div class="telemetry-gauge">
+                      <div class="telemetry-val text-success">96%</div>
+                      <div class="telemetry-lbl">Lithium Bank</div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="telemetry-gauge">
+                      <div class="telemetry-val text-primary">85%</div>
+                      <div class="telemetry-lbl">Fresh Water</div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="telemetry-gauge">
+                      <div class="telemetry-val text-warning">92 PSI</div>
+                      <div class="telemetry-lbl">Cold Tires</div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="telemetry-gauge">
+                      <div class="telemetry-val text-info">74%</div>
+                      <div class="telemetry-lbl">Oil Life</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="d-flex flex-wrap justify-content-between text-muted small pt-2 border-top">
+                  <span>Current Odometer: <strong>18,450 mi</strong></span>
+                  <span>Onan Generator: <strong>142 hrs</strong></span>
+                  <span>Last Service: <strong>May 12, 2026</strong></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sub-Systems Health Radar Chart -->
+          <div class="col-lg-5">
+            <div class="card p-4 border rounded-4 bg-white h-100 shadow-sm d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="fw-bold mb-0">Sub-Systems Health Score</h5>
+                <span class="badge bg-success">Overall 94%</span>
+              </div>
+              <p class="small text-muted mb-2">Evaluated during your last 65-point RoadReady inspection audit.</p>
+              
+              <div class="flex-grow-1 position-relative" style="min-height: 250px;">
+                <canvas id="ownerHealthChart"></canvas>
+              </div>
+
+              <div class="pt-3 border-top mt-2 d-flex justify-content-between small text-muted">
+                <span><i class="fas fa-check text-success me-1"></i> Chassis: 96%</span>
+                <span><i class="fas fa-check text-success me-1"></i> Roof: 88%</span>
+                <span><i class="fas fa-check text-success me-1"></i> Electrical: 92%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Appointments & Maintenance Table -->
+        <div class="card border rounded-4 bg-white shadow-sm overflow-hidden mb-4">
+          <div class="p-3 border-bottom d-flex justify-content-between align-items-center bg-light-subtle">
+            <h5 class="fw-bold mb-0"><i class="fas fa-tools text-warning me-2"></i>Active & Recent Maintenance Records</h5>
+            <a href="appointments.html" class="small fw-bold text-decoration-none">View All &rarr;</a>
+          </div>
+          <div class="table-responsive">
+            <table class="table-rn">
+              <thead>
+                <tr>
+                  <th>Record ID</th>
+                  <th>Service Description</th>
+                  <th>Date & Bay</th>
+                  <th>Assigned Tech</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="fw-bold">#APT-2026-904</td>
+                  <td>
+                    <div class="fw-bold">Seasonal Winterization & Freeze Guard</div>
+                    <small class="text-muted">Propylene glycol induction & tank drain</small>
+                  </td>
+                  <td>
+                    <div>Nov 15, 2026 (9:00 AM)</div>
+                    <small class="text-muted">Bay 4 (Denver)</small>
+                  </td>
+                  <td>Tyler Vance (Lead Tech)</td>
+                  <td><span class="status-pill status-confirmed">Confirmed</span></td>
+                  <td>
+                    <a href="appointments.html" class="btn btn-outline-navy btn-sm">Manage</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="fw-bold">#REC-2026-412</td>
+                  <td>
+                    <div class="fw-bold">Cummins Onan Generator Service</div>
+                    <small class="text-muted">100-Hr synthetic oil & carburetor tune</small>
+                  </td>
+                  <td>May 12, 2026</td>
+                  <td>Tyler Vance</td>
+                  <td><span class="status-pill status-completed">Completed</span></td>
+                  <td>
+                    <a href="invoices.html" class="btn btn-outline-navy btn-sm">Invoice</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="fw-bold">#REC-2026-108</td>
+                  <td>
+                    <div class="fw-bold">Roof Lap Seam Resealing</div>
+                    <small class="text-muted">Dicor self-leveling touchup</small>
+                  </td>
+                  <td>Mar 18, 2026</td>
+                  <td>Arthur Henderson</td>
+                  <td><span class="status-pill status-completed">Completed</span></td>
+                  <td>
+                    <a href="invoices.html" class="btn btn-outline-navy btn-sm">Invoice</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Chart.js & Main Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

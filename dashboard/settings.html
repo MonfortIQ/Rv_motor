@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Settings & Preferences | RoadNest Owner Portal</title>
+  <meta name="description" content="Manage your communication preferences, SMS bay updates, and security credentials.">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+</head>
+<body>
+
+  <div class="dashboard-wrapper">
+    <!-- Sidebar -->
+    <aside class="dashboard-sidebar">
+      <div class="sidebar-header">
+        <a class="navbar-brand text-decoration-none" href="../index.html">
+          <div class="brand-icon" style="width: 36px; height: 36px; font-size: 1.1rem;"><i class="fas fa-caravan"></i></div>
+          <div>
+            <span class="fw-bold fs-5">RoadNest</span>
+            <span class="brand-text-sub">Owner Portal</span>
+          </div>
+        </a>
+      </div>
+
+      <ul class="sidebar-menu">
+        <li class="sidebar-item"><a href="index.html" class="sidebar-link"><i class="fas fa-tachometer-alt"></i> Overview</a></li>
+        <li class="sidebar-item"><a href="book-service.html" class="sidebar-link"><i class="fas fa-calendar-plus"></i> Book Service</a></li>
+        <li class="sidebar-item"><a href="appointments.html" class="sidebar-link"><i class="fas fa-calendar-check"></i> Appointments <span class="badge-counter">1</span></a></li>
+        <li class="sidebar-item"><a href="my-rv.html" class="sidebar-link"><i class="fas fa-shuttle-van"></i> My RV Specs</a></li>
+        <li class="sidebar-item"><a href="maintenance.html" class="sidebar-link"><i class="fas fa-history"></i> Maintenance History</a></li>
+        <li class="sidebar-item"><a href="warranty.html" class="sidebar-link"><i class="fas fa-shield-alt"></i> Warranty Status</a></li>
+        <li class="sidebar-item"><a href="invoices.html" class="sidebar-link"><i class="fas fa-file-invoice-dollar"></i> Invoices</a></li>
+        <li class="sidebar-item"><a href="notifications.html" class="sidebar-link"><i class="fas fa-bell"></i> Notifications</a></li>
+        <li class="sidebar-item"><a href="profile.html" class="sidebar-link"><i class="fas fa-user-cog"></i> Profile</a></li>
+        <li class="sidebar-item"><a href="settings.html" class="sidebar-link active"><i class="fas fa-sliders-h"></i> Settings</a></li>
+      </ul>
+
+      <div class="sidebar-footer">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="d-flex align-items-center gap-2">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&auto=format&fit=crop&q=80" alt="John Davis" class="rounded-circle" style="width: 36px; height: 36px; object-fit: cover;">
+            <div>
+              <div class="fw-bold small">John Davis</div>
+              <small class="text-muted" style="font-size: 0.75rem;">Adventurer 35F</small>
+            </div>
+          </div>
+          <a href="../login.html" class="text-danger small" title="Logout"><i class="fas fa-sign-out-alt fs-5"></i></a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="dashboard-main">
+      <header class="dashboard-topbar">
+        <div class="d-flex align-items-center gap-3">
+          <button class="btn btn-outline-navy btn-sm d-lg-none" id="sidebarToggleBtn" aria-label="Toggle sidebar menu">
+            <i class="fas fa-bars"></i>
+          </button>
+          <h4 class="mb-0 fw-bold">Portal Settings</h4>
+        </div>
+
+        <div class="d-flex align-items-center gap-2">
+          <button class="rtl-pill rtl-toggle-btn"><span class="rtl-label">RTL</span></button>
+          <button class="utility-btn theme-toggle-btn"><i class="fas fa-moon"></i></button>
+        </div>
+      </header>
+
+      <div class="dashboard-content">
+        <div class="card p-4 p-md-5 border rounded-4 bg-white shadow-sm mb-4">
+          <h3 class="fw-bold mb-4">Notification & Dispatch Preferences</h3>
+          
+          <div class="form-check form-switch mb-3">
+            <input class="form-check-input" type="checkbox" id="smsAlerts" checked>
+            <label class="form-check-label fw-bold" for="smsAlerts">SMS Bay Work Order Updates</label>
+            <p class="small text-muted mb-0">Receive instant text alerts when your RV enters inspection bay, diagnostics, or quality check.</p>
+          </div>
+
+          <div class="form-check form-switch mb-3">
+            <input class="form-check-input" type="checkbox" id="genReminder" checked>
+            <label class="form-check-label fw-bold" for="genReminder">Monthly Generator Exercise Reminder</label>
+            <p class="small text-muted mb-0">Automated reminder to run your Cummins Onan under 50% load every 30 days.</p>
+          </div>
+
+          <div class="form-check form-switch mb-4 pb-4 border-bottom">
+            <input class="form-check-input" type="checkbox" id="winterAlerts" checked>
+            <label class="form-check-label fw-bold" for="winterAlerts">Early Frost Winterization Alerts</label>
+            <p class="small text-muted mb-0">Get alerted 2 weeks prior to predicted regional freezes to secure your winterization bay slot.</p>
+          </div>
+
+          <h3 class="fw-bold mb-3">Security & Password</h3>
+          <form onsubmit="event.preventDefault(); alert('Password successfully updated.');">
+            <div class="row g-3 mb-3" style="max-width: 500px;">
+              <div class="col-12">
+                <label class="form-label">Current Password</label>
+                <input type="password" class="form-control" value="••••••••••••">
+              </div>
+              <div class="col-12">
+                <label class="form-label">New Password</label>
+                <input type="password" class="form-control" placeholder="Enter new password">
+              </div>
+            </div>
+            <button type="submit" class="btn btn-accent btn-sm mb-4">Update Password</button>
+          </form>
+
+          <div class="pt-4 border-top">
+            <h5 class="fw-bold text-danger mb-2">Export or Delete Account</h5>
+            <p class="small text-muted mb-3">Export all vehicle telematics and maintenance history as an official CSV/PDF packet.</p>
+            <button class="btn btn-outline-navy btn-sm me-2" onclick="alert('Exporting complete vehicle service archives...');">
+              <i class="fas fa-file-export me-1"></i> Export Vehicle Archives
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

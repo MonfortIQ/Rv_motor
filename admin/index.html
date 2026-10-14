@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard & Workshop Management | RoadNest</title>
+  <meta name="description" content="RoadNest Commercial RV Workshop Admin Console. Manage bay appointments, certified technician assignments, repair work orders, and revenue analytics.">
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <!-- Font Awesome 6.5.2 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+</head>
+<body>
+
+  <div class="dashboard-wrapper">
+    <!-- Admin Sidebar -->
+    <aside class="dashboard-sidebar">
+      <div class="sidebar-header">
+        <a class="navbar-brand text-decoration-none" href="../index.html">
+          <div class="brand-icon" style="background: linear-gradient(135deg, #0d233a 0%, #1a56db 100%);"><i class="fas fa-shield-alt"></i></div>
+          <div>
+            <span class="fw-bold fs-5">RoadNest</span>
+            <span class="brand-text-sub text-primary" style="color: #1a56db !important;">Admin Console</span>
+          </div>
+        </a>
+      </div>
+
+      <ul class="sidebar-menu">
+        <li class="sidebar-item"><a href="index.html" class="sidebar-link active"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+        <li class="sidebar-item"><a href="appointments.html" class="sidebar-link"><i class="fas fa-calendar-check"></i> Appointments <span class="badge-counter">18</span></a></li>
+        <li class="sidebar-item"><a href="customers.html" class="sidebar-link"><i class="fas fa-users"></i> Customers</a></li>
+        <li class="sidebar-item"><a href="vehicles.html" class="sidebar-link"><i class="fas fa-caravan"></i> RV Fleet</a></li>
+        <li class="sidebar-item"><a href="services.html" class="sidebar-link"><i class="fas fa-tools"></i> Services & Rates</a></li>
+        <li class="sidebar-item"><a href="technicians.html" class="sidebar-link"><i class="fas fa-user-cog"></i> Technicians</a></li>
+        <li class="sidebar-item"><a href="maintenance.html" class="sidebar-link"><i class="fas fa-clipboard-list"></i> Work Orders</a></li>
+        <li class="sidebar-item"><a href="warranties.html" class="sidebar-link"><i class="fas fa-file-contract"></i> Warranty Claims</a></li>
+        <li class="sidebar-item"><a href="invoices.html" class="sidebar-link"><i class="fas fa-file-invoice-dollar"></i> Billing & Invoices</a></li>
+        <li class="sidebar-item"><a href="messages.html" class="sidebar-link"><i class="fas fa-envelope"></i> Inquiries <span class="badge-counter">4</span></a></li>
+        <li class="sidebar-item"><a href="settings.html" class="sidebar-link"><i class="fas fa-cogs"></i> Shop Settings</a></li>
+      </ul>
+
+      <div class="sidebar-footer">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="d-flex align-items-center gap-2">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&auto=format&fit=crop&q=80" alt="Sarah Miller" class="rounded-circle" style="width: 36px; height: 36px; object-fit: cover;">
+            <div>
+              <div class="fw-bold small">Sarah Miller</div>
+              <small class="text-muted" style="font-size: 0.75rem;">Service Director</small>
+            </div>
+          </div>
+          <a href="../login.html" class="text-danger small" title="Sign Out"><i class="fas fa-sign-out-alt fs-5"></i></a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Admin Content Area -->
+    <main class="dashboard-main">
+      <header class="dashboard-topbar">
+        <div class="d-flex align-items-center gap-3">
+          <button class="btn btn-outline-navy btn-sm d-lg-none" id="sidebarToggleBtn" aria-label="Toggle sidebar menu">
+            <i class="fas fa-bars"></i>
+          </button>
+          <h4 class="mb-0 fw-bold">Workshop Operations & Dispatch Overview</h4>
+        </div>
+
+        <div class="d-flex align-items-center gap-2">
+          <button class="rtl-pill rtl-toggle-btn"><span class="rtl-label">RTL</span></button>
+          <button class="utility-btn theme-toggle-btn"><i class="fas fa-moon"></i></button>
+          <a href="../index.html" class="btn btn-outline-navy btn-sm" title="Website Home">
+            <i class="fas fa-globe me-1"></i> Live Site
+          </a>
+        </div>
+      </header>
+
+      <div class="dashboard-content">
+        <!-- 6 KPI Metric Cards -->
+        <div class="row g-3 mb-4">
+          <div class="col-sm-6 col-xl-2">
+            <div class="metric-card p-3">
+              <div>
+                <div class="metric-title">Total Customers</div>
+                <div class="metric-val fs-4">4,520</div>
+                <div class="text-success small fw-bold">+8.4% MoM</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-xl-2">
+            <div class="metric-card p-3">
+              <div>
+                <div class="metric-title">Active Appts</div>
+                <div class="metric-val fs-4 text-primary">18</div>
+                <div class="text-muted small">8 Bays Full</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-xl-2">
+            <div class="metric-card p-3">
+              <div>
+                <div class="metric-title">RVs Serviced</div>
+                <div class="metric-val fs-4">8,540</div>
+                <div class="text-muted small">All Time</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-xl-2">
+            <div class="metric-card p-3">
+              <div>
+                <div class="metric-title">Pending Repairs</div>
+                <div class="metric-val fs-4 text-warning">6</div>
+                <div class="text-warning small fw-bold">Parts Awaiting</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-xl-2">
+            <div class="metric-card p-3">
+              <div>
+                <div class="metric-title">Monthly Revenue</div>
+                <div class="metric-val fs-4 text-success">$142.5k</div>
+                <div class="text-success small fw-bold">+14.2% YoY</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-xl-2">
+            <div class="metric-card p-3">
+              <div>
+                <div class="metric-title">Completed Jobs</div>
+                <div class="metric-val fs-4">142</div>
+                <div class="text-muted small">This Month</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Revenue Line Chart & Service Category Doughnut Chart -->
+        <div class="row g-4 mb-4">
+          <!-- Revenue Chart -->
+          <div class="col-lg-8">
+            <div class="card p-4 border rounded-4 bg-white shadow-sm h-100">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <div>
+                  <h5 class="fw-bold mb-0">Shop Revenue Trends (2026)</h5>
+                  <small class="text-muted">Monthly gross billing across parts and certified labor</small>
+                </div>
+                <span class="badge bg-success px-3 py-2">Yearly Target: 92%</span>
+              </div>
+              <div style="height: 300px; position: relative;">
+                <canvas id="adminRevenueChart"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Category Distribution Chart -->
+          <div class="col-lg-4">
+            <div class="card p-4 border rounded-4 bg-white shadow-sm h-100 d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="fw-bold mb-0">Service Share</h5>
+                <small class="text-muted">Volume %</small>
+              </div>
+              <div class="flex-grow-1 position-relative" style="min-height: 240px;">
+                <canvas id="adminServiceDistributionChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Technician Bay Workload & Active Schedule -->
+        <div class="row g-4 mb-4">
+          <div class="col-lg-4">
+            <div class="card p-4 border rounded-4 bg-white shadow-sm h-100">
+              <h5 class="fw-bold mb-3"><i class="fas fa-users-cog text-warning me-2"></i>Technician Bay Status</h5>
+              
+              <div class="d-flex align-items-center justify-content-between py-2 border-bottom">
+                <div>
+                  <div class="fw-bold">Tyler Vance</div>
+                  <small class="text-muted">Bay 4 • Winterization Flush</small>
+                </div>
+                <span class="badge bg-success">Active In Bay</span>
+              </div>
+
+              <div class="d-flex align-items-center justify-content-between py-2 border-bottom">
+                <div>
+                  <div class="fw-bold">Arthur Henderson</div>
+                  <small class="text-muted">Bay 1 • Roof Dicor Reseal</small>
+                </div>
+                <span class="badge bg-success">Active In Bay</span>
+              </div>
+
+              <div class="d-flex align-items-center justify-content-between py-2 border-bottom">
+                <div>
+                  <div class="fw-bold">Samantha Ray</div>
+                  <small class="text-muted">Bay 3 • 400Ah Solar Inverter</small>
+                </div>
+                <span class="badge bg-warning text-dark">Diagnostics</span>
+              </div>
+
+              <div class="d-flex align-items-center justify-content-between py-2">
+                <div>
+                  <div class="fw-bold">Carlos Morales</div>
+                  <small class="text-muted">Mobile Van 2 • Pine Creek Camp</small>
+                </div>
+                <span class="badge bg-primary">On Field Dispatch</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent Appointments Table -->
+          <div class="col-lg-8">
+            <div class="card border rounded-4 bg-white shadow-sm overflow-hidden h-100">
+              <div class="p-3 border-bottom d-flex justify-content-between align-items-center bg-light-subtle">
+                <h5 class="fw-bold mb-0"><i class="fas fa-calendar-alt text-warning me-2"></i>Live Bay Queue & Appointments</h5>
+                <a href="appointments.html" class="small fw-bold text-decoration-none">Manage All &rarr;</a>
+              </div>
+              <div class="table-responsive">
+                <table class="table-rn">
+                  <thead>
+                    <tr>
+                      <th>Appt ID</th>
+                      <th>Customer & Vehicle</th>
+                      <th>Service Package</th>
+                      <th>Bay</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="fw-bold text-primary">#APT-904</td>
+                      <td>
+                        <div class="fw-bold">John Davis</div>
+                        <small class="text-muted">Winnebago Adventurer 35F</small>
+                      </td>
+                      <td>Winterization Protocol</td>
+                      <td>Bay 4</td>
+                      <td><span class="status-pill status-confirmed">Confirmed</span></td>
+                    </tr>
+                    <tr>
+                      <td class="fw-bold text-primary">#APT-902</td>
+                      <td>
+                        <div class="fw-bold">Sarah Jenkins</div>
+                        <small class="text-muted">Tiffin Allegro Red 37BA</small>
+                      </td>
+                      <td>Slide-Out Hydraulic Alignment</td>
+                      <td>Bay 2</td>
+                      <td><span class="status-pill status-in-service">In Service</span></td>
+                    </tr>
+                    <tr>
+                      <td class="fw-bold text-primary">#APT-899</td>
+                      <td>
+                        <div class="fw-bold">Robert Lang</div>
+                        <small class="text-muted">EarthRoamer LTi Overland</small>
+                      </td>
+                      <td>Onan High-Altitude Carb Tune</td>
+                      <td>Bay 6</td>
+                      <td><span class="status-pill status-ready">Ready for Pickup</span></td>
+                    </tr>
+                    <tr>
+                      <td class="fw-bold text-primary">#APT-895</td>
+                      <td>
+                        <div class="fw-bold">Diana Vance</div>
+                        <small class="text-muted">Winnebago Revel 4x4</small>
+                      </td>
+                      <td>Lithium MPPT Solar Calibration</td>
+                      <td>Bay 3</td>
+                      <td><span class="status-pill status-completed">Completed</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Chart.js & Main Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

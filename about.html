@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About RoadNest | Master RV & Motorhome Service Specialists</title>
+  <meta name="description" content="Learn about RoadNest RV & Motorhome Care: our certified master technicians, 12-year history, state-of-the-art 50ft service facility, and road-trip safety philosophy.">
+  <link rel="canonical" href="about.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="About RoadNest | Master RV & Motorhome Service Specialists">
+  <meta property="og:description" content="Discover how RoadNest became the most trusted RV service facility in the Mountain West.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&auto=format&fit=crop&q=80">
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <!-- Font Awesome 6.5.2 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Topbar -->
+  <div class="rn-topbar d-none d-md-block">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-4">
+        <span><i class="fas fa-map-marker-alt text-warning me-2"></i>742 Horizon Valley Pkwy, Denver, CO 80216</span>
+        <span><i class="fas fa-clock text-warning me-2"></i>Mon - Sat: 7:30 AM - 6:00 PM | Sun: Emergency Dispatch</span>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <span><i class="fas fa-phone-alt text-warning me-1"></i> Emergency: <strong>(800) 555-ROAD</strong></span>
+        <a href="login.html" class="ms-2"><i class="fas fa-user-circle me-1"></i> Owner Portal</a>
+        <a href="admin/index.html" class="ms-1 text-secondary"><i class="fas fa-lock me-1"></i> Admin</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Master Header / Navbar -->
+  <header class="rn-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg py-2">
+        <a class="navbar-brand" href="index.html">
+          <div class="brand-icon">
+            <i class="fas fa-caravan"></i>
+          </div>
+          <div>
+            <span class="fw-bold tracking-tight">RoadNest</span>
+            <span class="brand-text-sub">RV & Motorhome Care</span>
+          </div>
+        </a>
+
+        <div class="collapse navbar-collapse d-none d-lg-block" id="desktopNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="index.html">
+                    <i class="fas fa-warehouse"></i>
+                    <div>
+                      <div class="fw-bold">Home 1 - Service Center</div>
+                      <small class="text-muted">Workshop & Diagnostics</small>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="home-2.html">
+                    <i class="fas fa-mountain"></i>
+                    <div>
+                      <div class="fw-bold">Home 2 - Road Trip Care</div>
+                      <small class="text-muted">Adventure & Freedom</small>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="d-flex align-items-center gap-2">
+          <button class="rtl-pill rtl-toggle-btn" title="Toggle RTL / LTR layout" aria-label="Toggle text direction">
+            <span class="rtl-label">RTL</span>
+          </button>
+          <button class="utility-btn theme-toggle-btn" title="Toggle Light / Dark Mode" aria-label="Toggle dark mode">
+            <i class="fas fa-moon"></i>
+          </button>
+          <a href="dashboard/book-service.html" class="btn btn-accent d-none d-sm-inline-flex">
+            <i class="fas fa-calendar-check"></i> Book Service
+          </a>
+          <button class="navbar-toggler d-lg-none utility-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuOffcanvas" aria-controls="mobileMenuOffcanvas" aria-label="Open navigation menu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Offcanvas Menu -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenuOffcanvas" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header">
+      <div class="d-flex align-items-center gap-2" id="mobileMenuLabel">
+        <div class="brand-icon" style="width: 36px; height: 36px; font-size: 1.1rem;">
+          <i class="fas fa-caravan"></i>
+        </div>
+        <span class="fw-bold fs-5">RoadNest Care</span>
+      </div>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <nav class="d-flex flex-column mb-4">
+        <a class="mobile-nav-link" data-bs-toggle="collapse" href="#mobileHomeSub" role="button">
+          <span><i class="fas fa-home me-2 text-warning"></i> Home Variations</span>
+          <i class="fas fa-chevron-down"></i>
+        </a>
+        <div class="collapse mobile-subnav" id="mobileHomeSub">
+          <a class="mobile-subnav-link" href="index.html"><i class="fas fa-warehouse me-1"></i> Home 1 - RV Service Center</a>
+          <a class="mobile-subnav-link" href="home-2.html"><i class="fas fa-compass me-1"></i> Home 2 - RV Road Trip Care</a>
+        </div>
+
+        <a class="mobile-nav-link text-warning fw-bold" href="about.html"><i class="fas fa-info-circle me-2 text-warning"></i> About Us</a>
+        <a class="mobile-nav-link" href="services.html"><i class="fas fa-tools me-2 text-warning"></i> Services Directory</a>
+        <a class="mobile-nav-link" href="pricing.html"><i class="fas fa-tags me-2 text-warning"></i> Inspection Pricing</a>
+        <a class="mobile-nav-link" href="blog.html"><i class="fas fa-newspaper me-2 text-warning"></i> Travel & Care Blog</a>
+        <a class="mobile-nav-link" href="contact.html"><i class="fas fa-envelope me-2 text-warning"></i> Contact Workshop</a>
+        <a class="mobile-nav-link" href="login.html"><i class="fas fa-user-circle me-2 text-warning"></i> Owner Login</a>
+        <a class="mobile-nav-link" href="register.html"><i class="fas fa-user-plus me-2 text-warning"></i> Register Vehicle</a>
+        <a class="mobile-nav-link" href="dashboard/index.html"><i class="fas fa-tachometer-alt me-2 text-warning"></i> Owner Dashboard</a>
+        <a class="mobile-nav-link" href="admin/index.html"><i class="fas fa-shield-alt me-2 text-secondary"></i> Admin Console</a>
+      </nav>
+
+      <div class="pt-2">
+        <a href="dashboard/book-service.html" class="btn btn-accent w-100 mb-2">
+          <i class="fas fa-calendar-check"></i> Book Appointment
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Header Hero -->
+  <section class="py-5 bg-light-subtle border-bottom">
+    <div class="container text-center py-4">
+      <span class="section-subtitle">Our Heritage & Expertise</span>
+      <h1 class="display-4 fw-bold mb-3">Dedicated to the Freedom of the Open Highway</h1>
+      <p class="section-desc mx-auto">
+        Founded by seasoned RV overlanders and RVIA Master Certified technicians, RoadNest was built on a simple conviction: motorhome care demands its own specialized engineering discipline.
+      </p>
+    </div>
+  </section>
+
+  <!-- Company Story & Mission -->
+  <section class="py-5 my-4">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=900&auto=format&fit=crop&q=80" alt="RoadNest Master Workshop Environment" class="rounded-4 shadow-lg w-100" style="height: 480px; object-fit: cover;">
+        </div>
+
+        <div class="col-lg-6">
+          <span class="section-subtitle">The RoadNest Story</span>
+          <h2 class="section-title mb-4">Craftsmanship Born on the American Road</h2>
+          <p class="text-muted mb-4">
+            In 2014, after spending years watching fellow travelers get turned away from automotive shops or stranded for weeks waiting for dealership parts, founder Arthur Henderson launched RoadNest in Denver, Colorado.
+          </p>
+          <p class="text-muted mb-4">
+            Unlike traditional garages that view an RV simply as an inconveniently large truck, our facility was engineered specifically around the dual nature of recreational vehicles: half heavy automotive transport, half luxury self-contained living habitat.
+          </p>
+
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <div class="p-3 rounded-3 bg-light-subtle border">
+                <h5 class="fw-bold mb-1 text-primary"><i class="fas fa-bullseye me-2 text-warning"></i>Our Mission</h5>
+                <p class="small text-muted mb-0">To eliminate breakdown anxiety through rigorous, proactive RV maintenance and transparent, honest diagnostics.</p>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="p-3 rounded-3 bg-light-subtle border">
+                <h5 class="fw-bold mb-1 text-primary"><i class="fas fa-eye me-2 text-warning"></i>Our Vision</h5>
+                <p class="small text-muted mb-0">To build North America’s most dependable, traveler-first RV care ecosystem with digital records accessible anywhere.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Values -->
+  <section class="py-5 bg-light-subtle">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="section-subtitle">Our Foundations</span>
+        <h2 class="section-title">Values That Guide Every Turn of the Wrench</h2>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="card-rn p-4 text-center">
+            <div class="trust-icon mx-auto mb-3" style="background: var(--rn-accent-light); color: var(--rn-accent);"><i class="fas fa-shield-alt"></i></div>
+            <h4 class="fw-bold mb-2">Traveler Safety First</h4>
+            <p class="small text-muted mb-0">We never compromise on brake torque, tire integrity, propane pressure, or structural slide locks.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card-rn p-4 text-center">
+            <div class="trust-icon mx-auto mb-3" style="background: var(--rn-accent-light); color: var(--rn-accent);"><i class="fas fa-search-dollar"></i></div>
+            <h4 class="fw-bold mb-2">Total Transparency</h4>
+            <p class="small text-muted mb-0">Detailed digital photos and clear itemized estimates for every repair line item before any work begins.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card-rn p-4 text-center">
+            <div class="trust-icon mx-auto mb-3" style="background: var(--rn-accent-light); color: var(--rn-accent);"><i class="fas fa-certificate"></i></div>
+            <h4 class="fw-bold mb-2">OEM Standards</h4>
+            <p class="small text-muted mb-0">We strictly adhere to manufacturer service bulletins for Lippert, Dometic, Aqua-Hot, and Cummins Onan.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card-rn p-4 text-center">
+            <div class="trust-icon mx-auto mb-3" style="background: var(--rn-accent-light); color: var(--rn-accent);"><i class="fas fa-compass"></i></div>
+            <h4 class="fw-bold mb-2">Adventure Passion</h4>
+            <p class="small text-muted mb-0">Our team camps, overlands, and tows. We know the exact stresses your rig endures on backcountry passes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Milestone Timeline (2014 to 2026) -->
+  <section class="py-5 my-4">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="section-subtitle">A Decade of Growth</span>
+        <h2 class="section-title">The RoadNest Journey</h2>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="maintenance-timeline">
+            <!-- 2014 -->
+            <div class="timeline-entry">
+              <div class="timeline-dot"></div>
+              <div class="timeline-card">
+                <span class="badge bg-warning text-dark mb-2">2014</span>
+                <h4 class="fw-bold mb-1">RoadNest Founded in Denver</h4>
+                <p class="text-muted small mb-0">Opened our first 2-bay dedicated RV workshop in Denver, focusing initially on rooftop leak sealing and winterization.</p>
+              </div>
+            </div>
+
+            <!-- 2017 -->
+            <div class="timeline-entry">
+              <div class="timeline-dot"></div>
+              <div class="timeline-card">
+                <span class="badge bg-warning text-dark mb-2">2017</span>
+                <h4 class="fw-bold mb-1">Expanded 50-Foot Commercial Facility</h4>
+                <p class="text-muted small mb-0">Constructed eight 50-foot pull-through bays equipped with high-clearance rotary hoists capable of servicing Class A diesel pushers.</p>
+              </div>
+            </div>
+
+            <!-- 2020 -->
+            <div class="timeline-entry">
+              <div class="timeline-dot"></div>
+              <div class="timeline-card">
+                <span class="badge bg-warning text-dark mb-2">2020</span>
+                <h4 class="fw-bold mb-1">Advanced Electronics & Solar Integration</h4>
+                <p class="text-muted small mb-0">Introduced specialized lithium LiFePO4 battery installation, pure sine wave inverter diagnostics, and digital multiplex system tuning.</p>
+              </div>
+            </div>
+
+            <!-- 2023 -->
+            <div class="timeline-entry">
+              <div class="timeline-dot"></div>
+              <div class="timeline-card">
+                <span class="badge bg-warning text-dark mb-2">2023</span>
+                <h4 class="fw-bold mb-1">Mobile RV Emergency Fleet Launched</h4>
+                <p class="text-muted small mb-0">Deployed fully outfitted mobile workshop vans providing on-site campground repairs and emergency roadside support across Colorado.</p>
+              </div>
+            </div>
+
+            <!-- 2026 -->
+            <div class="timeline-entry">
+              <div class="timeline-dot"></div>
+              <div class="timeline-card">
+                <span class="badge bg-warning text-dark mb-2">2026</span>
+                <h4 class="fw-bold mb-1">Digital Owner Maintenance Portal</h4>
+                <p class="text-muted small mb-0">Launched our comprehensive digital cloud portal, empowering over 4,500 RV owners with instant maintenance records and warranty tracking.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certified Technician Team (Unique Avatars) -->
+  <section class="py-5 bg-light-subtle">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="section-subtitle">Certified Master Craftsmanship</span>
+        <h2 class="section-title">Meet Our Lead RV Specialists</h2>
+        <p class="section-desc mx-auto">
+          Every technician at RoadNest holds advanced RVIA / RVDA certifications and undergoes rigorous manufacturer-specific training every year.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Tech 1 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card-rn text-center">
+            <div class="card-rn-img-wrap" style="height: 250px;">
+              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&auto=format&fit=crop&q=80" alt="Arthur Henderson" class="card-rn-img">
+            </div>
+            <div class="card-rn-body p-3">
+              <h5 class="fw-bold mb-1">Arthur Henderson</h5>
+              <div class="small text-warning fw-bold mb-2">Founder & Master RVIA Tech</div>
+              <p class="small text-muted mb-0">22+ years in heavy coach chassis engineering, slide mechanics, and dealership diagnostics.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tech 2 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card-rn text-center">
+            <div class="card-rn-img-wrap" style="height: 250px;">
+              <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=600&auto=format&fit=crop&q=80" alt="Tyler Vance" class="card-rn-img">
+            </div>
+            <div class="card-rn-body p-3">
+              <h5 class="fw-bold mb-1">Tyler Vance</h5>
+              <div class="small text-warning fw-bold mb-2">Lead Chassis & Diesel Tech</div>
+              <p class="small text-muted mb-0">Specialist in Cummins ISX, Freightliner custom chassis, and air brake suspension systems.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tech 3 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card-rn text-center">
+            <div class="card-rn-img-wrap" style="height: 250px;">
+              <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&auto=format&fit=crop&q=80" alt="Samantha Ray" class="card-rn-img">
+            </div>
+            <div class="card-rn-body p-3">
+              <h5 class="fw-bold mb-1">Samantha Ray</h5>
+              <div class="small text-warning fw-bold mb-2">Solar & Electrical Lead</div>
+              <p class="small text-muted mb-0">ABYC & RVIA certified in off-grid lithium batteries, Victron inverters, and CAN-Bus networks.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tech 4 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card-rn text-center">
+            <div class="card-rn-img-wrap" style="height: 250px;">
+              <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=600&auto=format&fit=crop&q=80" alt="Carlos Morales" class="card-rn-img">
+            </div>
+            <div class="card-rn-body p-3">
+              <h5 class="fw-bold mb-1">Carlos Morales</h5>
+              <div class="small text-warning fw-bold mb-2">HVAC & Plumbing Master</div>
+              <p class="small text-muted mb-0">Dometic & Coleman certified rooftop AC repairman with 14 years specializing in Aqua-Hot systems.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Authorized Certifications & OEM Partners -->
+  <section class="py-5">
+    <div class="container text-center">
+      <span class="section-subtitle">Industry Recognition</span>
+      <h3 class="fw-bold mb-4">Certified & Approved By Industry Leaders</h3>
+      <div class="row g-4 justify-content-center align-items-center opacity-75">
+        <div class="col-4 col-md-2 fw-bold text-muted fs-5"><i class="fas fa-check-shield text-warning me-1"></i> RVIA</div>
+        <div class="col-4 col-md-2 fw-bold text-muted fs-5"><i class="fas fa-check-shield text-warning me-1"></i> RVDA</div>
+        <div class="col-4 col-md-2 fw-bold text-muted fs-5"><i class="fas fa-bolt text-warning me-1"></i> Cummins Onan</div>
+        <div class="col-4 col-md-2 fw-bold text-muted fs-5"><i class="fas fa-fan text-warning me-1"></i> Dometic</div>
+        <div class="col-4 col-md-2 fw-bold text-muted fs-5"><i class="fas fa-cogs text-warning me-1"></i> Lippert</div>
+        <div class="col-4 col-md-2 fw-bold text-muted fs-5"><i class="fas fa-solar-panel text-warning me-1"></i> Battle Born</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="py-5 text-white" style="background: linear-gradient(135deg, #071321 0%, #0d2847 100%);">
+    <div class="container py-4 text-center">
+      <h2 class="display-5 fw-bold text-white mb-3">Experience the RoadNest Difference</h2>
+      <p class="lead text-light mb-4 mx-auto" style="max-width: 650px;">
+        Schedule an appointment today or stop by our Denver facility to tour our state-of-the-art repair bays and meet our master technicians.
+      </p>
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="dashboard/book-service.html" class="btn btn-accent btn-lg">
+          <i class="fas fa-calendar-check"></i> Book RV Appointment
+        </a>
+        <a href="contact.html" class="btn btn-outline-white btn-lg">
+          <i class="fas fa-phone-alt"></i> Contact Workshop
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Master Multi-Column Footer -->
+  <footer class="rn-footer">
+    <div class="container">
+      <div class="row g-5">
+        <!-- Col 1: RoadNest Info -->
+        <div class="col-lg-4">
+          <a class="navbar-brand text-white mb-3 d-inline-flex" href="index.html">
+            <div class="brand-icon">
+              <i class="fas fa-caravan"></i>
+            </div>
+            <div>
+              <span class="fw-bold text-white">RoadNest</span>
+              <span class="brand-text-sub">RV & Motorhome Care</span>
+            </div>
+          </a>
+          <p class="small text-muted mb-4">
+            Specialized recreational vehicle maintenance, roof repairs, electrical diagnostics, winterization, and certified pre-trip inspections for worry-free travel.
+          </p>
+          <div class="d-flex gap-2 mb-4">
+            <a href="https://facebook.com" class="rn-social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com" class="rn-social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com" class="rn-social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://linkedin.com" class="rn-social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <div class="p-3 rounded-3" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);">
+            <div class="small fw-bold text-warning mb-1"><i class="fas fa-truck-pickup me-1"></i> Roadside Emergency Line</div>
+            <div class="fs-5 fw-bold text-white">(800) 555-ROAD</div>
+          </div>
+        </div>
+
+        <!-- Col 2: Services -->
+        <div class="col-sm-6 col-lg-2">
+          <h5>Specialized Services</h5>
+          <ul class="rn-footer-links">
+            <li><a href="service-details/preventive-maintenance.html">Preventive Maintenance</a></li>
+            <li><a href="service-details/winterization.html">RV Winterization</a></li>
+            <li><a href="service-details/electrical.html">Electrical & Solar</a></li>
+            <li><a href="service-details/plumbing.html">Plumbing Systems</a></li>
+            <li><a href="service-details/roof-repair.html">Roof Resealing</a></li>
+            <li><a href="service-details/generator.html">Generator Service</a></li>
+            <li><a href="service-details/pre-trip-inspection.html">Pre-Trip Inspections</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Company -->
+        <div class="col-sm-6 col-lg-2">
+          <h5>Company & Care</h5>
+          <ul class="rn-footer-links">
+            <li><a href="about.html">About RoadNest</a></li>
+            <li><a href="services.html">All Services Directory</a></li>
+            <li><a href="pricing.html">Inspection Pricing</a></li>
+            <li><a href="blog.html">Maintenance Blog</a></li>
+            <li><a href="contact.html">Contact Workshop</a></li>
+            <li><a href="coming-soon.html">Mobile Van Dispatch</a></li>
+            <li><a href="404.html">404 Error Screen</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Owner Portal -->
+        <div class="col-sm-6 col-lg-2">
+          <h5>Owner Support</h5>
+          <ul class="rn-footer-links">
+            <li><a href="login.html">Owner Portal Login</a></li>
+            <li><a href="register.html">Register Your RV</a></li>
+            <li><a href="dashboard/index.html">Owner Dashboard</a></li>
+            <li><a href="dashboard/book-service.html">Book Appointment</a></li>
+            <li><a href="dashboard/maintenance.html">Service Records</a></li>
+            <li><a href="dashboard/warranty.html">Warranty Claims</a></li>
+            <li><a href="admin/index.html">Admin Workspace</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Operating Hours & Newsletter -->
+        <div class="col-sm-6 col-lg-2">
+          <h5>Workshop Hours</h5>
+          <ul class="list-unstyled small text-muted mb-4">
+            <li class="mb-1"><strong class="text-white">Mon - Fri:</strong> 7:30 AM - 6:00 PM</li>
+            <li class="mb-1"><strong class="text-white">Saturday:</strong> 8:00 AM - 4:00 PM</li>
+            <li class="mb-1"><strong class="text-white">Sunday:</strong> Emergency Dispatch</li>
+          </ul>
+
+          <h5 class="fs-6">Traveler Newsletter</h5>
+          <form action="https://formsubmit.co/newsletter@roadnestrvcare.com" method="POST" class="mt-2">
+            <input type="hidden" name="_subject" value="Newsletter Subscription">
+            <input type="hidden" name="_captcha" value="false">
+            <div class="input-group">
+              <input type="email" class="form-control form-control-sm" name="email" required placeholder="Your email">
+              <button class="btn btn-sm btn-accent" type="submit"><i class="fas fa-paper-plane"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div>
+          &copy; 2026 RoadNest RV & Motorhome Care. All rights reserved. Built for RV Explorers.
+        </div>
+        <div class="d-flex gap-3 small">
+          <a href="#" class="text-muted text-decoration-none">Privacy Policy</a>
+          <span class="text-muted">•</span>
+          <a href="#" class="text-muted text-decoration-none">Terms of Service</a>
+          <span class="text-muted">•</span>
+          <a href="#" class="text-muted text-decoration-none">Warranty Disclosure</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top button -->
+  <button type="button" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Bootstrap 5.3.3 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Main Script -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

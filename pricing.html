@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RV Inspection & Service Pricing | RoadNest Care</title>
+  <meta name="description" content="Transparent, upfront pricing packages for RV maintenance, pre-trip inspections, generator service, and comprehensive motorhome health audits.">
+  <link rel="canonical" href="pricing.html">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Topbar -->
+  <div class="rn-topbar d-none d-md-block">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-4">
+        <span><i class="fas fa-map-marker-alt text-warning me-2"></i>742 Horizon Valley Pkwy, Denver, CO 80216</span>
+        <span><i class="fas fa-clock text-warning me-2"></i>Mon - Sat: 7:30 AM - 6:00 PM | Sun: Emergency Dispatch</span>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <span><i class="fas fa-phone-alt text-warning me-1"></i> Emergency: <strong>(800) 555-ROAD</strong></span>
+        <a href="login.html" class="ms-2"><i class="fas fa-user-circle me-1"></i> Owner Portal</a>
+        <a href="admin/index.html" class="ms-1 text-secondary"><i class="fas fa-lock me-1"></i> Admin</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Master Header / Navbar -->
+  <header class="rn-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg py-2">
+        <a class="navbar-brand" href="index.html">
+          <div class="brand-icon">
+            <i class="fas fa-caravan"></i>
+          </div>
+          <div>
+            <span class="fw-bold tracking-tight">RoadNest</span>
+            <span class="brand-text-sub">RV & Motorhome Care</span>
+          </div>
+        </a>
+
+        <div class="collapse navbar-collapse d-none d-lg-block" id="desktopNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="index.html">
+                    <i class="fas fa-warehouse"></i>
+                    <div>
+                      <div class="fw-bold">Home 1 - Service Center</div>
+                      <small class="text-muted">Workshop & Diagnostics</small>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="home-2.html">
+                    <i class="fas fa-mountain"></i>
+                    <div>
+                      <div class="fw-bold">Home 2 - Road Trip Care</div>
+                      <small class="text-muted">Adventure & Freedom</small>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link active" href="pricing.html">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="d-flex align-items-center gap-2">
+          <button class="rtl-pill rtl-toggle-btn" title="Toggle RTL / LTR layout" aria-label="Toggle text direction">
+            <span class="rtl-label">RTL</span>
+          </button>
+          <button class="utility-btn theme-toggle-btn" title="Toggle Light / Dark Mode" aria-label="Toggle dark mode">
+            <i class="fas fa-moon"></i>
+          </button>
+          <a href="dashboard/book-service.html" class="btn btn-accent d-none d-sm-inline-flex">
+            <i class="fas fa-calendar-check"></i> Book Service
+          </a>
+          <button class="navbar-toggler d-lg-none utility-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuOffcanvas" aria-controls="mobileMenuOffcanvas" aria-label="Open navigation menu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Offcanvas Menu -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenuOffcanvas" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header">
+      <div class="d-flex align-items-center gap-2" id="mobileMenuLabel">
+        <div class="brand-icon" style="width: 36px; height: 36px; font-size: 1.1rem;">
+          <i class="fas fa-caravan"></i>
+        </div>
+        <span class="fw-bold fs-5">RoadNest Care</span>
+      </div>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <nav class="d-flex flex-column mb-4">
+        <a class="mobile-nav-link" data-bs-toggle="collapse" href="#mobileHomeSub" role="button">
+          <span><i class="fas fa-home me-2 text-warning"></i> Home Variations</span>
+          <i class="fas fa-chevron-down"></i>
+        </a>
+        <div class="collapse mobile-subnav" id="mobileHomeSub">
+          <a class="mobile-subnav-link" href="index.html"><i class="fas fa-warehouse me-1"></i> Home 1 - RV Service Center</a>
+          <a class="mobile-subnav-link" href="home-2.html"><i class="fas fa-compass me-1"></i> Home 2 - RV Road Trip Care</a>
+        </div>
+
+        <a class="mobile-nav-link" href="about.html"><i class="fas fa-info-circle me-2 text-warning"></i> About Us</a>
+        <a class="mobile-nav-link" href="services.html"><i class="fas fa-tools me-2 text-warning"></i> Services Directory</a>
+        <a class="mobile-nav-link text-warning fw-bold" href="pricing.html"><i class="fas fa-tags me-2 text-warning"></i> Inspection Pricing</a>
+        <a class="mobile-nav-link" href="blog.html"><i class="fas fa-newspaper me-2 text-warning"></i> Travel & Care Blog</a>
+        <a class="mobile-nav-link" href="contact.html"><i class="fas fa-envelope me-2 text-warning"></i> Contact Workshop</a>
+        <a class="mobile-nav-link" href="login.html"><i class="fas fa-user-circle me-2 text-warning"></i> Owner Login</a>
+        <a class="mobile-nav-link" href="register.html"><i class="fas fa-user-plus me-2 text-warning"></i> Register Vehicle</a>
+        <a class="mobile-nav-link" href="dashboard/index.html"><i class="fas fa-tachometer-alt me-2 text-warning"></i> Owner Dashboard</a>
+        <a class="mobile-nav-link" href="admin/index.html"><i class="fas fa-shield-alt me-2 text-secondary"></i> Admin Console</a>
+      </nav>
+
+      <div class="pt-2">
+        <a href="dashboard/book-service.html" class="btn btn-accent w-100 mb-2">
+          <i class="fas fa-calendar-check"></i> Book Appointment
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Header Hero -->
+  <section class="py-5 bg-light-subtle border-bottom">
+    <div class="container text-center py-4">
+      <span class="section-subtitle">Fair & Transparent Rates</span>
+      <h1 class="display-4 fw-bold mb-3">Transparent RV Care & Inspection Pricing</h1>
+      <p class="section-desc mx-auto">
+        No surprise invoices before your departure. Every package includes clear deliverables, digital photo reports, and technician consultation.
+      </p>
+    </div>
+  </section>
+
+  <!-- Pricing Cards (3 Core Packages) -->
+  <section class="py-5 my-4">
+    <div class="container">
+      <div class="row g-4 align-items-stretch">
+        <!-- 1. RoadReady Basic -->
+        <div class="col-lg-4">
+          <div class="pricing-card">
+            <h3 class="fw-bold mb-1">RoadReady Basic</h3>
+            <p class="text-muted small">Ideal for weekend getaways and local camp testing.</p>
+            <div class="pricing-price">
+              <span class="pricing-currency">$</span>189<span class="pricing-period"> / inspection</span>
+            </div>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check-circle"></i> 35-Point Visual Safety Audit</li>
+              <li><i class="fas fa-check-circle"></i> Tire Cold PSI & Tread Depth Check</li>
+              <li><i class="fas fa-check-circle"></i> Battery Terminal & Voltage Test</li>
+              <li><i class="fas fa-check-circle"></i> Chassis Fluid Levels Inspection</li>
+              <li><i class="fas fa-check-circle"></i> LP Gas Leak Detector Sensor Check</li>
+              <li><i class="fas fa-times-circle"></i> Inverter & 120V Shore Diagnostics</li>
+              <li><i class="fas fa-times-circle"></i> Onboard Generator Load Test</li>
+              <li><i class="fas fa-times-circle"></i> Dicor Roof Seam Penetration Audit</li>
+              <li><i class="fas fa-times-circle"></i> Priority Bay Scheduling</li>
+            </ul>
+            <a href="dashboard/book-service.html" class="btn btn-outline-navy w-100">
+              <i class="fas fa-calendar-check"></i> Book RoadReady Basic
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. Journey Plus (Featured) -->
+        <div class="col-lg-4">
+          <div class="pricing-card featured">
+            <span class="pricing-badge-popular">Most Popular</span>
+            <h3 class="fw-bold mb-1">Journey Plus</h3>
+            <p class="text-muted small">For multi-state tours, national park trips, and overlanding.</p>
+            <div class="pricing-price">
+              <span class="pricing-currency">$</span>349<span class="pricing-period"> / inspection</span>
+            </div>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check-circle"></i> <strong>Everything in Basic, plus:</strong></li>
+              <li><i class="fas fa-check-circle"></i> 12V DC & 120V Electrical Diagnostics</li>
+              <li><i class="fas fa-check-circle"></i> Plumbing 50 PSI Hydrostatic Leak Check</li>
+              <li><i class="fas fa-check-circle"></i> Onan Generator Tune & Electrical Load Test</li>
+              <li><i class="fas fa-check-circle"></i> Rooftop AC & Propane Furnace Cycling</li>
+              <li><i class="fas fa-check-circle"></i> Holding Tank Gate Valve Conditioning</li>
+              <li><i class="fas fa-times-circle"></i> Full Slide-Out Hydraulic Alignment</li>
+              <li><i class="fas fa-times-circle"></i> Full Roof Lap Seal Stripping</li>
+              <li><i class="fas fa-times-circle"></i> Priority 24-Hr Bay Turnaround</li>
+            </ul>
+            <a href="dashboard/book-service.html" class="btn btn-accent w-100">
+              <i class="fas fa-calendar-check"></i> Book Journey Plus
+            </a>
+          </div>
+        </div>
+
+        <!-- 3. Ultimate RV Care -->
+        <div class="col-lg-4">
+          <div class="pricing-card">
+            <h3 class="fw-bold mb-1">Ultimate RV Care</h3>
+            <p class="text-muted small">The definitive 65-point audit for full-timers and cross-country expeditions.</p>
+            <div class="pricing-price">
+              <span class="pricing-currency">$</span>589<span class="pricing-period"> / inspection</span>
+            </div>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check-circle"></i> <strong>Everything in Journey Plus, plus:</strong></li>
+              <li><i class="fas fa-check-circle"></i> Hands-On Dicor Roof Seam & Membrane Audit</li>
+              <li><i class="fas fa-check-circle"></i> Slide-Out Mechanism & Hydraulic Sync</li>
+              <li><i class="fas fa-check-circle"></i> 3-Way Refrigerator & Aqua-Hot Diagnostic</li>
+              <li><i class="fas fa-check-circle"></i> Bearing Temperature Heat Gun Testing</li>
+              <li><i class="fas fa-check-circle"></i> Priority Bay Queue & Emergency Dispatch</li>
+              <li><i class="fas fa-check-circle"></i> HD Digital Report with Color Photos</li>
+              <li><i class="fas fa-check-circle"></i> 1-on-1 Master Tech Debriefing</li>
+            </ul>
+            <a href="dashboard/book-service.html" class="btn btn-outline-navy w-100">
+              <i class="fas fa-calendar-check"></i> Book Ultimate Care
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pricing Notice / Disclaimer -->
+      <div class="alert alert-secondary mt-5 p-4 rounded-4 border">
+        <div class="d-flex gap-3">
+          <i class="fas fa-info-circle text-warning fs-3 flex-shrink-0"></i>
+          <div>
+            <h5 class="fw-bold mb-1">Important Pricing Information & Custom Estimates</h5>
+            <p class="small text-muted mb-0">
+              Listed package rates reflect certified technician labor for multi-point diagnostic audits. Any replacement parts, fluids (synthetic diesel oil, transmission fluid, coolant), or extensive structural repairs uncovered during the inspection are quoted separately. You must approve all line items before any work proceeds. Heavy Class A diesel pushers may require slight surcharges due to increased fluid capacities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed Feature Comparison Table -->
+  <section class="py-5 bg-light-subtle">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="section-subtitle">Side-by-Side Analysis</span>
+        <h2 class="section-title">Comprehensive Package Comparison</h2>
+      </div>
+
+      <div class="table-responsive rounded-4 border bg-white shadow-sm">
+        <table class="table table-hover align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+              <th scope="col" style="width: 40%;">Inspection & Diagnostic Feature</th>
+              <th scope="col" class="text-center" style="width: 20%;">RoadReady Basic ($189)</th>
+              <th scope="col" class="text-center text-warning" style="width: 20%;">Journey Plus ($349)</th>
+              <th scope="col" class="text-center" style="width: 20%;">Ultimate Care ($589)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Total Certified Checkpoints</td>
+              <td class="text-center">35 Points</td>
+              <td class="text-center fw-bold">50 Points</td>
+              <td class="text-center fw-bold text-success">65 Points</td>
+            </tr>
+            <tr>
+              <td>Tire Cold Pressure, Tread & Lug Torque</td>
+              <td class="text-center"><i class="fas fa-check text-success"></i></td>
+              <td class="text-center"><i class="fas fa-check text-success"></i></td>
+              <td class="text-center"><i class="fas fa-check text-success"></i></td>
+            </tr>
+            <tr>
+              <td>Engine & Auxiliary Battery Load Test</td>
+              <td class="text-center"><i class="fas fa-check text-success"></i></td>
+              <td class="text-center"><i class="fas fa-check text-success"></i></td>
+              <td class="text-center"><i class="fas fa-check text-success"></i></td>
+            </tr>
+            <tr>
+              <td>120V Shore Power & Inverter Output Diagnostics</td>
+              <td class="text-center text-muted"><i class="fas fa-minus"></i></td>
+              <td class="text-center"><i class="fas fa-check text-success"></i></td>
+              <td class="text-center"><i class="fas fa-check text-success"></i></td>
+            </tr>
+            <tr>
+              <td>Plumbing 50 PSI Water Pressure Leak Test</td>
+              <td class="text-center text-muted"><i class="fas fa-minus"></i></td>
+              <td class="text-center"><i class="fas fa-check text-success"></i></td>
+              <td class="text-center"><i class="fas fa-check text-success"></i></td>
+            </tr>
+            <tr>
+              <td>Onan Generator Load Bank Operation Test</td>
+              <td class="text-center text-muted"><i class="fas fa-minus"></i></td>
+              <td class="text-center"><i class="fas fa-check text-success"></i></td>
+              <td class="text-center"><i class="fas fa-check text-success"></i></td>
+            </tr>
+            <tr>
+              <td>Rooftop Air Conditioner & Furnace Cycle Test</td>
+              <td class="text-center text-muted"><i class="fas fa-minus"></i></td>
+              <td class="text-center"><i class="fas fa-check text-success"></i></td>
+              <td class="text-center"><i class="fas fa-check text-success"></i></td>
+            </tr>
+            <tr>
+              <td>Dicor Roof Seam Penetration & Lap Seal Audit</td>
+              <td class="text-center text-muted"><i class="fas fa-minus"></i></td>
+              <td class="text-center text-muted"><i class="fas fa-minus"></i></td>
+              <td class="text-center"><i class="fas fa-check text-success"></i></td>
+            </tr>
+            <tr>
+              <td>Slide-Out Hydraulic Alignment & Wiper Seal Check</td>
+              <td class="text-center text-muted"><i class="fas fa-minus"></i></td>
+              <td class="text-center text-muted"><i class="fas fa-minus"></i></td>
+              <td class="text-center"><i class="fas fa-check text-success"></i></td>
+            </tr>
+            <tr>
+              <td>Digital Cloud Report in Owner Portal with Photos</td>
+              <td class="text-center"><i class="fas fa-check text-success"></i></td>
+              <td class="text-center"><i class="fas fa-check text-success"></i></td>
+              <td class="text-center"><i class="fas fa-check text-success"></i></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing FAQs -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="section-subtitle">Answers to Common Questions</span>
+        <h2 class="section-title">Pricing & Billing FAQs</h2>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="accordion" id="pricingFaq">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#pfaq1">
+                  Do you accept third-party extended warranty claims?
+                </button>
+              </h2>
+              <div id="pfaq1" class="accordion-collapse collapse show" data-bs-parent="#pricingFaq">
+                <div class="accordion-body text-muted small">
+                  Yes! We work directly with all major RV extended warranty providers (Good Sam, America’s First RV, Cornerstone, Wholesale Warranties, and OEM factory warranties). We handle direct billing and claims submission so you only pay your deductible.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#pfaq2">
+                  What payment methods are accepted at pickup?
+                </button>
+              </h2>
+              <div id="pfaq2" class="accordion-collapse collapse" data-bs-parent="#pricingFaq">
+                <div class="accordion-body text-muted small">
+                  We accept all major credit cards (Visa, MasterCard, American Express, Discover), debit cards, ACH transfers, Apple Pay, Google Pay, and certified cashier’s checks. You can also review and settle your invoice directly inside your online Owner Portal.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#pfaq3">
+                  Is an appointment deposit required?
+                </button>
+              </h2>
+              <div id="pfaq3" class="accordion-collapse collapse" data-bs-parent="#pricingFaq">
+                <div class="accordion-body text-muted small">
+                  A nominal $50 bay reservation deposit is held for routine appointments, which is fully credited toward your completed service invoice. Cancellations with at least 24 hours notice are refunded 100%.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Master Multi-Column Footer -->
+  <footer class="rn-footer">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <a class="navbar-brand text-white mb-3 d-inline-flex" href="index.html">
+            <div class="brand-icon"><i class="fas fa-caravan"></i></div>
+            <div>
+              <span class="fw-bold text-white">RoadNest</span>
+              <span class="brand-text-sub">RV & Motorhome Care</span>
+            </div>
+          </a>
+          <p class="small text-muted mb-4">
+            Specialized recreational vehicle maintenance, roof repairs, electrical diagnostics, winterization, and certified pre-trip inspections for worry-free travel.
+          </p>
+        </div>
+        <div class="col-sm-6 col-lg-2">
+          <h5>Services</h5>
+          <ul class="rn-footer-links">
+            <li><a href="service-details/preventive-maintenance.html">Preventive Maintenance</a></li>
+            <li><a href="service-details/winterization.html">RV Winterization</a></li>
+            <li><a href="service-details/electrical.html">Electrical & Solar</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-lg-2">
+          <h5>Company</h5>
+          <ul class="rn-footer-links">
+            <li><a href="about.html">About RoadNest</a></li>
+            <li><a href="services.html">Services Directory</a></li>
+            <li><a href="pricing.html">Pricing Plans</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-lg-2">
+          <h5>Owner Portal</h5>
+          <ul class="rn-footer-links">
+            <li><a href="login.html">Owner Login</a></li>
+            <li><a href="dashboard/index.html">Dashboard</a></li>
+            <li><a href="dashboard/book-service.html">Book Service</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-lg-2">
+          <h5>Emergency</h5>
+          <p class="small text-muted"><strong class="text-white">Call:</strong> (800) 555-ROAD</p>
+        </div>
+      </div>
+      <div class="footer-bottom d-flex justify-content-between align-items-center">
+        <div>&copy; 2026 RoadNest RV & Motorhome Care. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RoadNest RV & Motorhome Care | Professional RV Maintenance, Repair & Inspection</title>
+  <meta name="description" content="RoadNest is the premier RV & Motorhome service center specializing in preventive maintenance, roof repair, electrical diagnostics, winterization, and pre-trip inspections.">
+  <link rel="canonical" href="index.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="RoadNest RV & Motorhome Care">
+  <meta property="og:description" content="Professional RV maintenance, repairs, inspections, upgrades, winterization, and roadside-ready care for every journey.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?w=1200&auto=format&fit=crop&q=80">
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <!-- Font Awesome 6.5.2 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Topbar -->
+  <div class="rn-topbar d-none d-md-block">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-4">
+        <span><i class="fas fa-map-marker-alt text-warning me-2"></i>742 Horizon Valley Pkwy, Denver, CO 80216</span>
+        <span><i class="fas fa-clock text-warning me-2"></i>Mon - Sat: 7:30 AM - 6:00 PM | Sun: Emergency Dispatch</span>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <span><i class="fas fa-phone-alt text-warning me-1"></i> Emergency: <strong>(800) 555-ROAD</strong></span>
+        <a href="login.html" class="ms-2"><i class="fas fa-user-circle me-1"></i> Owner Portal</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Master Header / Navbar -->
+  <header class="rn-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg py-2">
+        <!-- Brand Logo -->
+        <a class="navbar-brand" href="index.html">
+          <div class="brand-icon">
+            <i class="fas fa-caravan"></i>
+          </div>
+          <div>
+            <span class="fw-bold tracking-tight">RoadNest</span>
+            <span class="brand-text-sub">RV & Motorhome Care</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Items -->
+        <div class="collapse navbar-collapse d-none d-lg-block" id="desktopNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="dashboard/index.html">Owner Dashboard</a></li>
+            <li class="nav-item"><a class="nav-link" href="login.html">Owner Login</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">More</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="about.html">About RoadNest</a></li>
+                <li><a class="dropdown-item" href="pricing.html">Inspection Pricing</a></li>
+                <li><a class="dropdown-item" href="blog.html">Travel & Care Blog</a></li>
+                <li><a class="dropdown-item" href="contact.html">Contact Workshop</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Controls & Action CTA -->
+        <div class="d-flex align-items-center gap-2">
+          <!-- RTL Toggle -->
+          <button class="rtl-pill rtl-toggle-btn" title="Toggle RTL / LTR layout" aria-label="Toggle text direction">
+            <span class="rtl-label">RTL</span>
+          </button>
+
+          <!-- Theme Toggle -->
+          <button class="utility-btn theme-toggle-btn" title="Toggle Light / Dark Mode" aria-label="Toggle dark mode">
+            <i class="fas fa-moon"></i>
+          </button>
+
+          <!-- Book Service Desktop Button -->
+          <a href="dashboard/book-service.html" class="btn btn-accent d-none d-sm-inline-flex">
+            <i class="fas fa-calendar-check"></i> Book Service
+          </a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button class="navbar-toggler d-lg-none utility-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuOffcanvas" aria-controls="mobileMenuOffcanvas" aria-label="Open navigation menu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Offcanvas Menu -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenuOffcanvas" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header">
+      <div class="d-flex align-items-center gap-2" id="mobileMenuLabel">
+        <div class="brand-icon" style="width: 36px; height: 36px; font-size: 1.1rem;">
+          <i class="fas fa-caravan"></i>
+        </div>
+        <span class="fw-bold fs-5">RoadNest Care</span>
+      </div>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <nav class="d-flex flex-column mb-4">
+        <a class="mobile-nav-link text-warning fw-bold" href="index.html"><i class="fas fa-home me-2 text-warning"></i> Home</a>
+        <a class="mobile-nav-link" href="services.html"><i class="fas fa-tools me-2 text-warning"></i> Services Directory</a>
+        <a class="mobile-nav-link" href="dashboard/index.html"><i class="fas fa-tachometer-alt me-2 text-warning"></i> Owner Dashboard</a>
+        <a class="mobile-nav-link" href="login.html"><i class="fas fa-user-circle me-2 text-warning"></i> Owner Login</a>
+        <a class="mobile-nav-link" href="about.html"><i class="fas fa-info-circle me-2 text-warning"></i> About Us</a>
+        <a class="mobile-nav-link" href="pricing.html"><i class="fas fa-tags me-2 text-warning"></i> Inspection Pricing</a>
+        <a class="mobile-nav-link" href="blog.html"><i class="fas fa-newspaper me-2 text-warning"></i> Travel & Care Blog</a>
+        <a class="mobile-nav-link" href="contact.html"><i class="fas fa-envelope me-2 text-warning"></i> Contact Workshop</a>
+        <a class="mobile-nav-link" href="register.html"><i class="fas fa-user-plus me-2 text-warning"></i> Register Vehicle</a>
+      </nav>
+
+      <div class="pt-2">
+        <a href="dashboard/book-service.html" class="btn btn-accent w-100 mb-2">
+          <i class="fas fa-calendar-check"></i> Book Appointment
+        </a>
+        <div class="text-center text-muted small mt-3">
+          <i class="fas fa-phone-alt me-1"></i> 24/7 Road Assistance: <strong>(800) 555-ROAD</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <span class="hero-h1-badge">
+            <i class="fas fa-certificate text-warning"></i> Master RVIA Certified Facility
+          </span>
+          <h1 class="hero-title mb-4">
+            Professional Care for <span class="text-primary" style="color: var(--rn-accent) !important;">Every Mile Ahead.</span>
+          </h1>
+          <p class="section-desc mb-4">
+            Keep your motorhome, campervan, and travel trailer in peak operational readiness. From complex slide-out hydraulics and roof leak seals to complete winterization and multi-point road trip checks, RoadNest delivers peace of mind for every journey.
+          </p>
+          <div class="d-flex flex-wrap gap-3 mb-5">
+            <a href="dashboard/book-service.html" class="btn btn-accent btn-lg">
+              <i class="fas fa-calendar-check"></i> Book RV Service
+            </a>
+            <a href="services.html" class="btn btn-outline-navy btn-lg">
+              <i class="fas fa-tools"></i> Explore Services
+            </a>
+          </div>
+
+          <!-- Hero Credibility Checkpoints -->
+          <div class="row g-3 pt-2 border-top">
+            <div class="col-sm-6 d-flex align-items-center gap-2">
+              <i class="fas fa-check-circle text-warning fs-5"></i>
+              <span class="small fw-bold">Certified RVIA Technicians</span>
+            </div>
+            <div class="col-sm-6 d-flex align-items-center gap-2">
+              <i class="fas fa-check-circle text-warning fs-5"></i>
+              <span class="small fw-bold">Same-Week Bay Appointments</span>
+            </div>
+            <div class="col-sm-6 d-flex align-items-center gap-2">
+              <i class="fas fa-check-circle text-warning fs-5"></i>
+              <span class="small fw-bold">45-Point Digital Health Audit</span>
+            </div>
+            <div class="col-sm-6 d-flex align-items-center gap-2">
+              <i class="fas fa-check-circle text-warning fs-5"></i>
+              <span class="small fw-bold">Factory Warranty Approved</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Layered Visual Media Layout -->
+        <div class="col-lg-6">
+          <div class="hero-img-wrap">
+            <img src="https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?w=1000&auto=format&fit=crop&q=80" alt="Luxury Class A Motorcoach Serviced by RoadNest" class="hero-main-img">
+            
+            <!-- Floating Tech Card -->
+            <div class="hero-floating-card card-bottom-left">
+              <div class="floating-icon">
+                <i class="fas fa-microchip"></i>
+              </div>
+              <div>
+                <h6 class="mb-0 fw-bold">Digital Diagnostics</h6>
+                <small class="text-muted">12V / 120V & CAN-Bus Telemetry</small>
+              </div>
+            </div>
+
+            <!-- Floating Warranty Badge -->
+            <div class="hero-floating-card card-top-right">
+              <div class="floating-icon" style="background: rgba(16, 185, 129, 0.15); color: #10b981;">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <div>
+                <h6 class="mb-0 fw-bold">100% Guaranteed</h6>
+                <small class="text-muted">24-Month / 24,000-Mile Parts</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Strip -->
+  <section class="trust-strip">
+    <div class="container">
+      <div class="row g-4 justify-content-between">
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="trust-item">
+            <div class="trust-icon"><i class="fas fa-award"></i></div>
+            <div>
+              <div class="trust-title">RVIA Master</div>
+              <div class="trust-text">Certified Techs</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="trust-item">
+            <div class="trust-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+            <div>
+              <div class="trust-title">Clear Pricing</div>
+              <div class="trust-text">No Hidden Fees</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="trust-item">
+            <div class="trust-icon"><i class="fas fa-shield-check"></i></div>
+            <div>
+              <div class="trust-title">OEM Warranty</div>
+              <div class="trust-text">Authorized Claims</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="trust-item">
+            <div class="trust-icon"><i class="fas fa-cogs"></i></div>
+            <div>
+              <div class="trust-title">Genuine Parts</div>
+              <div class="trust-text">Dometic & Lippert</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="trust-item">
+            <div class="trust-icon"><i class="fas fa-clipboard-check"></i></div>
+            <div>
+              <div class="trust-title">Multi-Point</div>
+              <div class="trust-text">Road-Ready Audits</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="trust-item">
+            <div class="trust-icon"><i class="fas fa-history"></i></div>
+            <div>
+              <div class="trust-title">12+ Years</div>
+              <div class="trust-text">RV Field Authority</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Preview Section (8 Distinct RV Services with unique images & individual detail links) -->
+  <section class="py-5 my-4">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="section-subtitle">Workshop Capabilities</span>
+        <h2 class="section-title">Specialized RV Maintenance & Repairs</h2>
+        <p class="section-desc mx-auto">
+          Unlike standard auto repair shops, RoadNest is built specifically for recreational vehicles, housing 50-foot commercial bays, high-clearance hoists, and certified master technicians.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Service 1: Preventive Maintenance -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card-rn">
+            <div class="card-rn-img-wrap">
+              <img src="https://images.unsplash.com/photo-1486006920555-c77dce18193b?w=600&auto=format&fit=crop&q=80" alt="Preventive RV Chassis & Engine Maintenance" class="card-rn-img">
+              <span class="card-badge-top">Essential</span>
+            </div>
+            <div class="card-rn-body">
+              <div class="card-icon-pill"><i class="fas fa-wrench"></i></div>
+              <h3 class="card-rn-title">Preventive Maintenance</h3>
+              <p class="card-rn-text">Full chassis fluid flushes, drivetrain lubrication, brake pads, and seasonal filter replacements for motorhomes.</p>
+              <a href="service-details/preventive-maintenance.html" class="fw-bold mt-auto text-decoration-none">
+                Learn More <i class="fas fa-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 2: Winterization -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card-rn">
+            <div class="card-rn-img-wrap">
+              <img src="https://images.unsplash.com/photo-1516431883659-655d41c09bf9?w=600&auto=format&fit=crop&q=80" alt="RV Winterization and Freeze Proofing" class="card-rn-img">
+              <span class="card-badge-top">Seasonal</span>
+            </div>
+            <div class="card-rn-body">
+              <div class="card-icon-pill"><i class="fas fa-snowflake"></i></div>
+              <h3 class="card-rn-title">RV Winterization</h3>
+              <p class="card-rn-text">Non-toxic antifreeze induction, water heater bypass, black tank blowout, and battery isolation for freezing winters.</p>
+              <a href="service-details/winterization.html" class="fw-bold mt-auto text-decoration-none">
+                Learn More <i class="fas fa-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 3: Electrical Systems -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card-rn">
+            <div class="card-rn-img-wrap">
+              <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&auto=format&fit=crop&q=80" alt="RV Electrical Diagnostics and Wiring" class="card-rn-img">
+              <span class="card-badge-top">Diagnostics</span>
+            </div>
+            <div class="card-rn-body">
+              <div class="card-icon-pill"><i class="fas fa-bolt"></i></div>
+              <h3 class="card-rn-title">Electrical Systems</h3>
+              <p class="card-rn-text">12V DC house battery troubleshooting, 120V AC shore power transfer switches, pure sine inverters, and fuse panels.</p>
+              <a href="service-details/electrical.html" class="fw-bold mt-auto text-decoration-none">
+                Learn More <i class="fas fa-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 4: Plumbing Repair -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card-rn">
+            <div class="card-rn-img-wrap">
+              <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&auto=format&fit=crop&q=80" alt="RV Plumbing and Holding Tank Repair" class="card-rn-img">
+              <span class="card-badge-top">Repairs</span>
+            </div>
+            <div class="card-rn-body">
+              <div class="card-icon-pill"><i class="fas fa-faucet"></i></div>
+              <h3 class="card-rn-title">Plumbing & Tanks</h3>
+              <p class="card-rn-text">PEX line leak remediation, Shurflo water pump replacements, tank sensors, gate valves, and water heaters.</p>
+              <a href="service-details/plumbing.html" class="fw-bold mt-auto text-decoration-none">
+                Learn More <i class="fas fa-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 5: Roof & Exterior Repair -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card-rn">
+            <div class="card-rn-img-wrap">
+              <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&auto=format&fit=crop&q=80" alt="RV Roof Seam Resealing and Membrane Repair" class="card-rn-img">
+              <span class="card-badge-top">Protection</span>
+            </div>
+            <div class="card-rn-body">
+              <div class="card-icon-pill"><i class="fas fa-shield-alt"></i></div>
+              <h3 class="card-rn-title">Roof & Exterior Repair</h3>
+              <p class="card-rn-text">Dicor lap sealant reapplication, TPO/EPDM membrane patches, skylight resealing, and leak prevention inspections.</p>
+              <a href="service-details/roof-repair.html" class="fw-bold mt-auto text-decoration-none">
+                Learn More <i class="fas fa-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 6: HVAC Service -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card-rn">
+            <div class="card-rn-img-wrap">
+              <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&auto=format&fit=crop&q=80" alt="Rooftop RV Air Conditioner and Heat Pump Repair" class="card-rn-img">
+              <span class="card-badge-top">Climate</span>
+            </div>
+            <div class="card-rn-body">
+              <div class="card-icon-pill"><i class="fas fa-wind"></i></div>
+              <h3 class="card-rn-title">HVAC & AC Service</h3>
+              <p class="card-rn-text">Rooftop AC compressor testing, heat pump diagnostics, propane furnace burner cleaning, and duct airflow balancing.</p>
+              <a href="service-details/hvac.html" class="fw-bold mt-auto text-decoration-none">
+                Learn More <i class="fas fa-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 7: Generator Maintenance -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card-rn">
+            <div class="card-rn-img-wrap">
+              <img src="https://images.unsplash.com/photo-1513828583688-c52646db42dd?w=600&auto=format&fit=crop&q=80" alt="Onan RV Generator Maintenance and Oil Change" class="card-rn-img">
+              <span class="card-badge-top">Power</span>
+            </div>
+            <div class="card-rn-body">
+              <div class="card-icon-pill"><i class="fas fa-plug"></i></div>
+              <h3 class="card-rn-title">Generator Maintenance</h3>
+              <p class="card-rn-text">Cummins Onan gasoline/diesel generator oil changes, spark plugs, carburetor cleaning, and rotor load tests.</p>
+              <a href="service-details/generator.html" class="fw-bold mt-auto text-decoration-none">
+                Learn More <i class="fas fa-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 8: Pre-Trip Inspection -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card-rn">
+            <div class="card-rn-img-wrap">
+              <img src="https://images.unsplash.com/photo-1520072959219-c595dc870360?w=600&auto=format&fit=crop&q=80" alt="Comprehensive RV Pre-Trip Inspection Checklist" class="card-rn-img">
+              <span class="card-badge-top">Road Ready</span>
+            </div>
+            <div class="card-rn-body">
+              <div class="card-icon-pill"><i class="fas fa-clipboard-list"></i></div>
+              <h3 class="card-rn-title">Pre-Trip Inspection</h3>
+              <p class="card-rn-text">Rigorous 65-point evaluation covering tire pressures, wheel bearings, hitch systems, propane gas, and safety alarms.</p>
+              <a href="service-details/pre-trip-inspection.html" class="fw-bold mt-auto text-decoration-none">
+                Learn More <i class="fas fa-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <a href="services.html" class="btn btn-navy">
+          <i class="fas fa-th-large"></i> View All 12+ RV Service Capabilities
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RV Health Check Section (Interactive Visual UI) -->
+  <section class="py-5 bg-light-subtle border-top border-bottom">
+    <div class="container">
+      <div class="row align-items-center mb-5">
+        <div class="col-lg-7">
+          <span class="section-subtitle">Preventive Intelligence</span>
+          <h2 class="section-title">RV Multi-System Health Audit</h2>
+          <p class="section-desc">
+            A recreational vehicle combines a luxury home with heavy automotive machinery. Our diagnostic technicians systematically monitor every sub-system before you hit cross-country highways.
+          </p>
+        </div>
+        <div class="col-lg-5 text-lg-end">
+          <a href="dashboard/book-service.html" class="btn btn-accent">
+            <i class="fas fa-stethoscope"></i> Request System Audit
+          </a>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Engine & Transmission -->
+        <div class="col-md-6 col-lg-4">
+          <div class="health-check-card">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <div class="d-flex align-items-center gap-2">
+                <i class="fas fa-tachometer-alt text-warning fs-5"></i>
+                <h5 class="mb-0">Engine & Drivetrain</h5>
+              </div>
+              <span class="health-status-badge badge-optimal">Optimal (98%)</span>
+            </div>
+            <p class="small text-muted mb-3">Fluid analysis, transmission cooling, belts, and diesel particulate filters checked.</p>
+            <div class="progress" style="height: 6px;">
+              <div class="progress-bar bg-success" role="progressbar" style="width: 98%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Auxiliary Batteries & Solar -->
+        <div class="col-md-6 col-lg-4">
+          <div class="health-check-card">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <div class="d-flex align-items-center gap-2">
+                <i class="fas fa-car-battery text-warning fs-5"></i>
+                <h5 class="mb-0">Battery & Solar Array</h5>
+              </div>
+              <span class="health-status-badge badge-optimal">13.8V Charge</span>
+            </div>
+            <p class="small text-muted mb-3">Deep cycle AGM/LiFePO4 cell balancing, MPPT solar controllers, and inverter output verified.</p>
+            <div class="progress" style="height: 6px;">
+              <div class="progress-bar bg-success" role="progressbar" style="width: 92%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tires & Suspension -->
+        <div class="col-md-6 col-lg-4">
+          <div class="health-check-card">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <div class="d-flex align-items-center gap-2">
+                <i class="fas fa-ring text-warning fs-5"></i>
+                <h5 class="mb-0">Tires & Bearings</h5>
+              </div>
+              <span class="health-status-badge badge-attention">Repack Due</span>
+            </div>
+            <p class="small text-muted mb-3">Tread depth 8/32", date code 2023, axle seals tight. Hub greasing recommended in 1,200 mi.</p>
+            <div class="progress" style="height: 6px;">
+              <div class="progress-bar bg-warning" role="progressbar" style="width: 76%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rooftop Seals & Membrane -->
+        <div class="col-md-6 col-lg-4">
+          <div class="health-check-card">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <div class="d-flex align-items-center gap-2">
+                <i class="fas fa-umbrella text-warning fs-5"></i>
+                <h5 class="mb-0">Roof Sealing & Vents</h5>
+              </div>
+              <span class="health-status-badge badge-optimal">Resealed</span>
+            </div>
+            <p class="small text-muted mb-3">Self-leveling Dicor joints, skylights, satellite mounts, and AC gasket watertight test cleared.</p>
+            <div class="progress" style="height: 6px;">
+              <div class="progress-bar bg-success" role="progressbar" style="width: 95%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Plumbing & Holding Tanks -->
+        <div class="col-md-6 col-lg-4">
+          <div class="health-check-card">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <div class="d-flex align-items-center gap-2">
+                <i class="fas fa-water text-warning fs-5"></i>
+                <h5 class="mb-0">Plumbing & Valves</h5>
+              </div>
+              <span class="health-status-badge badge-optimal">50 PSI Tested</span>
+            </div>
+            <p class="small text-muted mb-3">City water regulator, 12V pump check valve, gray/black macerators, and tank heaters intact.</p>
+            <div class="progress" style="height: 6px;">
+              <div class="progress-bar bg-success" role="progressbar" style="width: 88%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Onan Generator & Transfer Switch -->
+        <div class="col-md-6 col-lg-4">
+          <div class="health-check-card">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <div class="d-flex align-items-center gap-2">
+                <i class="fas fa-bolt-lightning text-warning fs-5"></i>
+                <h5 class="mb-0">Aux Generator</h5>
+              </div>
+              <span class="health-status-badge badge-optimal">142 Total Hrs</span>
+            </div>
+            <p class="small text-muted mb-3">Spark plug gapped, fresh synthetic oil, automatic transfer switch tested under dual AC load.</p>
+            <div class="progress" style="height: 6px;">
+              <div class="progress-bar bg-success" role="progressbar" style="width: 90%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose RoadNest -->
+  <section class="py-5 my-5">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="position-relative">
+            <img src="https://images.unsplash.com/photo-1613214149922-f1809c99b414?w=900&auto=format&fit=crop&q=80" alt="RoadNest Modern RV Service Bay Facility" class="rounded-4 shadow-lg w-100" style="height: 480px; object-fit: cover;">
+            <div class="position-absolute bottom-0 start-0 m-4 p-3 bg-white text-dark rounded-3 shadow d-flex align-items-center gap-3" style="max-width: 320px;">
+              <div class="bg-primary text-white p-3 rounded-2">
+                <i class="fas fa-tools fs-4"></i>
+              </div>
+              <div>
+                <h6 class="mb-1 fw-bold text-dark">50-Foot Commercial Bays</h6>
+                <p class="small text-muted mb-0">Specially engineered for 45ft Class A coaches & 5th wheels.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <span class="section-subtitle">The RoadNest Advantage</span>
+          <h2 class="section-title mb-4">Engineered Exclusively for RVs & Motorhomes</h2>
+          <p class="section-desc mb-4">
+            We don’t treat your motorhome like an oversized pickup truck. An RV is a self-contained habitat with intricate plumbing, 120V electrical inverters, propane heating, and delicate roof seals that demand specialized craftsmanship.
+          </p>
+
+          <div class="d-flex flex-column gap-3">
+            <div class="d-flex gap-3">
+              <div class="trust-icon" style="background: var(--rn-accent-light); color: var(--rn-accent);"><i class="fas fa-id-card"></i></div>
+              <div>
+                <h5 class="mb-1">RVIA & RVDA Master Certified Techs</h5>
+                <p class="text-muted small">Trained under factory standards for Winnebago, Thor, Forest River, Tiffin, and Airstream.</p>
+              </div>
+            </div>
+
+            <div class="d-flex gap-3">
+              <div class="trust-icon" style="background: var(--rn-accent-light); color: var(--rn-accent);"><i class="fas fa-file-invoice"></i></div>
+              <div>
+                <h5 class="mb-1">100% Upfront Transparent Estimates</h5>
+                <p class="text-muted small">No surprise bills before your road trip. You approve every repair line item with digital photos.</p>
+              </div>
+            </div>
+
+            <div class="d-flex gap-3">
+              <div class="trust-icon" style="background: var(--rn-accent-light); color: var(--rn-accent);"><i class="fas fa-laptop-medical"></i></div>
+              <div>
+                <h5 class="mb-1">Digital Owner Maintenance Portal</h5>
+                <p class="text-muted small">Access service records, invoices, warranty expiration dates, and inspection reports anywhere on the road.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How Service Works (4-Step Process) -->
+  <section class="py-5 bg-light-subtle">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="section-subtitle">Streamlined Workflow</span>
+        <h2 class="section-title">How Service Works at RoadNest</h2>
+        <p class="section-desc mx-auto">
+          We respect your travel schedules. Our appointment and repair pipeline is designed to eliminate workshop delays so you can hit the highway on time.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Step 1 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="step-item card-rn p-4 h-100">
+            <div class="step-number">01</div>
+            <h4 class="fw-bold mb-2">Choose Service</h4>
+            <p class="text-muted small">Select your needed repairs, seasonal winterization package, or pre-departure inspection checklist.</p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="step-item card-rn p-4 h-100">
+            <div class="step-number">02</div>
+            <h4 class="fw-bold mb-2">Book Slot</h4>
+            <p class="text-muted small">Pick a convenient drop-off date or request our mobile field van directly to your campsite/storage unit.</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="step-item card-rn p-4 h-100">
+            <div class="step-number">03</div>
+            <h4 class="fw-bold mb-2">Precision Service</h4>
+            <p class="text-muted small">Certified specialists perform thorough diagnostics, OEM component repairs, and quality check sign-offs.</p>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="step-item card-rn p-4 h-100">
+            <div class="step-number">04</div>
+            <h4 class="fw-bold mb-2">Hit The Road</h4>
+            <p class="text-muted small">Receive your comprehensive digital health certificate, pick up your RV, and embark on your journey worry-free.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Service Package: RoadReady Complete Inspection -->
+  <section class="py-5 my-4">
+    <div class="container">
+      <div class="bg-primary text-white rounded-4 p-4 p-lg-5 position-relative overflow-hidden" style="background: linear-gradient(135deg, #091728 0%, #122b4a 100%) !important;">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7">
+            <span class="badge bg-warning text-dark px-3 py-2 fw-bold text-uppercase mb-3">Signature Package</span>
+            <h2 class="display-5 fw-bold text-white mb-3">RoadReady Complete Inspection</h2>
+            <p class="lead text-light mb-4">
+              Our flagship 65-point evaluation designed specifically for owners heading on multi-state tours, snowbird migrations, or remote boondocking ventures.
+            </p>
+            
+            <div class="row g-2 mb-4">
+              <div class="col-sm-6 d-flex align-items-center gap-2">
+                <i class="fas fa-check-circle text-warning"></i> <span>Chassis Brakes & Suspension Torque</span>
+              </div>
+              <div class="col-sm-6 d-flex align-items-center gap-2">
+                <i class="fas fa-check-circle text-warning"></i> <span>Tire Pressure & Bearing Heat Check</span>
+              </div>
+              <div class="col-sm-6 d-flex align-items-center gap-2">
+                <i class="fas fa-check-circle text-warning"></i> <span>12V / 120V Battery Bank Load Test</span>
+              </div>
+              <div class="col-sm-6 d-flex align-items-center gap-2">
+                <i class="fas fa-check-circle text-warning"></i> <span>Propane LP Pressure Drop Test</span>
+              </div>
+              <div class="col-sm-6 d-flex align-items-center gap-2">
+                <i class="fas fa-check-circle text-warning"></i> <span>Dicor Roof Seam Water Intrusion Audit</span>
+              </div>
+              <div class="col-sm-6 d-flex align-items-center gap-2">
+                <i class="fas fa-check-circle text-warning"></i> <span>Rooftop HVAC & Furnace Operational Test</span>
+              </div>
+            </div>
+
+            <div class="d-flex flex-wrap gap-3">
+              <a href="dashboard/book-service.html" class="btn btn-accent btn-lg">
+                <i class="fas fa-calendar-check"></i> Book RoadReady Inspection ($289)
+              </a>
+              <a href="pricing.html" class="btn btn-outline-white btn-lg">
+                <i class="fas fa-list"></i> Compare All Packages
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-5 text-center">
+            <img src="https://images.unsplash.com/photo-1527786356703-4b100091cd2c?w=700&auto=format&fit=crop&q=80" alt="RoadReady RV Inspection at Scenic Trailhead" class="rounded-4 shadow-lg w-100" style="max-height: 380px; object-fit: cover;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Statistics (Animated Counters) -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-6 col-lg-3">
+          <div class="stat-box">
+            <div class="stat-number counter-val" data-target="12" data-suffix="+">12+</div>
+            <div class="stat-label">Years of RV Specialization</div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="stat-box">
+            <div class="stat-number counter-val" data-target="8500" data-suffix="+">8,500+</div>
+            <div class="stat-label">RVs & Motorhomes Serviced</div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="stat-box">
+            <div class="stat-number counter-val" data-target="4500" data-suffix="+">4,500+</div>
+            <div class="stat-label">Active Portal Owners</div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="stat-box">
+            <div class="stat-number counter-val" data-target="98" data-suffix="%">98%</div>
+            <div class="stat-label">Customer Satisfaction Rating</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Road Trip Readiness Section -->
+  <section class="py-5 bg-light-subtle">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <span class="section-subtitle">Road Trip Security</span>
+          <h2 class="section-title">Pre-Trip Safety & Readiness Checklist</h2>
+          <p class="section-desc mb-4">
+            A minor mechanical oversight can turn a dream highway road trip into an expensive highway breakdown. Ensure your rig is 100% prepared before leaving your driveway.
+          </p>
+
+          <div class="card p-4 border-0 shadow-sm bg-white mb-4">
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" checked id="c1">
+              <label class="form-check-label fw-bold" for="c1">Tire Cold Pressure & Lug Nut Torque Inspected</label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" checked id="c2">
+              <label class="form-check-label fw-bold" for="c2">House & Engine Batteries Tested Under Full Load</label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" checked id="c3">
+              <label class="form-check-label fw-bold" for="c3">Onboard Generator Oil Changed & Exercised Under Load</label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" checked id="c4">
+              <label class="form-check-label fw-bold" for="c4">Fresh Water Sanitized & Waste Valves Lubricated</label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" checked id="c5">
+              <label class="form-check-label fw-bold" for="c5">Roof Seams & Slide-Out Seals UV Protected</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" checked id="c6">
+              <label class="form-check-label fw-bold" for="c6">CO2, Smoke, and LP Leak Detectors Recalibrated</label>
+            </div>
+          </div>
+
+          <a href="service-details/pre-trip-inspection.html" class="btn btn-accent">
+            <i class="fas fa-clipboard-check"></i> Schedule Pre-Trip Inspection
+          </a>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card-rn p-4">
+            <h4 class="fw-bold mb-3"><i class="fas fa-compass text-warning me-2"></i>Traveling Soon?</h4>
+            <p class="text-muted small mb-4">
+              Book your bay appointment at least 7 to 10 days before departure during peak summer and snowbird seasons.
+            </p>
+            <form action="https://formsubmit.co/support@roadnestrvcare.com" method="POST" data-validate="true">
+              <!-- FormSubmit config -->
+              <input type="hidden" name="_subject" value="Quick Road-Trip Inspection Request">
+              <input type="hidden" name="_captcha" value="false">
+
+              <div class="mb-3">
+                <label class="form-label" for="quickName">Your Name</label>
+                <input type="text" class="form-control" id="quickName" name="name" required placeholder="e.g. John Davis">
+              </div>
+              <div class="row g-2 mb-3">
+                <div class="col-6">
+                  <label class="form-label" for="quickEmail">Email</label>
+                  <input type="email" class="form-control" id="quickEmail" name="email" required placeholder="name@email.com">
+                </div>
+                <div class="col-6">
+                  <label class="form-label" for="quickPhone">Phone</label>
+                  <input type="tel" class="form-control" id="quickPhone" name="phone" required placeholder="(555) 000-0000">
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="quickRv">RV Make & Model</label>
+                <input type="text" class="form-control" id="quickRv" name="rv_model" required placeholder="e.g. 2023 Winnebago View 24D">
+              </div>
+              <button type="submit" class="btn btn-accent w-100">
+                <i class="fas fa-paper-plane"></i> Reserve Inspection Bay
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials (Unique traveler profiles & RV models) -->
+  <section class="py-5 my-4">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="section-subtitle">Real Traveler Stories</span>
+        <h2 class="section-title">Trusted By RV Adventurers Across North America</h2>
+        <p class="section-desc mx-auto">
+          Read how RoadNest keeps full-timers, weekend campers, and retired snowbirds rolling safely with zero breakdown stress.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Testimonial 1 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              “Our hydraulic slide-out malfunctioned right before our Yellowstone trip. RoadNest got us in within 48 hours, realigned the Lippert rack, and had us rolling on time.”
+            </p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&auto=format&fit=crop&q=80" alt="Sarah Jenkins" class="testimonial-avatar">
+              <div>
+                <div class="testimonial-name">Sarah Jenkins</div>
+                <div class="testimonial-vehicle">2022 Tiffin Allegro Red</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              “The Owner Portal is a game changer! I can look up my generator service invoices and battery specs while parked at a national park without carrying paper files.”
+            </p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80" alt="Marcus Thorne" class="testimonial-avatar">
+              <div>
+                <div class="testimonial-name">Marcus Thorne</div>
+                <div class="testimonial-vehicle">2024 Winnebago Adventurer 35F</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              “As a solo female vanlifer, finding an honest repair shop is hard. Carlos and Tyler explained my 400Ah lithium battery setup thoroughly with zero condescension.”
+            </p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80" alt="Elena Rostova" class="testimonial-avatar">
+              <div>
+                <div class="testimonial-name">Elena Rostova</div>
+                <div class="testimonial-vehicle">Mercedes Sprinter 4x4 Camper</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 4 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              “We’ve put 60,000 miles on our Fifth Wheel. RoadNest has handled our annual roof seals, brake drums, and suspension repacks for 5 straight years. Flawless workmanship.”
+            </p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80" alt="David Miller" class="testimonial-avatar">
+              <div>
+                <div class="testimonial-name">David & Carol Miller</div>
+                <div class="testimonial-vehicle">Grand Design Reflection 312BHTS</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Preview Section (3 Dedicated RV Maintenance Articles) -->
+  <section class="py-5 bg-light-subtle">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-end mb-5">
+        <div>
+          <span class="section-subtitle">Expert Advice</span>
+          <h2 class="section-title mb-0">Latest RV Care & Travel Guides</h2>
+        </div>
+        <a href="blog.html" class="btn btn-outline-navy d-none d-sm-inline-flex">
+          View All Articles <i class="fas fa-arrow-right ms-1"></i>
+        </a>
+      </div>
+
+      <div class="row g-4">
+        <!-- Article 1 -->
+        <div class="col-md-4">
+          <div class="card-rn">
+            <div class="card-rn-img-wrap">
+              <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&auto=format&fit=crop&q=80" alt="RV Pre-Trip Maintenance Essentials" class="card-rn-img">
+              <span class="card-badge-top">Road Trips</span>
+            </div>
+            <div class="card-rn-body">
+              <div class="small text-muted mb-2"><i class="fas fa-calendar-alt me-1"></i> Oct 12, 2026 • 6 min read</div>
+              <h4 class="card-rn-title"><a href="blog-details/essential-rv-pre-trip-maintenance.html">Essential RV Maintenance Before a Long Distance Trip</a></h4>
+              <p class="card-rn-text">The critical checklist every motorhome driver must review before embarking on cross-country road journeys.</p>
+              <a href="blog-details/essential-rv-pre-trip-maintenance.html" class="fw-bold mt-auto text-decoration-none">
+                Read Full Article <i class="fas fa-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Article 2 -->
+        <div class="col-md-4">
+          <div class="card-rn">
+            <div class="card-rn-img-wrap">
+              <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=600&auto=format&fit=crop&q=80" alt="RV Winterization Step-by-Step" class="card-rn-img">
+              <span class="card-badge-top">Winterization</span>
+            </div>
+            <div class="card-rn-body">
+              <div class="small text-muted mb-2"><i class="fas fa-calendar-alt me-1"></i> Sep 28, 2026 • 8 min read</div>
+              <h4 class="card-rn-title"><a href="blog-details/complete-rv-winterization-guide.html">Complete Step-by-Step RV Winterization Checklist</a></h4>
+              <p class="card-rn-text">How to prevent cracked pipes, damaged tanks, and ruined batteries when storing your RV in sub-zero climates.</p>
+              <a href="blog-details/complete-rv-winterization-guide.html" class="fw-bold mt-auto text-decoration-none">
+                Read Full Article <i class="fas fa-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Article 3 -->
+        <div class="col-md-4">
+          <div class="card-rn">
+            <div class="card-rn-img-wrap">
+              <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?w=600&auto=format&fit=crop&q=80" alt="RV Battery Care and Solar Diagnostics" class="card-rn-img">
+              <span class="card-badge-top">Electrical</span>
+            </div>
+            <div class="card-rn-body">
+              <div class="small text-muted mb-2"><i class="fas fa-calendar-alt me-1"></i> Sep 14, 2026 • 5 min read</div>
+              <h4 class="card-rn-title"><a href="blog-details/signs-your-rv-battery-needs-attention.html">5 Warning Signs Your RV Battery Bank Is Failing</a></h4>
+              <p class="card-rn-text">Recognize voltage sag, sulfation, and alternator charging problems before you lose power at a remote boondocking spot.</p>
+              <a href="blog-details/signs-your-rv-battery-needs-attention.html" class="fw-bold mt-auto text-decoration-none">
+                Read Full Article <i class="fas fa-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final Call to Action -->
+  <section class="py-5 text-white" style="background: linear-gradient(135deg, #071321 0%, #0d2847 100%);">
+    <div class="container py-4 text-center">
+      <span class="badge bg-warning text-dark px-3 py-2 fw-bold text-uppercase mb-3">Hit The Road With Confidence</span>
+      <h2 class="display-5 fw-bold text-white mb-3">Your Next Adventure Starts With a Road-Ready RV.</h2>
+      <p class="lead text-light mb-4 mx-auto" style="max-width: 650px;">
+        Don't risk mid-journey breakdowns. Schedule your preventive maintenance, roof audit, or seasonal winterization with Denver's leading RV specialists today.
+      </p>
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="dashboard/book-service.html" class="btn btn-accent btn-lg">
+          <i class="fas fa-calendar-check"></i> Book RV Appointment
+        </a>
+        <a href="contact.html" class="btn btn-outline-white btn-lg">
+          <i class="fas fa-phone-alt"></i> Contact Workshop Team
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Master Multi-Column Footer -->
+  <footer class="rn-footer">
+    <div class="container">
+      <div class="row g-5">
+        <!-- Col 1: RoadNest Info -->
+        <div class="col-lg-4">
+          <a class="navbar-brand text-white mb-3 d-inline-flex" href="index.html">
+            <div class="brand-icon">
+              <i class="fas fa-caravan"></i>
+            </div>
+            <div>
+              <span class="fw-bold text-white">RoadNest</span>
+              <span class="brand-text-sub">RV & Motorhome Care</span>
+            </div>
+          </a>
+          <p class="small text-muted mb-4">
+            Specialized recreational vehicle maintenance, roof repairs, electrical diagnostics, winterization, and certified pre-trip inspections for worry-free travel.
+          </p>
+          <div class="d-flex gap-2 mb-4">
+            <a href="https://facebook.com" class="rn-social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com" class="rn-social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com" class="rn-social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://linkedin.com" class="rn-social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <div class="p-3 rounded-3" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);">
+            <div class="small fw-bold text-warning mb-1"><i class="fas fa-truck-pickup me-1"></i> Roadside Emergency Line</div>
+            <div class="fs-5 fw-bold text-white">(800) 555-ROAD</div>
+          </div>
+        </div>
+
+        <!-- Col 2: Services -->
+        <div class="col-sm-6 col-lg-2">
+          <h5>Specialized Services</h5>
+          <ul class="rn-footer-links">
+            <li><a href="service-details/preventive-maintenance.html">Preventive Maintenance</a></li>
+            <li><a href="service-details/winterization.html">RV Winterization</a></li>
+            <li><a href="service-details/electrical.html">Electrical & Solar</a></li>
+            <li><a href="service-details/plumbing.html">Plumbing Systems</a></li>
+            <li><a href="service-details/roof-repair.html">Roof Resealing</a></li>
+            <li><a href="service-details/generator.html">Generator Service</a></li>
+            <li><a href="service-details/pre-trip-inspection.html">Pre-Trip Inspections</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Company -->
+        <div class="col-sm-6 col-lg-2">
+          <h5>Company & Care</h5>
+          <ul class="rn-footer-links">
+            <li><a href="about.html">About RoadNest</a></li>
+            <li><a href="services.html">All Services Directory</a></li>
+            <li><a href="pricing.html">Inspection Pricing</a></li>
+            <li><a href="blog.html">Maintenance Blog</a></li>
+            <li><a href="contact.html">Contact Workshop</a></li>
+            <li><a href="coming-soon.html">Mobile Van Dispatch</a></li>
+            <li><a href="404.html">404 Error Screen</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Owner Portal -->
+        <div class="col-sm-6 col-lg-2">
+          <h5>Owner Support</h5>
+          <ul class="rn-footer-links">
+            <li><a href="login.html">Owner Portal Login</a></li>
+            <li><a href="register.html">Register Your RV</a></li>
+            <li><a href="dashboard/index.html">Owner Dashboard</a></li>
+            <li><a href="dashboard/book-service.html">Book Appointment</a></li>
+            <li><a href="dashboard/maintenance.html">Service Records</a></li>
+            <li><a href="dashboard/warranty.html">Warranty Claims</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Operating Hours & Newsletter -->
+        <div class="col-sm-6 col-lg-2">
+          <h5>Workshop Hours</h5>
+          <ul class="list-unstyled small text-muted mb-4">
+            <li class="mb-1"><strong class="text-white">Mon - Fri:</strong> 7:30 AM - 6:00 PM</li>
+            <li class="mb-1"><strong class="text-white">Saturday:</strong> 8:00 AM - 4:00 PM</li>
+            <li class="mb-1"><strong class="text-white">Sunday:</strong> Emergency Dispatch</li>
+          </ul>
+
+          <h5 class="fs-6">Traveler Newsletter</h5>
+          <form action="https://formsubmit.co/newsletter@roadnestrvcare.com" method="POST" class="mt-2">
+            <input type="hidden" name="_subject" value="Newsletter Subscription">
+            <input type="hidden" name="_captcha" value="false">
+            <div class="input-group">
+              <input type="email" class="form-control form-control-sm" name="email" required placeholder="Your email">
+              <button class="btn btn-sm btn-accent" type="submit"><i class="fas fa-paper-plane"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div>
+          &copy; 2026 RoadNest RV & Motorhome Care. All rights reserved. Built for RV Explorers.
+        </div>
+        <div class="d-flex gap-3 small">
+          <a href="#" class="text-muted text-decoration-none">Privacy Policy</a>
+          <span class="text-muted">•</span>
+          <a href="#" class="text-muted text-decoration-none">Terms of Service</a>
+          <span class="text-muted">•</span>
+          <a href="#" class="text-muted text-decoration-none">Warranty Disclosure</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top button -->
+  <button type="button" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Bootstrap 5.3.3 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Main Script -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

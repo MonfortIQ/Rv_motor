@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Directory | RoadNest Admin Console</title>
+  <meta name="description" content="RoadNest Workshop Admin Console for commercial RV repair operations.">
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <!-- Font Awesome 6.5.2 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+</head>
+<body>
+
+  <div class="dashboard-wrapper">
+    <!-- Admin Sidebar -->
+    <aside class="dashboard-sidebar">
+      <div class="sidebar-header">
+        <a class="navbar-brand text-decoration-none" href="../index.html">
+          <div class="brand-icon" style="background: linear-gradient(135deg, #0d233a 0%, #1a56db 100%);"><i class="fas fa-shield-alt"></i></div>
+          <div>
+            <span class="fw-bold fs-5">RoadNest</span>
+            <span class="brand-text-sub text-primary" style="color: #1a56db !important;">Admin Console</span>
+          </div>
+        </a>
+      </div>
+
+      <ul class="sidebar-menu">
+        <li class="sidebar-item"><a href="index.html" class="sidebar-link "><i class="fas fa-chart-line"></i> Dashboard</a></li>
+        <li class="sidebar-item"><a href="appointments.html" class="sidebar-link "><i class="fas fa-calendar-check"></i> Appointments <span class="badge-counter">18</span></a></li>
+        <li class="sidebar-item"><a href="customers.html" class="sidebar-link active"><i class="fas fa-users"></i> Customers</a></li>
+        <li class="sidebar-item"><a href="vehicles.html" class="sidebar-link "><i class="fas fa-caravan"></i> RV Fleet</a></li>
+        <li class="sidebar-item"><a href="services.html" class="sidebar-link "><i class="fas fa-tools"></i> Services & Rates</a></li>
+        <li class="sidebar-item"><a href="technicians.html" class="sidebar-link "><i class="fas fa-user-cog"></i> Technicians</a></li>
+        <li class="sidebar-item"><a href="maintenance.html" class="sidebar-link "><i class="fas fa-clipboard-list"></i> Work Orders</a></li>
+        <li class="sidebar-item"><a href="warranties.html" class="sidebar-link "><i class="fas fa-file-contract"></i> Warranty Claims</a></li>
+        <li class="sidebar-item"><a href="invoices.html" class="sidebar-link "><i class="fas fa-file-invoice-dollar"></i> Billing & Invoices</a></li>
+        <li class="sidebar-item"><a href="messages.html" class="sidebar-link "><i class="fas fa-envelope"></i> Inquiries <span class="badge-counter">4</span></a></li>
+        <li class="sidebar-item"><a href="settings.html" class="sidebar-link "><i class="fas fa-cogs"></i> Shop Settings</a></li>
+      </ul>
+
+      <div class="sidebar-footer">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="d-flex align-items-center gap-2">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&auto=format&fit=crop&q=80" alt="Sarah Miller" class="rounded-circle" style="width: 36px; height: 36px; object-fit: cover;">
+            <div>
+              <div class="fw-bold small">Sarah Miller</div>
+              <small class="text-muted" style="font-size: 0.75rem;">Service Director</small>
+            </div>
+          </div>
+          <a href="../login.html" class="text-danger small" title="Sign Out"><i class="fas fa-sign-out-alt fs-5"></i></a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="dashboard-main">
+      <header class="dashboard-topbar">
+        <div class="d-flex align-items-center gap-3">
+          <button class="btn btn-outline-navy btn-sm d-lg-none" id="sidebarToggleBtn" aria-label="Toggle sidebar menu">
+            <i class="fas fa-bars"></i>
+          </button>
+          <h4 class="mb-0 fw-bold">Customer Directory</h4>
+        </div>
+
+        <div class="d-flex align-items-center gap-2">
+          <button class="rtl-pill rtl-toggle-btn"><span class="rtl-label">RTL</span></button>
+          <button class="utility-btn theme-toggle-btn"><i class="fas fa-moon"></i></button>
+          <a href="../index.html" class="btn btn-outline-navy btn-sm" title="Website Home">
+            <i class="fas fa-globe me-1"></i> Live Site
+          </a>
+        </div>
+      </header>
+
+      <div class="dashboard-content">
+        
+        <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 gap-3">
+          <div>
+            <h2 class="fw-bold mb-1">RV Owner & Fleet Directory</h2>
+            <p class="text-muted mb-0">Total of 4,520 registered RV owners across retail and commercial fleet accounts.</p>
+          </div>
+          <button class="btn btn-accent" onclick="alert('Opening customer onboarding modal...');">
+            <i class="fas fa-user-plus me-1"></i> Add New Customer
+          </button>
+        </div>
+
+        <div class="card border rounded-4 bg-white shadow-sm overflow-hidden mb-4">
+          <div class="table-responsive">
+            <table class="table-rn">
+              <thead>
+                <tr>
+                  <th>Customer Name</th>
+                  <th>Contact Info</th>
+                  <th>Primary Registered RV</th>
+                  <th>Total Visits</th>
+                  <th>Lifetime Spend</th>
+                  <th>Club ID</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="fw-bold">John Davis</td>
+                  <td>
+                    <div>john.davis@email.com</div>
+                    <small class="text-muted">(303) 555-0144</small>
+                  </td>
+                  <td>2024 Winnebago Adventurer 35F</td>
+                  <td>4 Visits</td>
+                  <td class="fw-bold text-success">$1,033.00</td>
+                  <td><span class="badge bg-light text-dark border">Good Sam</span></td>
+                  <td><button class="btn btn-sm btn-outline-navy" onclick="alert('Loading customer telematics profile...');">Profile</button></td>
+                </tr>
+                <tr>
+                  <td class="fw-bold">Sarah Jenkins</td>
+                  <td>
+                    <div>sarah.j@allegro.org</div>
+                    <small class="text-muted">(720) 555-9012</small>
+                  </td>
+                  <td>2022 Tiffin Allegro Red 37BA</td>
+                  <td>6 Visits</td>
+                  <td class="fw-bold text-success">$3,420.00</td>
+                  <td><span class="badge bg-light text-dark border">FMCA Platinum</span></td>
+                  <td><button class="btn btn-sm btn-outline-navy">Profile</button></td>
+                </tr>
+                <tr>
+                  <td class="fw-bold">Robert Lang</td>
+                  <td>
+                    <div>robert@overlandnomad.com</div>
+                    <small class="text-muted">(970) 555-4421</small>
+                  </td>
+                  <td>EarthRoamer LTi Overland</td>
+                  <td>2 Visits</td>
+                  <td class="fw-bold text-success">$1,850.00</td>
+                  <td><span class="badge bg-light text-dark border">Overland Club</span></td>
+                  <td><button class="btn btn-sm btn-outline-navy">Profile</button></td>
+                </tr>
+                <tr>
+                  <td class="fw-bold">Elena Rostova</td>
+                  <td>
+                    <div>elena.vanlife@gmail.com</div>
+                    <small class="text-muted">(303) 555-8812</small>
+                  </td>
+                  <td>Mercedes Sprinter 4x4 Camper</td>
+                  <td>3 Visits</td>
+                  <td class="fw-bold text-success">$2,190.00</td>
+                  <td><span class="badge bg-light text-dark border">Sprinter Alliance</span></td>
+                  <td><button class="btn btn-sm btn-outline-navy">Profile</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

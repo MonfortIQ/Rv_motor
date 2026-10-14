@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Owner Portal Login | RoadNest RV & Motorhome Care</title>
+  <meta name="description" content="Log in to your RoadNest Owner Portal to view maintenance history, track ongoing bay service, review inspection reports, and check warranty claims.">
+  <link rel="canonical" href="login.html">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-light-subtle d-flex flex-column min-vh-100">
+
+  <!-- Minimal Header -->
+  <header class="py-3 px-4 border-bottom bg-white d-flex justify-content-between align-items-center">
+    <a class="navbar-brand" href="index.html">
+      <div class="brand-icon" style="width: 38px; height: 38px; font-size: 1.15rem;"><i class="fas fa-caravan"></i></div>
+      <div>
+        <span class="fw-bold fs-5">RoadNest</span>
+        <span class="brand-text-sub">Owner Portal</span>
+      </div>
+    </a>
+    <div class="d-flex align-items-center gap-2">
+      <button class="rtl-pill rtl-toggle-btn"><span class="rtl-label">RTL</span></button>
+      <button class="utility-btn theme-toggle-btn"><i class="fas fa-moon"></i></button>
+      <a href="index.html" class="btn btn-outline-navy btn-sm"><i class="fas fa-home me-1"></i> Back to Website</a>
+    </div>
+  </header>
+
+  <!-- Login Form Container -->
+  <main class="flex-grow-1 d-flex align-items-center justify-content-center py-5">
+    <div class="container" style="max-width: 460px;">
+      <div class="card p-4 p-sm-5 border rounded-4 shadow-sm bg-white">
+        <div class="text-center mb-4">
+          <div class="brand-icon mx-auto mb-3" style="width: 52px; height: 52px; font-size: 1.5rem;"><i class="fas fa-user-lock"></i></div>
+          <h2 class="fw-bold mb-1">Owner Portal Login</h2>
+          <p class="small text-muted mb-0">Access your digital maintenance records, upcoming appointments, and warranty coverage.</p>
+        </div>
+
+        <div class="alert alert-warning small d-flex gap-2 align-items-start mb-4" role="note">
+          <i class="fas fa-flask mt-1"></i>
+          <span><strong>Prototype portal:</strong> use any valid email and password to preview the owner dashboard. Live authentication can be connected when a backend is available.</span>
+        </div>
+
+        <form id="loginForm" action="dashboard/index.html" method="GET">
+          <div class="mb-3">
+            <label class="form-label" for="loginEmail">Email Address</label>
+            <div class="input-group">
+              <span class="input-group-text bg-light border-end-0"><i class="fas fa-envelope text-muted"></i></span>
+              <input type="email" class="form-control border-start-0" id="loginEmail" required value="owner@roadnest.com" placeholder="name@email.com">
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <div class="d-flex justify-content-between">
+              <label class="form-label" for="loginPass">Password</label>
+              <a href="#" class="small text-muted" onclick="alert('Password reset link has been dispatched to owner@roadnest.com'); return false;">Forgot Password?</a>
+            </div>
+            <div class="input-group">
+              <span class="input-group-text bg-light border-end-0"><i class="fas fa-lock text-muted"></i></span>
+              <input type="password" class="form-control border-start-0" id="loginPass" required value="winnebago2026" placeholder="Enter password">
+            </div>
+          </div>
+
+          <div class="form-check mb-4">
+            <input class="form-check-input" type="checkbox" id="rememberMe" checked>
+            <label class="form-check-label small" for="rememberMe">Remember my vehicle on this device</label>
+          </div>
+
+          <button type="submit" class="btn btn-accent w-100 btn-lg mb-3">
+            <i class="fas fa-sign-in-alt"></i> Login to Dashboard
+          </button>
+        </form>
+
+        <div class="text-center pt-3 border-top small">
+          <span class="text-muted">First-time RV owner with RoadNest?</span><br>
+          <a href="register.html" class="fw-bold text-decoration-none">Create Portal Account & Register RV &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Minimal Footer -->
+  <footer class="py-3 text-center text-muted small border-top bg-white">
+    &copy; 2026 RoadNest RV & Motorhome Care. Secure Owner Portal.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      sessionStorage.setItem('roadnest_demo_session', 'active');
+      window.location.href = 'dashboard/index.html';
+    });
+  </script>
+</body>
+</html>

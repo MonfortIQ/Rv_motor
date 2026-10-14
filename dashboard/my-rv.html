@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My RV Specifications & Telematics | RoadNest Owner Portal</title>
+  <meta name="description" content="Detailed vehicle technical specifications, chassis limits, tank capacities, and maintenance telematics for your Winnebago Adventurer.">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+</head>
+<body>
+
+  <div class="dashboard-wrapper">
+    <!-- Sidebar -->
+    <aside class="dashboard-sidebar">
+      <div class="sidebar-header">
+        <a class="navbar-brand text-decoration-none" href="../index.html">
+          <div class="brand-icon" style="width: 36px; height: 36px; font-size: 1.1rem;"><i class="fas fa-caravan"></i></div>
+          <div>
+            <span class="fw-bold fs-5">RoadNest</span>
+            <span class="brand-text-sub">Owner Portal</span>
+          </div>
+        </a>
+      </div>
+
+      <ul class="sidebar-menu">
+        <li class="sidebar-item"><a href="index.html" class="sidebar-link"><i class="fas fa-tachometer-alt"></i> Overview</a></li>
+        <li class="sidebar-item"><a href="book-service.html" class="sidebar-link"><i class="fas fa-calendar-plus"></i> Book Service</a></li>
+        <li class="sidebar-item"><a href="appointments.html" class="sidebar-link"><i class="fas fa-calendar-check"></i> Appointments <span class="badge-counter">1</span></a></li>
+        <li class="sidebar-item"><a href="my-rv.html" class="sidebar-link active"><i class="fas fa-shuttle-van"></i> My RV Specs</a></li>
+        <li class="sidebar-item"><a href="maintenance.html" class="sidebar-link"><i class="fas fa-history"></i> Maintenance History</a></li>
+        <li class="sidebar-item"><a href="warranty.html" class="sidebar-link"><i class="fas fa-shield-alt"></i> Warranty Status</a></li>
+        <li class="sidebar-item"><a href="invoices.html" class="sidebar-link"><i class="fas fa-file-invoice-dollar"></i> Invoices</a></li>
+        <li class="sidebar-item"><a href="notifications.html" class="sidebar-link"><i class="fas fa-bell"></i> Notifications</a></li>
+        <li class="sidebar-item"><a href="profile.html" class="sidebar-link"><i class="fas fa-user-cog"></i> Profile</a></li>
+        <li class="sidebar-item"><a href="settings.html" class="sidebar-link"><i class="fas fa-sliders-h"></i> Settings</a></li>
+      </ul>
+
+      <div class="sidebar-footer">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="d-flex align-items-center gap-2">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&auto=format&fit=crop&q=80" alt="John Davis" class="rounded-circle" style="width: 36px; height: 36px; object-fit: cover;">
+            <div>
+              <div class="fw-bold small">John Davis</div>
+              <small class="text-muted" style="font-size: 0.75rem;">Adventurer 35F</small>
+            </div>
+          </div>
+          <a href="../login.html" class="text-danger small" title="Logout"><i class="fas fa-sign-out-alt fs-5"></i></a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="dashboard-main">
+      <header class="dashboard-topbar">
+        <div class="d-flex align-items-center gap-3">
+          <button class="btn btn-outline-navy btn-sm d-lg-none" id="sidebarToggleBtn" aria-label="Toggle sidebar menu">
+            <i class="fas fa-bars"></i>
+          </button>
+          <h4 class="mb-0 fw-bold">Vehicle Profile & Engineering Specs</h4>
+        </div>
+
+        <div class="d-flex align-items-center gap-2">
+          <button class="rtl-pill rtl-toggle-btn"><span class="rtl-label">RTL</span></button>
+          <button class="utility-btn theme-toggle-btn"><i class="fas fa-moon"></i></button>
+          <a href="book-service.html" class="btn btn-accent btn-sm">
+            <i class="fas fa-wrench"></i> Schedule Bay Slot
+          </a>
+        </div>
+      </header>
+
+      <div class="dashboard-content">
+        <!-- Hero Rig Banner -->
+        <div class="card border rounded-4 bg-white shadow-sm overflow-hidden mb-4">
+          <div class="row g-0 align-items-center">
+            <div class="col-lg-5">
+              <img src="https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?w=900&auto=format&fit=crop&q=80" alt="2024 Winnebago Adventurer 35F" class="w-100 h-100 object-fit-cover" style="min-height: 280px; max-height: 340px;">
+            </div>
+            <div class="col-lg-7 p-4 p-md-5">
+              <span class="badge bg-primary text-white mb-2">Class A Gas Motorhome</span>
+              <h2 class="display-6 fw-bold mb-1">2024 Winnebago Adventurer 35F</h2>
+              <p class="text-muted small mb-4">
+                Chassis: Ford F-53 7.3L V8 (350 HP / 468 lb-ft) • VIN: <code>1F66F5DN8P0A19842</code>
+              </p>
+
+              <div class="row g-3">
+                <div class="col-sm-4">
+                  <div class="p-3 bg-light-subtle rounded-3 border">
+                    <small class="text-muted fw-bold text-uppercase">Odometer</small>
+                    <div class="fs-4 fw-bold text-primary">18,450 mi</div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="p-3 bg-light-subtle rounded-3 border">
+                    <small class="text-muted fw-bold text-uppercase">Generator</small>
+                    <div class="fs-4 fw-bold text-primary">142.4 hrs</div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="p-3 bg-light-subtle rounded-3 border">
+                    <small class="text-muted fw-bold text-uppercase">Health Score</small>
+                    <div class="fs-4 fw-bold text-success">94% Optimal</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Technical Specification Grids -->
+        <div class="row g-4 mb-4">
+          <!-- Fluid & Tank Capacities -->
+          <div class="col-lg-6">
+            <div class="card p-4 border rounded-4 bg-white shadow-sm h-100">
+              <h5 class="fw-bold mb-3"><i class="fas fa-water text-primary me-2"></i>Tank & Fluid Capacities</h5>
+              <div class="d-flex justify-content-between py-2 border-bottom">
+                <span class="text-muted">Fresh Water Holding Tank:</span>
+                <strong>93 Gallons</strong>
+              </div>
+              <div class="d-flex justify-content-between py-2 border-bottom">
+                <span class="text-muted">Black Water Waste Tank:</span>
+                <strong>41 Gallons</strong>
+              </div>
+              <div class="d-flex justify-content-between py-2 border-bottom">
+                <span class="text-muted">Grey Water Waste Tank:</span>
+                <strong>61 Gallons</strong>
+              </div>
+              <div class="d-flex justify-content-between py-2 border-bottom">
+                <span class="text-muted">Fuel Capacity (Unleaded Gas):</span>
+                <strong>80 Gallons</strong>
+              </div>
+              <div class="d-flex justify-content-between py-2 border-bottom">
+                <span class="text-muted">Propane (LP Gas Tank):</span>
+                <strong>18 Gallons (76 lbs)</strong>
+              </div>
+              <div class="d-flex justify-content-between py-2">
+                <span class="text-muted">Water Heater Capacity:</span>
+                <strong>10 Gallon Gas/Electric Quick Recovery</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Electrical, Solar & Power Specs -->
+          <div class="col-lg-6">
+            <div class="card p-4 border rounded-4 bg-white shadow-sm h-100">
+              <h5 class="fw-bold mb-3"><i class="fas fa-bolt text-warning me-2"></i>Electrical, Battery & Solar Rig</h5>
+              <div class="d-flex justify-content-between py-2 border-bottom">
+                <span class="text-muted">Onboard Generator:</span>
+                <strong>Cummins Onan QG 5,500W Gas</strong>
+              </div>
+              <div class="d-flex justify-content-between py-2 border-bottom">
+                <span class="text-muted">Pure Sine Wave Inverter:</span>
+                <strong>2,000 Watt Inverter/Charger</strong>
+              </div>
+              <div class="d-flex justify-content-between py-2 border-bottom">
+                <span class="text-muted">House Battery Chemistry:</span>
+                <strong>Dual Battle Born 100Ah LiFePO4 (200Ah Total)</strong>
+              </div>
+              <div class="d-flex justify-content-between py-2 border-bottom">
+                <span class="text-muted">Rooftop Solar Array:</span>
+                <strong>400W Monocrystalline + Victron MPPT 100/30</strong>
+              </div>
+              <div class="d-flex justify-content-between py-2 border-bottom">
+                <span class="text-muted">Shore Power Service:</span>
+                <strong>50 Amp with Automatic Transfer Switch</strong>
+              </div>
+              <div class="d-flex justify-content-between py-2">
+                <span class="text-muted">Climate Cooling & Heating:</span>
+                <strong>Dual 15k BTU ACs + 35k BTU Furnace</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Exterior Dimensions & Towing Weight Limits -->
+        <div class="card p-4 border rounded-4 bg-white shadow-sm mb-4">
+          <h5 class="fw-bold mb-3"><i class="fas fa-truck-monster text-warning me-2"></i>Chassis Dimensions & Towing Capacities</h5>
+          <div class="row g-4 text-center">
+            <div class="col-6 col-md-3">
+              <div class="p-3 bg-light-subtle rounded-3 border">
+                <div class="fs-4 fw-bold">35' 5"</div>
+                <small class="text-muted">Exterior Length</small>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="p-3 bg-light-subtle rounded-3 border">
+                <div class="fs-4 fw-bold">12' 5"</div>
+                <small class="text-muted">Exterior Height (with AC)</small>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="p-3 bg-light-subtle rounded-3 border">
+                <div class="fs-4 fw-bold">22,000 lbs</div>
+                <small class="text-muted">Gross Vehicle Weight (GVWR)</small>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="p-3 bg-light-subtle rounded-3 border">
+                <div class="fs-4 fw-bold">5,000 lbs</div>
+                <small class="text-muted">Hitch Tow Rating</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

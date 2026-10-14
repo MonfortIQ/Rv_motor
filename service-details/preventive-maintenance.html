@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preventive RV Maintenance & Chassis Service | RoadNest</title>
+  <meta name="description" content="Comprehensive preventive maintenance for motorhomes and RVs: fluid flushes, drivetrain lubrication, brake systems, filter replacements, and scheduled mileage service.">
+  <link rel="canonical" href="preventive-maintenance.html">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <!-- Topbar -->
+  <div class="rn-topbar d-none d-md-block">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-4">
+        <span><i class="fas fa-map-marker-alt text-warning me-2"></i>742 Horizon Valley Pkwy, Denver, CO 80216</span>
+        <span><i class="fas fa-clock text-warning me-2"></i>Mon - Sat: 7:30 AM - 6:00 PM</span>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <span><i class="fas fa-phone-alt text-warning me-1"></i> Emergency: <strong>(800) 555-ROAD</strong></span>
+        <a href="../login.html" class="ms-2"><i class="fas fa-user-circle me-1"></i> Owner Portal</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="rn-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg py-2">
+        <a class="navbar-brand" href="../index.html">
+          <div class="brand-icon"><i class="fas fa-caravan"></i></div>
+          <div>
+            <span class="fw-bold tracking-tight">RoadNest</span>
+            <span class="brand-text-sub">RV & Motorhome Care</span>
+          </div>
+        </a>
+
+        <div class="collapse navbar-collapse d-none d-lg-block">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Home</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="../index.html"><i class="fas fa-warehouse"></i> Home 1 - Service Center</a></li>
+                <li><a class="dropdown-item" href="../home-2.html"><i class="fas fa-mountain"></i> Home 2 - Road Trip Care</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="../about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link active" href="../services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="../pricing.html">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link" href="../blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="d-flex align-items-center gap-2">
+          <button class="rtl-pill rtl-toggle-btn"><span class="rtl-label">RTL</span></button>
+          <button class="utility-btn theme-toggle-btn"><i class="fas fa-moon"></i></button>
+          <a href="../dashboard/book-service.html" class="btn btn-accent d-none d-sm-inline-flex"><i class="fas fa-calendar-check"></i> Book Service</a>
+          <button class="navbar-toggler d-lg-none utility-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuOffcanvas">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Offcanvas Menu -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenuOffcanvas">
+    <div class="offcanvas-header">
+      <div class="d-flex align-items-center gap-2">
+        <div class="brand-icon" style="width: 36px; height: 36px; font-size: 1.1rem;"><i class="fas fa-caravan"></i></div>
+        <span class="fw-bold fs-5">RoadNest Care</span>
+      </div>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <nav class="d-flex flex-column mb-4">
+        <a class="mobile-nav-link" href="../index.html"><i class="fas fa-warehouse me-2 text-warning"></i> Home 1 - Service Center</a>
+        <a class="mobile-nav-link" href="../home-2.html"><i class="fas fa-compass me-2 text-warning"></i> Home 2 - Road Trip Care</a>
+        <a class="mobile-nav-link" href="../about.html"><i class="fas fa-info-circle me-2 text-warning"></i> About Us</a>
+        <a class="mobile-nav-link text-warning fw-bold" href="../services.html"><i class="fas fa-tools me-2 text-warning"></i> Services Directory</a>
+        <a class="mobile-nav-link" href="../pricing.html"><i class="fas fa-tags me-2 text-warning"></i> Inspection Pricing</a>
+        <a class="mobile-nav-link" href="../blog.html"><i class="fas fa-newspaper me-2 text-warning"></i> Maintenance Blog</a>
+        <a class="mobile-nav-link" href="../contact.html"><i class="fas fa-envelope me-2 text-warning"></i> Contact Workshop</a>
+        <a class="mobile-nav-link" href="../login.html"><i class="fas fa-user-circle me-2 text-warning"></i> Owner Login</a>
+      </nav>
+      <a href="../dashboard/book-service.html" class="btn btn-accent w-100"><i class="fas fa-calendar-check"></i> Book Appointment</a>
+    </div>
+  </div>
+
+  <!-- Breadcrumbs & Hero -->
+  <section class="py-5 bg-light-subtle border-bottom">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-2">
+          <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="../services.html">Services</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Preventive Maintenance</li>
+        </ol>
+      </nav>
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <span class="badge bg-warning text-dark px-3 py-2 fw-bold text-uppercase mb-3">Chassis & Powertrain</span>
+          <h1 class="display-4 fw-bold mb-3">Preventive RV Maintenance</h1>
+          <p class="lead text-muted">
+            Engineered for heavy-duty motorhome chassis and long-distance travel. Protect your engine, transmission, brakes, and suspension from extreme highway wear.
+          </p>
+        </div>
+        <div class="col-lg-5 text-lg-end">
+          <a href="../dashboard/book-service.html" class="btn btn-accent btn-lg">
+            <i class="fas fa-calendar-check"></i> Book Preventive Service
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Details Body -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-5">
+        <!-- Main Content -->
+        <div class="col-lg-8">
+          <img src="https://images.unsplash.com/photo-1486006920555-c77dce18193b?w=1000&auto=format&fit=crop&q=80" alt="Preventive RV Chassis & Engine Maintenance" class="rounded-4 shadow-sm w-100 mb-5" style="max-height: 440px; object-fit: cover;">
+
+          <h2 class="fw-bold mb-3">Why Preventive Maintenance Matters for Motorhomes</h2>
+          <p class="text-muted">
+            Unlike passenger cars that weigh 3,500 lbs, a Class A diesel pusher or Class C motorhome weighs between 12,000 and 45,000 lbs. That immense load exerts relentless stress on transmissions, cooling systems, brake linings, and suspension joints—especially when climbing Rocky Mountain passes or braking down steep declines.
+          </p>
+          <p class="text-muted">
+            Our certified technicians follow chassis-specific service intervals for Freightliner, Spartan, Ford F-53, Mercedes-Benz Sprinter, and Chevy Workhorse chassis.
+          </p>
+
+          <h3 class="fw-bold mt-5 mb-3">Warning Signs Your RV Needs Chassis Attention</h3>
+          <div class="row g-3 mb-4">
+            <div class="col-md-6">
+              <div class="p-3 bg-light-subtle rounded-3 border h-100">
+                <h6 class="fw-bold text-danger"><i class="fas fa-exclamation-triangle me-2"></i>Spongy or Pulling Brakes</h6>
+                <p class="small text-muted mb-0">Indicates worn brake drums, air brake pressure drop, or overheating hydraulic calipers.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="p-3 bg-light-subtle rounded-3 border h-100">
+                <h6 class="fw-bold text-danger"><i class="fas fa-exclamation-triangle me-2"></i>Elevated Transmission Temps</h6>
+                <p class="small text-muted mb-0">Fluid thermal breakdown that can lead to catastrophic transmission slip on highway grades.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="p-3 bg-light-subtle rounded-3 border h-100">
+                <h6 class="fw-bold text-danger"><i class="fas fa-exclamation-triangle me-2"></i>Steering Play or Wandering</h6>
+                <p class="small text-muted mb-0">Dry tie-rod ends, worn kingpins, or loose steering stabilizer shocks causing fatigue.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="p-3 bg-light-subtle rounded-3 border h-100">
+                <h6 class="fw-bold text-danger"><i class="fas fa-exclamation-triangle me-2"></i>Exhaust Smoke or Hesitation</h6>
+                <p class="small text-muted mb-0">Clogged fuel water separators, dirty diesel particulate filters (DPF), or fouled injectors.</p>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="fw-bold mt-5 mb-3">What's Included in RoadNest Preventive Care</h3>
+          <ul class="list-group list-group-flush mb-5">
+            <li class="list-group-item bg-transparent px-0 py-3 d-flex align-items-center gap-3">
+              <i class="fas fa-check-circle text-success fs-5"></i>
+              <div>
+                <strong>Engine Oil & Heavy Duty Filter Flush:</strong> Full synthetic diesel/gas formulation matched to manufacturer viscosity specifications.
+              </div>
+            </li>
+            <li class="list-group-item bg-transparent px-0 py-3 d-flex align-items-center gap-3">
+              <i class="fas fa-check-circle text-success fs-5"></i>
+              <div>
+                <strong>Chassis Grease & Zerk Fitting Lube:</strong> Complete lubrication of all front suspension kingpins, drag links, and universal joints.
+              </div>
+            </li>
+            <li class="list-group-item bg-transparent px-0 py-3 d-flex align-items-center gap-3">
+              <i class="fas fa-check-circle text-success fs-5"></i>
+              <div>
+                <strong>Transmission & Coolant Analysis:</strong> Refractometer testing of coolant freeze point and digital fluid clarity evaluation.
+              </div>
+            </li>
+            <li class="list-group-item bg-transparent px-0 py-3 d-flex align-items-center gap-3">
+              <i class="fas fa-check-circle text-success fs-5"></i>
+              <div>
+                <strong>Brake System Torque & Pad Measure:</strong> Rotor micrometer measurements, drum brake shoe inspection, and air brake desiccator filter purge.
+              </div>
+            </li>
+          </ul>
+
+          <!-- FAQs -->
+          <h3 class="fw-bold mt-5 mb-3">Frequently Asked Questions</h3>
+          <div class="accordion mb-5" id="serviceFaq">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#f1">
+                  How often should I service my motorhome chassis?
+                </button>
+              </h2>
+              <div id="f1" class="accordion-collapse collapse show" data-bs-parent="#serviceFaq">
+                <div class="accordion-body text-muted small">
+                  Most gas motorhomes require service every 5,000 miles or 6 months. Diesel pushers typically operate on a 10,000 to 15,000-mile or annual schedule. Even if you haven't hit the mileage, annual fluid inspections are vital due to condensation.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#f2">
+                  Can you service Mercedes Sprinter Class B campervans?
+                </button>
+              </h2>
+              <div id="f2" class="accordion-collapse collapse" data-bs-parent="#serviceFaq">
+                <div class="accordion-body text-muted small">
+                  Yes, our certified technicians are equipped with OEM Mercedes Xentry diagnostics, approved 229.52 spec synthetic oils, and fuel filter replacement tools.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-lg-4">
+          <div class="card p-4 border rounded-4 mb-4 bg-light-subtle shadow-sm">
+            <h4 class="fw-bold mb-3">Service Summary</h4>
+            <div class="d-flex justify-content-between py-2 border-bottom">
+              <span class="text-muted">Estimated Time:</span>
+              <strong>3 - 5 Hours</strong>
+            </div>
+            <div class="d-flex justify-content-between py-2 border-bottom">
+              <span class="text-muted">Starting Rate:</span>
+              <strong class="text-warning fs-5">$249*</strong>
+            </div>
+            <div class="d-flex justify-content-between py-2 border-bottom">
+              <span class="text-muted">Parts Warranty:</span>
+              <strong>24 Mos / 24k Miles</strong>
+            </div>
+            <div class="d-flex justify-content-between py-2 mb-4">
+              <span class="text-muted">Facility Bay:</span>
+              <strong>50ft High-Clearance</strong>
+            </div>
+
+            <a href="../dashboard/book-service.html" class="btn btn-accent w-100 mb-2">
+              <i class="fas fa-calendar-check"></i> Book This Service
+            </a>
+            <div class="text-center small text-muted">
+              *Pricing varies based on diesel vs gas chassis fluid capacity.
+            </div>
+          </div>
+
+          <!-- Related Services -->
+          <div class="card p-4 border rounded-4 bg-light-subtle shadow-sm">
+            <h5 class="fw-bold mb-3">Related Services</h5>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-2"><a href="generator.html" class="text-decoration-none fw-bold"><i class="fas fa-arrow-right text-warning me-2"></i>Generator Maintenance</a></li>
+              <li class="mb-2"><a href="pre-trip-inspection.html" class="text-decoration-none fw-bold"><i class="fas fa-arrow-right text-warning me-2"></i>Pre-Trip Safety Inspection</a></li>
+              <li class="mb-2"><a href="tire-service.html" class="text-decoration-none fw-bold"><i class="fas fa-arrow-right text-warning me-2"></i>Tire & Wheel Bearing Service</a></li>
+              <li><a href="winterization.html" class="text-decoration-none fw-bold"><i class="fas fa-arrow-right text-warning me-2"></i>Seasonal Winterization</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Master Multi-Column Footer -->
+  <footer class="rn-footer">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <a class="navbar-brand text-white mb-3 d-inline-flex" href="../index.html">
+            <div class="brand-icon"><i class="fas fa-caravan"></i></div>
+            <div>
+              <span class="fw-bold text-white">RoadNest</span>
+              <span class="brand-text-sub">RV & Motorhome Care</span>
+            </div>
+          </a>
+          <p class="small text-muted mb-4">
+            Specialized recreational vehicle maintenance, roof repairs, electrical diagnostics, winterization, and certified pre-trip inspections for worry-free travel.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="https://facebook.com" class="rn-social-btn"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com" class="rn-social-btn"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com" class="rn-social-btn"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-2">
+          <h5>Services</h5>
+          <ul class="rn-footer-links">
+            <li><a href="preventive-maintenance.html">Preventive Maintenance</a></li>
+            <li><a href="winterization.html">RV Winterization</a></li>
+            <li><a href="electrical.html">Electrical & Solar</a></li>
+            <li><a href="roof-repair.html">Roof Resealing</a></li>
+          </ul>
+        </div>
+
+        <div class="col-sm-6 col-lg-2">
+          <h5>Company</h5>
+          <ul class="rn-footer-links">
+            <li><a href="../about.html">About RoadNest</a></li>
+            <li><a href="../services.html">Services Directory</a></li>
+            <li><a href="../pricing.html">Pricing Plans</a></li>
+            <li><a href="../contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-sm-6 col-lg-2">
+          <h5>Owner Portal</h5>
+          <ul class="rn-footer-links">
+            <li><a href="../login.html">Owner Login</a></li>
+            <li><a href="../dashboard/index.html">Dashboard</a></li>
+            <li><a href="../dashboard/book-service.html">Book Service</a></li>
+            <li><a href="../dashboard/maintenance.html">Service History</a></li>
+          </ul>
+        </div>
+
+        <div class="col-sm-6 col-lg-2">
+          <h5>Workshop Hours</h5>
+          <p class="small text-muted mb-1"><strong class="text-white">Mon-Fri:</strong> 7:30am - 6:00pm</p>
+          <p class="small text-muted mb-1"><strong class="text-white">Saturday:</strong> 8:00am - 4:00pm</p>
+          <p class="small text-muted mb-0"><strong class="text-white">Emergency:</strong> (800) 555-ROAD</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex justify-content-between align-items-center gap-3">
+        <div>&copy; 2026 RoadNest RV & Motorhome Care. All rights reserved.</div>
+        <div class="small"><a href="#" class="text-muted text-decoration-none">Privacy</a> • <a href="#" class="text-muted text-decoration-none">Terms</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

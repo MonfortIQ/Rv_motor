@@ -109,6 +109,28 @@
       return firstInvalid;
     };
 
+    const resetAuthForm = form => {
+      form.reset();
+      form.classList.remove('auth-form-validated');
+      form.querySelectorAll('.auth-field, .auth-terms').forEach(container => {
+        container.classList.remove('has-error', 'has-success');
+      });
+      form.querySelectorAll('.auth-error').forEach(error => {
+        error.textContent = '';
+      });
+      form.querySelectorAll('[aria-invalid]').forEach(field => {
+        field.setAttribute('aria-invalid', 'false');
+      });
+
+      form.querySelectorAll('[data-password-toggle]').forEach(toggle => {
+        const input = document.getElementById(toggle.dataset.passwordToggle);
+        const icon = toggle.querySelector('i');
+        if (input) input.type = 'password';
+        toggle.setAttribute('aria-label', 'Show password');
+        if (icon) icon.className = 'fas fa-eye';
+      });
+    };
+
     document.querySelectorAll('.auth-form input, .auth-form select').forEach(field => {
       const update = () => {
         const form = field.form;
@@ -141,7 +163,14 @@
           submit.innerHTML = '<i class="fas fa-spinner fa-spin" aria-hidden="true"></i><span>Signing In...</span>';
         }
         sessionStorage.setItem('roadnest_demo_session', 'active');
-        window.setTimeout(() => { window.location.href = 'dashboard/index.html'; }, 350);
+        window.setTimeout(() => {
+          resetAuthForm(loginForm);
+          if (submit) {
+            submit.disabled = false;
+            submit.innerHTML = '<span>Sign In to Owner Portal</span><i class="fas fa-arrow-right" aria-hidden="true"></i>';
+          }
+          showStatus(loginStatus, 'Login successful. Your fields were reset.', 'success');
+        }, 350);
       });
     }
 

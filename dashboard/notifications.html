@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Service Notifications & Alerts | RoadNest Owner Portal</title>
   <meta name="description" content="View maintenance reminders, upcoming appointment check-ins, and warranty alerts for your RV.">
+  <link rel="canonical" href="notifications.html">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -42,7 +43,7 @@
       <div class="sidebar-footer">
         <div class="d-flex align-items-center justify-content-between">
           <div class="d-flex align-items-center gap-2">
-            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&auto=format&fit=crop&q=80" alt="John Davis" class="rounded-circle" style="width: 36px; height: 36px; object-fit: cover;">
+            <span class="user-avatar-initials" aria-label="John Davis">JD</span>
             <div>
               <div class="fw-bold small">John Davis</div>
               <small class="text-muted" style="font-size: 0.75rem;">Adventurer 35F</small>
@@ -83,47 +84,47 @@
         <!-- Notification List -->
         <div class="d-flex flex-column gap-3">
           <!-- Notification 1 -->
-          <div class="card p-3 border-start border-4 border-warning rounded-3 shadow-sm bg-white">
+          <div class="card p-3 border-start border-4 border-warning rounded-3 shadow-sm bg-white notification-card">
             <div class="d-flex justify-content-between align-items-start">
               <div class="d-flex gap-3">
-                <div class="trust-icon" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b;"><i class="fas fa-snowflake"></i></div>
-                <div>
+                <div class="trust-icon notification-icon" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b;"><i class="fas fa-snowflake" aria-hidden="true"></i></div>
+                <div class="notification-copy">
                   <h6 class="fw-bold mb-1">Upcoming Bay Appointment: Seasonal Winterization</h6>
                   <p class="small text-muted mb-1">Your reservation for Bay 4 on <strong>Nov 15, 2026 at 9:00 AM</strong> is confirmed. Please arrive with empty holding tanks.</p>
                   <small class="text-muted"><i class="fas fa-clock me-1"></i> Today at 8:30 AM</small>
                 </div>
               </div>
-              <a href="appointments.html" class="btn btn-sm btn-outline-navy">View Appt</a>
+              <a href="appointments.html" class="btn btn-sm btn-outline-navy notification-action">View Appt</a>
             </div>
           </div>
 
           <!-- Notification 2 -->
-          <div class="card p-3 border-start border-4 border-primary rounded-3 shadow-sm bg-white">
+          <div class="card p-3 border-start border-4 border-primary rounded-3 shadow-sm bg-white notification-card">
             <div class="d-flex justify-content-between align-items-start">
               <div class="d-flex gap-3">
-                <div class="trust-icon" style="background: rgba(26, 86, 219, 0.15); color: #1a56db;"><i class="fas fa-plug"></i></div>
-                <div>
+                <div class="trust-icon notification-icon" style="background: rgba(26, 86, 219, 0.15); color: #1a56db;"><i class="fas fa-plug" aria-hidden="true"></i></div>
+                <div class="notification-copy">
                   <h6 class="fw-bold mb-1">Cummins Onan Monthly Exercise Due</h6>
                   <p class="small text-muted mb-1">It has been 28 days since your last generator run. Exercise your generator for 2 hours under 50% load to prevent carburetor varnishing.</p>
                   <small class="text-muted"><i class="fas fa-clock me-1"></i> Yesterday</small>
                 </div>
               </div>
-              <span class="badge bg-light text-dark border">Routine Reminder</span>
+              <span class="badge bg-light text-dark border notification-action">Routine Reminder</span>
             </div>
           </div>
 
           <!-- Notification 3 -->
-          <div class="card p-3 border-start border-4 border-success rounded-3 shadow-sm bg-white">
+          <div class="card p-3 border-start border-4 border-success rounded-3 shadow-sm bg-white notification-card">
             <div class="d-flex justify-content-between align-items-start">
               <div class="d-flex gap-3">
-                <div class="trust-icon" style="background: rgba(16, 185, 129, 0.15); color: #10b981;"><i class="fas fa-shield-check"></i></div>
-                <div>
+                <div class="trust-icon notification-icon" style="background: rgba(16, 185, 129, 0.15); color: #10b981;"><i class="fas fa-shield-halved" aria-hidden="true"></i></div>
+                <div class="notification-copy">
                   <h6 class="fw-bold mb-1">Annual Roof Reseal Inspection Verified</h6>
                   <p class="small text-muted mb-1">Your previous Dicor lap seal warranty certificate has been added to your cloud files.</p>
                   <small class="text-muted"><i class="fas fa-clock me-1"></i> Oct 02, 2026</small>
                 </div>
               </div>
-              <a href="invoices.html" class="btn btn-sm btn-outline-navy">View Receipt</a>
+              <a href="invoices.html" class="btn btn-sm btn-outline-navy notification-action">View Receipt</a>
             </div>
           </div>
         </div>

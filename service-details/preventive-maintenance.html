@@ -13,20 +13,6 @@
 </head>
 <body>
 
-  <!-- Topbar -->
-  <div class="rn-topbar d-none d-md-block">
-    <div class="container d-flex justify-content-between align-items-center">
-      <div class="d-flex align-items-center gap-4">
-        <span><i class="fas fa-map-marker-alt text-warning me-2"></i>742 Horizon Valley Pkwy, Denver, CO 80216</span>
-        <span><i class="fas fa-clock text-warning me-2"></i>Mon - Sat: 7:30 AM - 6:00 PM</span>
-      </div>
-      <div class="d-flex align-items-center gap-3">
-        <span><i class="fas fa-phone-alt text-warning me-1"></i> Emergency: <strong>(800) 555-ROAD</strong></span>
-        <a href="../login.html" class="ms-2"><i class="fas fa-user-circle me-1"></i> Owner Portal</a>
-      </div>
-    </div>
-  </div>
-
   <!-- Header -->
   <header class="rn-header">
     <div class="container">
@@ -42,7 +28,7 @@
         <div class="collapse navbar-collapse d-none d-lg-block">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Home</a>
+              <a class="nav-link dropdown-toggle" href="../index.html" role="button" data-bs-toggle="dropdown">Home</a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="../index.html"><i class="fas fa-warehouse"></i> Home 1 - Service Center</a></li>
                 <li><a class="dropdown-item" href="../home-2.html"><i class="fas fa-mountain"></i> Home 2 - Road Trip Care</a></li>
@@ -59,7 +45,8 @@
         <div class="d-flex align-items-center gap-2">
           <button class="rtl-pill rtl-toggle-btn"><span class="rtl-label">RTL</span></button>
           <button class="utility-btn theme-toggle-btn"><i class="fas fa-moon"></i></button>
-          <a href="../dashboard/book-service.html" class="btn btn-accent d-none d-sm-inline-flex"><i class="fas fa-calendar-check"></i> Book Service</a>
+          <a href="../login.html" class="btn btn-outline-light d-none d-sm-inline-flex"><i class="fas fa-user-circle"></i> Login</a>
+          <a href="../dashboard/index.html" class="btn btn-accent d-none d-sm-inline-flex"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
           <button class="navbar-toggler d-lg-none utility-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuOffcanvas">
             <i class="fas fa-bars"></i>
           </button>
@@ -69,7 +56,7 @@
   </header>
 
   <!-- Mobile Offcanvas Menu -->
-  <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenuOffcanvas">
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenuOffcanvas">
     <div class="offcanvas-header">
       <div class="d-flex align-items-center gap-2">
         <div class="brand-icon" style="width: 36px; height: 36px; font-size: 1.1rem;"><i class="fas fa-caravan"></i></div>
@@ -125,7 +112,7 @@
       <div class="row g-5">
         <!-- Main Content -->
         <div class="col-lg-8">
-          <img src="https://images.unsplash.com/photo-1486006920555-c77dce18193b?w=1000&auto=format&fit=crop&q=80" alt="Preventive RV Chassis & Engine Maintenance" class="rounded-4 shadow-sm w-100 mb-5" style="max-height: 440px; object-fit: cover;">
+          <img src="../assets/images/services/service-preventive-maintenance.png" alt="RV technician inspecting motorhome chassis and engine systems" class="rounded-4 shadow-sm w-100 mb-5" style="max-height: 440px; object-fit: cover;" loading="eager">
 
           <h2 class="fw-bold mb-3">Why Preventive Maintenance Matters for Motorhomes</h2>
           <p class="text-muted">
@@ -321,13 +308,13 @@
           <h5>Workshop Hours</h5>
           <p class="small text-muted mb-1"><strong class="text-white">Mon-Fri:</strong> 7:30am - 6:00pm</p>
           <p class="small text-muted mb-1"><strong class="text-white">Saturday:</strong> 8:00am - 4:00pm</p>
-          <p class="small text-muted mb-0"><strong class="text-white">Emergency:</strong> (800) 555-ROAD</p>
+          <p class="small text-muted mb-0"><strong class="text-white">Emergency:</strong> +1 (303) 555-0144</p>
         </div>
       </div>
 
       <div class="footer-bottom d-flex justify-content-between align-items-center gap-3">
         <div>&copy; 2026 RoadNest RV & Motorhome Care. All rights reserved.</div>
-        <div class="small"><a href="#" class="text-muted text-decoration-none">Privacy</a> • <a href="#" class="text-muted text-decoration-none">Terms</a></div>
+        <div class="small"><a href="../privacy.html" class="text-muted text-decoration-none">Privacy</a> • <a href="../terms.html" class="text-muted text-decoration-none">Terms</a></div>
       </div>
     </div>
   </footer>

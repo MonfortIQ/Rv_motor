@@ -6,11 +6,12 @@
   <title>RoadNest RV & Motorhome Care | Professional RV Maintenance, Repair & Inspection</title>
   <meta name="description" content="RoadNest is the premier RV & Motorhome service center specializing in preventive maintenance, roof repair, electrical diagnostics, winterization, and pre-trip inspections.">
   <link rel="canonical" href="index.html">
+  <link rel="icon" type="image/svg+xml" href="assets/images/roadnest-favicon.svg">
 
   <!-- Open Graph -->
   <meta property="og:title" content="RoadNest RV & Motorhome Care">
   <meta property="og:description" content="Professional RV maintenance, repairs, inspections, upgrades, winterization, and roadside-ready care for every journey.">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?w=1200&auto=format&fit=crop&q=80">
+  <meta property="og:image" content="assets/images/home-1/home1-hero-rv-service.png">
 
   <!-- Bootstrap 5.3.3 CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
@@ -20,20 +21,6 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-
-  <!-- Topbar -->
-  <div class="rn-topbar d-none d-md-block">
-    <div class="container d-flex justify-content-between align-items-center">
-      <div class="d-flex align-items-center gap-4">
-        <span><i class="fas fa-map-marker-alt text-warning me-2"></i>742 Horizon Valley Pkwy, Denver, CO 80216</span>
-        <span><i class="fas fa-clock text-warning me-2"></i>Mon - Sat: 7:30 AM - 6:00 PM | Sun: Emergency Dispatch</span>
-      </div>
-      <div class="d-flex align-items-center gap-3">
-        <span><i class="fas fa-phone-alt text-warning me-1"></i> Emergency: <strong>(800) 555-ROAD</strong></span>
-        <a href="login.html" class="ms-2"><i class="fas fa-user-circle me-1"></i> Owner Portal</a>
-      </div>
-    </div>
-  </div>
 
   <!-- Master Header / Navbar -->
   <header class="rn-header">
@@ -53,17 +40,24 @@
         <!-- Desktop Navigation Items -->
         <div class="collapse navbar-collapse d-none d-lg-block" id="desktopNav">
           <ul class="navbar-nav mx-auto">
-            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="dashboard/index.html">Owner Dashboard</a></li>
-            <li class="nav-item"><a class="nav-link" href="login.html">Owner Login</a></li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">More</a>
+              <a class="nav-link dropdown-toggle active" href="index.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="about.html">About RoadNest</a></li>
-                <li><a class="dropdown-item" href="pricing.html">Inspection Pricing</a></li>
-                <li><a class="dropdown-item" href="blog.html">Travel & Care Blog</a></li>
-                <li><a class="dropdown-item" href="contact.html">Contact Workshop</a></li>
+                <li><a class="dropdown-item active" href="index.html"><i class="fas fa-warehouse"></i><div><div class="fw-bold">Home 1 - Service Center</div><small class="text-muted">Workshop & Diagnostics</small></div></a></li>
+                <li><a class="dropdown-item" href="home-2.html"><i class="fas fa-mountain"></i><div><div class="fw-bold">Home 2 - Road Trip Care</div><small class="text-muted">Adventure & Readiness</small></div></a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="faq.html"><i class="fas fa-circle-question"></i><div><div class="fw-bold">FAQ</div><small class="text-muted">Common owner questions</small></div></a></li>
+                <li><a class="dropdown-item" href="coming-soon.html"><i class="fas fa-hourglass-half"></i><div><div class="fw-bold">Coming Soon</div><small class="text-muted">New RoadNest features</small></div></a></li>
+                <li><a class="dropdown-item" href="404.html"><i class="fas fa-triangle-exclamation"></i><div><div class="fw-bold">404 Error</div><small class="text-muted">Lost on the highway</small></div></a></li>
               </ul>
             </li>
           </ul>
@@ -81,9 +75,12 @@
             <i class="fas fa-moon"></i>
           </button>
 
-          <!-- Book Service Desktop Button -->
-          <a href="dashboard/book-service.html" class="btn btn-accent d-none d-sm-inline-flex">
-            <i class="fas fa-calendar-check"></i> Book Service
+          <!-- Owner Login and Dashboard Buttons -->
+          <a href="login.html" class="btn btn-outline-light d-none d-sm-inline-flex">
+            <i class="fas fa-user-circle"></i> Login
+          </a>
+          <a href="dashboard/index.html" class="btn btn-accent d-none d-sm-inline-flex">
+            <i class="fas fa-tachometer-alt"></i> Dashboard
           </a>
 
           <!-- Mobile Hamburger Toggle -->
@@ -96,7 +93,7 @@
   </header>
 
   <!-- Mobile Offcanvas Menu -->
-  <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenuOffcanvas" aria-labelledby="mobileMenuLabel">
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenuOffcanvas" aria-labelledby="mobileMenuLabel">
     <div class="offcanvas-header">
       <div class="d-flex align-items-center gap-2" id="mobileMenuLabel">
         <div class="brand-icon" style="width: 36px; height: 36px; font-size: 1.1rem;">
@@ -108,7 +105,13 @@
     </div>
     <div class="offcanvas-body">
       <nav class="d-flex flex-column mb-4">
-        <a class="mobile-nav-link text-warning fw-bold" href="index.html"><i class="fas fa-home me-2 text-warning"></i> Home</a>
+        <a class="mobile-nav-link" data-bs-toggle="collapse" href="#mobileHomeSub" role="button" aria-expanded="true">
+          <span><i class="fas fa-home me-2 text-warning"></i> Home</span><i class="fas fa-chevron-down"></i>
+        </a>
+        <div class="collapse show mobile-subnav" id="mobileHomeSub">
+          <a class="mobile-subnav-link text-warning fw-bold" href="index.html"><i class="fas fa-check-circle me-1"></i> Home 1 - Service Center</a>
+          <a class="mobile-subnav-link" href="home-2.html"><i class="fas fa-compass me-1"></i> Home 2 - Road Trip Care</a>
+        </div>
         <a class="mobile-nav-link" href="services.html"><i class="fas fa-tools me-2 text-warning"></i> Services Directory</a>
         <a class="mobile-nav-link" href="dashboard/index.html"><i class="fas fa-tachometer-alt me-2 text-warning"></i> Owner Dashboard</a>
         <a class="mobile-nav-link" href="login.html"><i class="fas fa-user-circle me-2 text-warning"></i> Owner Login</a>
@@ -117,6 +120,15 @@
         <a class="mobile-nav-link" href="blog.html"><i class="fas fa-newspaper me-2 text-warning"></i> Travel & Care Blog</a>
         <a class="mobile-nav-link" href="contact.html"><i class="fas fa-envelope me-2 text-warning"></i> Contact Workshop</a>
         <a class="mobile-nav-link" href="register.html"><i class="fas fa-user-plus me-2 text-warning"></i> Register Vehicle</a>
+        <a class="mobile-nav-link" data-bs-toggle="collapse" href="#mobilePagesSub" role="button" aria-expanded="false">
+          <span><i class="fas fa-layer-group text-warning"></i> Pages</span>
+          <i class="fas fa-chevron-down"></i>
+        </a>
+        <div class="collapse mobile-subnav" id="mobilePagesSub">
+          <a class="mobile-subnav-link" href="faq.html"><i class="fas fa-circle-question me-1"></i> FAQ</a>
+          <a class="mobile-subnav-link" href="coming-soon.html"><i class="fas fa-hourglass-half me-1"></i> Coming Soon</a>
+          <a class="mobile-subnav-link" href="404.html"><i class="fas fa-triangle-exclamation me-1"></i> 404 Error</a>
+        </div>
       </nav>
 
       <div class="pt-2">
@@ -124,7 +136,7 @@
           <i class="fas fa-calendar-check"></i> Book Appointment
         </a>
         <div class="text-center text-muted small mt-3">
-          <i class="fas fa-phone-alt me-1"></i> 24/7 Road Assistance: <strong>(800) 555-ROAD</strong>
+          <i class="fas fa-phone-alt me-1"></i> Road Assistance: <strong>+1 (303) 555-0144</strong>
         </div>
       </div>
     </div>
@@ -177,7 +189,7 @@
         <!-- Layered Visual Media Layout -->
         <div class="col-lg-6">
           <div class="hero-img-wrap">
-            <img src="https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?w=1000&auto=format&fit=crop&q=80" alt="Luxury Class A Motorcoach Serviced by RoadNest" class="hero-main-img">
+            <img src="assets/images/home-1/home1-hero-rv-service.png" alt="Technician inspecting a Class A motorhome inside an RV service center" class="hero-main-img" loading="eager">
             
             <!-- Floating Tech Card -->
             <div class="hero-floating-card card-bottom-left">
@@ -230,7 +242,7 @@
         </div>
         <div class="col-6 col-md-4 col-lg-2">
           <div class="trust-item">
-            <div class="trust-icon"><i class="fas fa-shield-check"></i></div>
+              <div class="trust-icon"><i class="fas fa-shield-halved" aria-hidden="true"></i></div>
             <div>
               <div class="trust-title">OEM Warranty</div>
               <div class="trust-text">Authorized Claims</div>
@@ -284,7 +296,7 @@
         <div class="col-md-6 col-lg-3">
           <div class="card-rn">
             <div class="card-rn-img-wrap">
-              <img src="https://images.unsplash.com/photo-1486006920555-c77dce18193b?w=600&auto=format&fit=crop&q=80" alt="Preventive RV Chassis & Engine Maintenance" class="card-rn-img">
+              <img src="assets/images/services/service-preventive-maintenance.png" alt="RV technician inspecting motorhome chassis and engine systems" class="card-rn-img" loading="lazy">
               <span class="card-badge-top">Essential</span>
             </div>
             <div class="card-rn-body">
@@ -302,7 +314,7 @@
         <div class="col-md-6 col-lg-3">
           <div class="card-rn">
             <div class="card-rn-img-wrap">
-              <img src="https://images.unsplash.com/photo-1516431883659-655d41c09bf9?w=600&auto=format&fit=crop&q=80" alt="RV Winterization and Freeze Proofing" class="card-rn-img">
+              <img src="assets/images/services/service-winterization.png" alt="Technician winterizing a motorhome freshwater system" class="card-rn-img" loading="lazy">
               <span class="card-badge-top">Seasonal</span>
             </div>
             <div class="card-rn-body">
@@ -320,7 +332,7 @@
         <div class="col-md-6 col-lg-3">
           <div class="card-rn">
             <div class="card-rn-img-wrap">
-              <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&auto=format&fit=crop&q=80" alt="RV Electrical Diagnostics and Wiring" class="card-rn-img">
+              <img src="assets/images/services/service-electrical.png" alt="Technician testing a motorhome electrical panel and battery system" class="card-rn-img" loading="lazy">
               <span class="card-badge-top">Diagnostics</span>
             </div>
             <div class="card-rn-body">
@@ -338,7 +350,7 @@
         <div class="col-md-6 col-lg-3">
           <div class="card-rn">
             <div class="card-rn-img-wrap">
-              <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&auto=format&fit=crop&q=80" alt="RV Plumbing and Holding Tank Repair" class="card-rn-img">
+              <img src="assets/images/services/service-plumbing.png" alt="Technician servicing motorhome freshwater plumbing and holding tank connections" class="card-rn-img" loading="lazy">
               <span class="card-badge-top">Repairs</span>
             </div>
             <div class="card-rn-body">
@@ -356,7 +368,7 @@
         <div class="col-md-6 col-lg-3">
           <div class="card-rn">
             <div class="card-rn-img-wrap">
-              <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&auto=format&fit=crop&q=80" alt="RV Roof Seam Resealing and Membrane Repair" class="card-rn-img">
+              <img src="assets/images/services/service-roof-repair.png" alt="Technician resealing roof vents and seams on a Class A motorhome" class="card-rn-img" loading="lazy">
               <span class="card-badge-top">Protection</span>
             </div>
             <div class="card-rn-body">
@@ -374,7 +386,7 @@
         <div class="col-md-6 col-lg-3">
           <div class="card-rn">
             <div class="card-rn-img-wrap">
-              <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&auto=format&fit=crop&q=80" alt="Rooftop RV Air Conditioner and Heat Pump Repair" class="card-rn-img">
+              <img src="assets/images/services/service-hvac.png" alt="Technician servicing a rooftop RV air-conditioning unit" class="card-rn-img" loading="lazy">
               <span class="card-badge-top">Climate</span>
             </div>
             <div class="card-rn-body">
@@ -392,7 +404,7 @@
         <div class="col-md-6 col-lg-3">
           <div class="card-rn">
             <div class="card-rn-img-wrap">
-              <img src="https://images.unsplash.com/photo-1513828583688-c52646db42dd?w=600&auto=format&fit=crop&q=80" alt="Onan RV Generator Maintenance and Oil Change" class="card-rn-img">
+              <img src="assets/images/services/service-generator.png" alt="Technician servicing an onboard motorhome generator" class="card-rn-img" loading="lazy">
               <span class="card-badge-top">Power</span>
             </div>
             <div class="card-rn-body">
@@ -410,7 +422,7 @@
         <div class="col-md-6 col-lg-3">
           <div class="card-rn">
             <div class="card-rn-img-wrap">
-              <img src="https://images.unsplash.com/photo-1520072959219-c595dc870360?w=600&auto=format&fit=crop&q=80" alt="Comprehensive RV Pre-Trip Inspection Checklist" class="card-rn-img">
+              <img src="assets/images/services/service-pre-trip.png" alt="Technician performing a pre-trip safety inspection on a motorhome" class="card-rn-img" loading="lazy">
               <span class="card-badge-top">Road Ready</span>
             </div>
             <div class="card-rn-body">
@@ -455,16 +467,16 @@
         <!-- Engine & Transmission -->
         <div class="col-md-6 col-lg-4">
           <div class="health-check-card">
-            <div class="d-flex justify-content-between align-items-center mb-3">
-              <div class="d-flex align-items-center gap-2">
-                <i class="fas fa-tachometer-alt text-warning fs-5"></i>
+            <div class="health-check-header mb-3">
+              <div class="health-check-title">
+                <i class="fas fa-gauge-high text-warning fs-5" aria-hidden="true"></i>
                 <h5 class="mb-0">Engine & Drivetrain</h5>
               </div>
               <span class="health-status-badge badge-optimal">Optimal (98%)</span>
             </div>
             <p class="small text-muted mb-3">Fluid analysis, transmission cooling, belts, and diesel particulate filters checked.</p>
             <div class="progress" style="height: 6px;">
-              <div class="progress-bar bg-success" role="progressbar" style="width: 98%;"></div>
+              <div class="progress-bar bg-success" role="progressbar" style="width: 98%;" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100" aria-label="Engine system health 98 percent"></div>
             </div>
           </div>
         </div>
@@ -472,16 +484,16 @@
         <!-- Auxiliary Batteries & Solar -->
         <div class="col-md-6 col-lg-4">
           <div class="health-check-card">
-            <div class="d-flex justify-content-between align-items-center mb-3">
-              <div class="d-flex align-items-center gap-2">
-                <i class="fas fa-car-battery text-warning fs-5"></i>
+            <div class="health-check-header mb-3">
+              <div class="health-check-title">
+                <i class="fas fa-car-battery text-warning fs-5" aria-hidden="true"></i>
                 <h5 class="mb-0">Battery & Solar Array</h5>
               </div>
               <span class="health-status-badge badge-optimal">13.8V Charge</span>
             </div>
             <p class="small text-muted mb-3">Deep cycle AGM/LiFePO4 cell balancing, MPPT solar controllers, and inverter output verified.</p>
             <div class="progress" style="height: 6px;">
-              <div class="progress-bar bg-success" role="progressbar" style="width: 92%;"></div>
+              <div class="progress-bar bg-success" role="progressbar" style="width: 92%;" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100" aria-label="Battery system health 92 percent"></div>
             </div>
           </div>
         </div>
@@ -489,16 +501,16 @@
         <!-- Tires & Suspension -->
         <div class="col-md-6 col-lg-4">
           <div class="health-check-card">
-            <div class="d-flex justify-content-between align-items-center mb-3">
-              <div class="d-flex align-items-center gap-2">
-                <i class="fas fa-ring text-warning fs-5"></i>
+            <div class="health-check-header mb-3">
+              <div class="health-check-title">
+                <i class="fas fa-circle-dot text-warning fs-5" aria-hidden="true"></i>
                 <h5 class="mb-0">Tires & Bearings</h5>
               </div>
               <span class="health-status-badge badge-attention">Repack Due</span>
             </div>
             <p class="small text-muted mb-3">Tread depth 8/32", date code 2023, axle seals tight. Hub greasing recommended in 1,200 mi.</p>
             <div class="progress" style="height: 6px;">
-              <div class="progress-bar bg-warning" role="progressbar" style="width: 76%;"></div>
+              <div class="progress-bar bg-warning" role="progressbar" style="width: 76%;" aria-valuenow="76" aria-valuemin="0" aria-valuemax="100" aria-label="Tire system health 76 percent"></div>
             </div>
           </div>
         </div>
@@ -506,16 +518,16 @@
         <!-- Rooftop Seals & Membrane -->
         <div class="col-md-6 col-lg-4">
           <div class="health-check-card">
-            <div class="d-flex justify-content-between align-items-center mb-3">
-              <div class="d-flex align-items-center gap-2">
-                <i class="fas fa-umbrella text-warning fs-5"></i>
+            <div class="health-check-header mb-3">
+              <div class="health-check-title">
+                <i class="fas fa-umbrella text-warning fs-5" aria-hidden="true"></i>
                 <h5 class="mb-0">Roof Sealing & Vents</h5>
               </div>
               <span class="health-status-badge badge-optimal">Resealed</span>
             </div>
             <p class="small text-muted mb-3">Self-leveling Dicor joints, skylights, satellite mounts, and AC gasket watertight test cleared.</p>
             <div class="progress" style="height: 6px;">
-              <div class="progress-bar bg-success" role="progressbar" style="width: 95%;"></div>
+              <div class="progress-bar bg-success" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="Roof system health 95 percent"></div>
             </div>
           </div>
         </div>
@@ -523,16 +535,16 @@
         <!-- Plumbing & Holding Tanks -->
         <div class="col-md-6 col-lg-4">
           <div class="health-check-card">
-            <div class="d-flex justify-content-between align-items-center mb-3">
-              <div class="d-flex align-items-center gap-2">
-                <i class="fas fa-water text-warning fs-5"></i>
+            <div class="health-check-header mb-3">
+              <div class="health-check-title">
+                <i class="fas fa-water text-warning fs-5" aria-hidden="true"></i>
                 <h5 class="mb-0">Plumbing & Valves</h5>
               </div>
               <span class="health-status-badge badge-optimal">50 PSI Tested</span>
             </div>
             <p class="small text-muted mb-3">City water regulator, 12V pump check valve, gray/black macerators, and tank heaters intact.</p>
             <div class="progress" style="height: 6px;">
-              <div class="progress-bar bg-success" role="progressbar" style="width: 88%;"></div>
+              <div class="progress-bar bg-success" role="progressbar" style="width: 88%;" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" aria-label="Plumbing system health 88 percent"></div>
             </div>
           </div>
         </div>
@@ -540,16 +552,67 @@
         <!-- Onan Generator & Transfer Switch -->
         <div class="col-md-6 col-lg-4">
           <div class="health-check-card">
-            <div class="d-flex justify-content-between align-items-center mb-3">
-              <div class="d-flex align-items-center gap-2">
-                <i class="fas fa-bolt-lightning text-warning fs-5"></i>
+            <div class="health-check-header mb-3">
+              <div class="health-check-title">
+                <i class="fas fa-bolt text-warning fs-5" aria-hidden="true"></i>
                 <h5 class="mb-0">Aux Generator</h5>
               </div>
               <span class="health-status-badge badge-optimal">142 Total Hrs</span>
             </div>
             <p class="small text-muted mb-3">Spark plug gapped, fresh synthetic oil, automatic transfer switch tested under dual AC load.</p>
             <div class="progress" style="height: 6px;">
-              <div class="progress-bar bg-success" role="progressbar" style="width: 90%;"></div>
+              <div class="progress-bar bg-success" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Generator system health 90 percent"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Electrical & Inverter Systems -->
+        <div class="col-md-6 col-lg-4">
+          <div class="health-check-card">
+            <div class="health-check-header mb-3">
+              <div class="health-check-title">
+                <i class="fas fa-plug text-warning fs-5" aria-hidden="true"></i>
+                <h5 class="mb-0">Electrical & Inverter</h5>
+              </div>
+              <span class="health-status-badge badge-optimal">Load Tested</span>
+            </div>
+            <p class="small text-muted mb-3">Shore power, transfer switch, inverter output, GFCI protection, and 12V circuits checked.</p>
+            <div class="progress" style="height: 6px;">
+              <div class="progress-bar bg-success" role="progressbar" style="width: 94%;" aria-label="Electrical system health 94 percent"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- HVAC & Climate Control -->
+        <div class="col-md-6 col-lg-4">
+          <div class="health-check-card">
+            <div class="health-check-header mb-3">
+              <div class="health-check-title">
+                <i class="fas fa-snowflake text-warning fs-5" aria-hidden="true"></i>
+                <h5 class="mb-0">HVAC & Climate Control</h5>
+              </div>
+              <span class="health-status-badge badge-optimal">Cooling Verified</span>
+            </div>
+            <p class="small text-muted mb-3">Rooftop AC temperature split, furnace ignition, duct airflow, and thermostat response verified.</p>
+            <div class="progress" style="height: 6px;">
+              <div class="progress-bar bg-success" role="progressbar" style="width: 86%;" aria-label="HVAC system health 86 percent"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Water Heater & LP Appliances -->
+        <div class="col-md-6 col-lg-4">
+          <div class="health-check-card">
+            <div class="health-check-header mb-3">
+              <div class="health-check-title">
+                <i class="fas fa-fire text-warning fs-5" aria-hidden="true"></i>
+                <h5 class="mb-0">Water Heater &amp; Appliances</h5>
+              </div>
+              <span class="health-status-badge badge-optimal">Safety Checked</span>
+            </div>
+            <p class="small text-muted mb-3">Water heater anode, refrigerator, cooktop, and LP appliance safety checks completed.</p>
+            <div class="progress" style="height: 6px;">
+              <div class="progress-bar bg-success" role="progressbar" style="width: 91%;" aria-valuenow="91" aria-valuemin="0" aria-valuemax="100" aria-label="Water heater and appliance health 91 percent"></div>
             </div>
           </div>
         </div>
@@ -563,7 +626,7 @@
       <div class="row align-items-center g-5">
         <div class="col-lg-6">
           <div class="position-relative">
-            <img src="https://images.unsplash.com/photo-1613214149922-f1809c99b414?w=900&auto=format&fit=crop&q=80" alt="RoadNest Modern RV Service Bay Facility" class="rounded-4 shadow-lg w-100" style="height: 480px; object-fit: cover;">
+            <img src="assets/images/home-1/home1-workshop.png" alt="Wide professional RV workshop with multiple service bays and motorhomes" class="rounded-4 shadow-lg w-100" loading="lazy" style="height: 480px; object-fit: cover;">
             <div class="position-absolute bottom-0 start-0 m-4 p-3 bg-white text-dark rounded-3 shadow d-flex align-items-center gap-3" style="max-width: 320px;">
               <div class="bg-primary text-white p-3 rounded-2">
                 <i class="fas fa-tools fs-4"></i>
@@ -606,6 +669,18 @@
                 <h5 class="mb-1">Digital Owner Maintenance Portal</h5>
                 <p class="text-muted small">Access service records, invoices, warranty expiration dates, and inspection reports anywhere on the road.</p>
               </div>
+            </div>
+          </div>
+
+          <div class="row g-3 mt-4">
+            <div class="col-4">
+              <img src="assets/images/home-1/home1-technician.png" alt="RV technician inspecting a motorhome engine bay" class="rounded-3 shadow-sm w-100" loading="lazy" style="height: 118px; object-fit: cover;">
+            </div>
+            <div class="col-4">
+              <img src="assets/images/home-1/home1-inspection-process.png" alt="Service advisor reviewing a motorhome inspection with an owner" class="rounded-3 shadow-sm w-100" loading="lazy" style="height: 118px; object-fit: cover;">
+            </div>
+            <div class="col-4">
+              <img src="assets/images/home-1/home1-cta-roadtrip.png" alt="Class A motorhome departing toward a scenic highway" class="rounded-3 shadow-sm w-100" loading="lazy" style="height: 118px; object-fit: cover;">
             </div>
           </div>
         </div>
@@ -708,7 +783,7 @@
           </div>
 
           <div class="col-lg-5 text-center">
-            <img src="https://images.unsplash.com/photo-1527786356703-4b100091cd2c?w=700&auto=format&fit=crop&q=80" alt="RoadReady RV Inspection at Scenic Trailhead" class="rounded-4 shadow-lg w-100" style="max-height: 380px; object-fit: cover;">
+            <img src="assets/images/home-1/home1-roadready.png" alt="Serviced Class C motorhome ready outside an RV service center" class="rounded-4 shadow-lg w-100" loading="lazy" style="max-height: 380px; object-fit: cover;">
           </div>
         </div>
       </div>
@@ -796,7 +871,7 @@
             <p class="text-muted small mb-4">
               Book your bay appointment at least 7 to 10 days before departure during peak summer and snowbird seasons.
             </p>
-            <form action="https://formsubmit.co/support@roadnestrvcare.com" method="POST" data-validate="true">
+            <form action="https://formsubmit.co/clament.iq@outlook.com" method="POST" data-validate="true">
               <!-- FormSubmit config -->
               <input type="hidden" name="_subject" value="Quick Road-Trip Inspection Request">
               <input type="hidden" name="_captcha" value="false">
@@ -840,7 +915,7 @@
         </p>
       </div>
 
-      <div class="row g-4">
+      <div class="row g-4 testimonial-grid">
         <!-- Testimonial 1 -->
         <div class="col-md-6 col-lg-3">
           <div class="testimonial-card">
@@ -851,7 +926,7 @@
               “Our hydraulic slide-out malfunctioned right before our Yellowstone trip. RoadNest got us in within 48 hours, realigned the Lippert rack, and had us rolling on time.”
             </p>
             <div class="testimonial-author">
-              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&auto=format&fit=crop&q=80" alt="Sarah Jenkins" class="testimonial-avatar">
+              <img class="testimonial-avatar" src="assets/images/testimonials/sarah-jenkins.png" alt="Portrait of Sarah Jenkins" loading="lazy">
               <div>
                 <div class="testimonial-name">Sarah Jenkins</div>
                 <div class="testimonial-vehicle">2022 Tiffin Allegro Red</div>
@@ -870,7 +945,7 @@
               “The Owner Portal is a game changer! I can look up my generator service invoices and battery specs while parked at a national park without carrying paper files.”
             </p>
             <div class="testimonial-author">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80" alt="Marcus Thorne" class="testimonial-avatar">
+              <img class="testimonial-avatar" src="assets/images/testimonials/marcus-thorne.png" alt="Portrait of Marcus Thorne" loading="lazy">
               <div>
                 <div class="testimonial-name">Marcus Thorne</div>
                 <div class="testimonial-vehicle">2024 Winnebago Adventurer 35F</div>
@@ -889,7 +964,7 @@
               “As a solo female vanlifer, finding an honest repair shop is hard. Carlos and Tyler explained my 400Ah lithium battery setup thoroughly with zero condescension.”
             </p>
             <div class="testimonial-author">
-              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80" alt="Elena Rostova" class="testimonial-avatar">
+              <img class="testimonial-avatar" src="assets/images/testimonials/elena-rostova.png" alt="Portrait of Elena Rostova" loading="lazy">
               <div>
                 <div class="testimonial-name">Elena Rostova</div>
                 <div class="testimonial-vehicle">Mercedes Sprinter 4x4 Camper</div>
@@ -908,7 +983,7 @@
               “We’ve put 60,000 miles on our Fifth Wheel. RoadNest has handled our annual roof seals, brake drums, and suspension repacks for 5 straight years. Flawless workmanship.”
             </p>
             <div class="testimonial-author">
-              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80" alt="David Miller" class="testimonial-avatar">
+              <img class="testimonial-avatar" src="assets/images/testimonials/david-carol-miller.png" alt="Portrait of David and Carol Miller" loading="lazy">
               <div>
                 <div class="testimonial-name">David & Carol Miller</div>
                 <div class="testimonial-vehicle">Grand Design Reflection 312BHTS</div>
@@ -938,7 +1013,7 @@
         <div class="col-md-4">
           <div class="card-rn">
             <div class="card-rn-img-wrap">
-              <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&auto=format&fit=crop&q=80" alt="RV Pre-Trip Maintenance Essentials" class="card-rn-img">
+              <img src="assets/images/blog/blog-long-trip-maintenance.png" alt="Technician performing a pre-trip inspection on a Class C motorhome" class="card-rn-img" loading="lazy">
               <span class="card-badge-top">Road Trips</span>
             </div>
             <div class="card-rn-body">
@@ -956,7 +1031,7 @@
         <div class="col-md-4">
           <div class="card-rn">
             <div class="card-rn-img-wrap">
-              <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=600&auto=format&fit=crop&q=80" alt="RV Winterization Step-by-Step" class="card-rn-img">
+              <img src="assets/images/blog/blog-winterization-checklist.png" alt="Technician winterizing a motorhome freshwater system" class="card-rn-img" loading="lazy">
               <span class="card-badge-top">Winterization</span>
             </div>
             <div class="card-rn-body">
@@ -974,7 +1049,7 @@
         <div class="col-md-4">
           <div class="card-rn">
             <div class="card-rn-img-wrap">
-              <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?w=600&auto=format&fit=crop&q=80" alt="RV Battery Care and Solar Diagnostics" class="card-rn-img">
+              <img src="assets/images/blog/blog-battery-warning-signs.png" alt="Technician testing a motorhome house battery bank" class="card-rn-img" loading="lazy">
               <span class="card-badge-top">Electrical</span>
             </div>
             <div class="card-rn-body">
@@ -992,11 +1067,11 @@
   </section>
 
   <!-- Final Call to Action -->
-  <section class="py-5 text-white" style="background: linear-gradient(135deg, #071321 0%, #0d2847 100%);">
+  <section class="rn-theme-cta py-5">
     <div class="container py-4 text-center">
       <span class="badge bg-warning text-dark px-3 py-2 fw-bold text-uppercase mb-3">Hit The Road With Confidence</span>
-      <h2 class="display-5 fw-bold text-white mb-3">Your Next Adventure Starts With a Road-Ready RV.</h2>
-      <p class="lead text-light mb-4 mx-auto" style="max-width: 650px;">
+      <h2 class="display-5 fw-bold mb-3">Your Next Adventure Starts With a Road-Ready RV.</h2>
+      <p class="lead mb-4 mx-auto" style="max-width: 650px;">
         Don't risk mid-journey breakdowns. Schedule your preventive maintenance, roof audit, or seasonal winterization with Denver's leading RV specialists today.
       </p>
       <div class="d-flex flex-wrap justify-content-center gap-3">
@@ -1036,7 +1111,7 @@
           </div>
           <div class="p-3 rounded-3" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);">
             <div class="small fw-bold text-warning mb-1"><i class="fas fa-truck-pickup me-1"></i> Roadside Emergency Line</div>
-            <div class="fs-5 fw-bold text-white">(800) 555-ROAD</div>
+            <div class="fs-5 fw-bold text-white">+1 (303) 555-0144</div>
           </div>
         </div>
 
@@ -1076,7 +1151,7 @@
             <li><a href="register.html">Register Your RV</a></li>
             <li><a href="dashboard/index.html">Owner Dashboard</a></li>
             <li><a href="dashboard/book-service.html">Book Appointment</a></li>
-            <li><a href="dashboard/maintenance.html">Service Records</a></li>
+            <li><a href="dashboard/service-records.html">Service Records</a></li>
             <li><a href="dashboard/warranty.html">Warranty Claims</a></li>
           </ul>
         </div>
@@ -1085,13 +1160,13 @@
         <div class="col-sm-6 col-lg-2">
           <h5>Workshop Hours</h5>
           <ul class="list-unstyled small text-muted mb-4">
-            <li class="mb-1"><strong class="text-white">Mon - Fri:</strong> 7:30 AM - 6:00 PM</li>
-            <li class="mb-1"><strong class="text-white">Saturday:</strong> 8:00 AM - 4:00 PM</li>
-            <li class="mb-1"><strong class="text-white">Sunday:</strong> Emergency Dispatch</li>
+            <li class="mb-1"><strong class="text-white">Mon - Fri:</strong> 8:00 AM - 6:00 PM</li>
+            <li class="mb-1"><strong class="text-white">Saturday:</strong> 9:00 AM - 4:00 PM</li>
+            <li class="mb-1"><strong class="text-white">Sunday:</strong> Closed</li>
           </ul>
 
           <h5 class="fs-6">Traveler Newsletter</h5>
-          <form action="https://formsubmit.co/newsletter@roadnestrvcare.com" method="POST" class="mt-2">
+          <form action="https://formsubmit.co/clament.iq@outlook.com" method="POST" class="mt-2">
             <input type="hidden" name="_subject" value="Newsletter Subscription">
             <input type="hidden" name="_captcha" value="false">
             <div class="input-group">
@@ -1108,11 +1183,11 @@
           &copy; 2026 RoadNest RV & Motorhome Care. All rights reserved. Built for RV Explorers.
         </div>
         <div class="d-flex gap-3 small">
-          <a href="#" class="text-muted text-decoration-none">Privacy Policy</a>
+          <a href="privacy.html" class="text-muted text-decoration-none">Privacy Policy</a>
           <span class="text-muted">•</span>
-          <a href="#" class="text-muted text-decoration-none">Terms of Service</a>
+          <a href="terms.html" class="text-muted text-decoration-none">Terms of Service</a>
           <span class="text-muted">•</span>
-          <a href="#" class="text-muted text-decoration-none">Warranty Disclosure</a>
+          <a href="terms.html#warranty" class="text-muted text-decoration-none">Warranty Disclosure</a>
         </div>
       </div>
     </div>

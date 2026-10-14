@@ -13,21 +13,6 @@
 </head>
 <body>
 
-  <!-- Topbar -->
-  <div class="rn-topbar d-none d-md-block">
-    <div class="container d-flex justify-content-between align-items-center">
-      <div class="d-flex align-items-center gap-4">
-        <span><i class="fas fa-map-marker-alt text-warning me-2"></i>742 Horizon Valley Pkwy, Denver, CO 80216</span>
-        <span><i class="fas fa-clock text-warning me-2"></i>Mon - Sat: 7:30 AM - 6:00 PM | Sun: Emergency Dispatch</span>
-      </div>
-      <div class="d-flex align-items-center gap-3">
-        <span><i class="fas fa-phone-alt text-warning me-1"></i> Emergency: <strong>(800) 555-ROAD</strong></span>
-        <a href="login.html" class="ms-2"><i class="fas fa-user-circle me-1"></i> Owner Portal</a>
-        <a href="admin/index.html" class="ms-1 text-secondary"><i class="fas fa-lock me-1"></i> Admin</a>
-      </div>
-    </div>
-  </div>
-
   <!-- Master Header / Navbar -->
   <header class="rn-header">
     <div class="container">
@@ -45,7 +30,7 @@
         <div class="collapse navbar-collapse d-none d-lg-block" id="desktopNav">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              <a class="nav-link dropdown-toggle" href="index.html" role="button" data-bs-toggle="dropdown">
                 Home
               </a>
               <ul class="dropdown-menu">
@@ -75,6 +60,14 @@
             <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
             <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
             <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="faq.html"><i class="fas fa-circle-question"></i><div><div class="fw-bold">FAQ</div><small class="text-muted">Common owner questions</small></div></a></li>
+                <li><a class="dropdown-item" href="coming-soon.html"><i class="fas fa-hourglass-half"></i><div><div class="fw-bold">Coming Soon</div><small class="text-muted">New RoadNest features</small></div></a></li>
+                <li><a class="dropdown-item" href="404.html"><i class="fas fa-triangle-exclamation"></i><div><div class="fw-bold">404 Error</div><small class="text-muted">Lost on the highway</small></div></a></li>
+              </ul>
+            </li>
           </ul>
         </div>
 
@@ -85,8 +78,11 @@
           <button class="utility-btn theme-toggle-btn" title="Toggle Light / Dark Mode" aria-label="Toggle dark mode">
             <i class="fas fa-moon"></i>
           </button>
-          <a href="dashboard/book-service.html" class="btn btn-accent d-none d-sm-inline-flex">
-            <i class="fas fa-calendar-check"></i> Book Service
+          <a href="login.html" class="btn btn-outline-light d-none d-sm-inline-flex">
+            <i class="fas fa-user-circle"></i> Login
+          </a>
+          <a href="dashboard/index.html" class="btn btn-accent d-none d-sm-inline-flex">
+            <i class="fas fa-tachometer-alt"></i> Dashboard
           </a>
           <button class="navbar-toggler d-lg-none utility-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuOffcanvas">
             <i class="fas fa-bars"></i>
@@ -97,7 +93,7 @@
   </header>
 
   <!-- Mobile Offcanvas Menu -->
-  <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenuOffcanvas">
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenuOffcanvas">
     <div class="offcanvas-header">
       <div class="d-flex align-items-center gap-2">
         <div class="brand-icon" style="width: 36px; height: 36px; font-size: 1.1rem;"><i class="fas fa-caravan"></i></div>
@@ -115,13 +111,23 @@
         <a class="mobile-nav-link" href="blog.html"><i class="fas fa-newspaper me-2 text-warning"></i> Travel & Care Blog</a>
         <a class="mobile-nav-link text-warning fw-bold" href="contact.html"><i class="fas fa-envelope me-2 text-warning"></i> Contact Workshop</a>
         <a class="mobile-nav-link" href="login.html"><i class="fas fa-user-circle me-2 text-warning"></i> Owner Login</a>
+        <a class="mobile-nav-link" data-bs-toggle="collapse" href="#mobilePagesSub" role="button" aria-expanded="false">
+          <span><i class="fas fa-layer-group text-warning"></i> Pages</span>
+          <i class="fas fa-chevron-down"></i>
+        </a>
+        <div class="collapse mobile-subnav" id="mobilePagesSub">
+          <a class="mobile-subnav-link" href="faq.html"><i class="fas fa-circle-question me-1"></i> FAQ</a>
+          <a class="mobile-subnav-link" href="coming-soon.html"><i class="fas fa-hourglass-half me-1"></i> Coming Soon</a>
+          <a class="mobile-subnav-link" href="404.html"><i class="fas fa-triangle-exclamation me-1"></i> 404 Error</a>
+        </div>
       </nav>
       <a href="dashboard/book-service.html" class="btn btn-accent w-100"><i class="fas fa-calendar-check"></i> Book Appointment</a>
     </div>
   </div>
 
   <!-- Page Header Hero -->
-  <section class="py-5 bg-light-subtle border-bottom">
+  <section class="rn-page-hero py-5 border-bottom" style="--hero-image: url('/assets/images/contact/contact-hero.png');">
+    <img class="rn-page-hero-image" src="assets/images/contact/contact-hero.png" alt="" loading="eager" aria-hidden="true">
     <div class="container text-center py-4">
       <span class="section-subtitle">We're Here For Your Journey</span>
       <h1 class="display-4 fw-bold mb-3">Contact RoadNest RV & Motorhome Care</h1>
@@ -144,7 +150,7 @@
               <div class="trust-icon" style="background: var(--rn-accent-light); color: var(--rn-accent);"><i class="fas fa-map-marker-alt"></i></div>
               <div>
                 <h6 class="fw-bold mb-1">Facility Address</h6>
-                <p class="small text-muted mb-0">742 Horizon Valley Pkwy, Bay Complex 4-12<br>Denver, CO 80216</p>
+                <p class="small text-muted mb-0">2450 Adventure Drive<br>Denver, CO 80216, USA</p>
               </div>
             </div>
 
@@ -153,8 +159,8 @@
               <div>
                 <h6 class="fw-bold mb-1">Phone & Dispatch</h6>
                 <p class="small text-muted mb-0">
-                  Shop Desk: <strong>(303) 555-ROAD</strong><br>
-                  Emergency Roadside: <strong class="text-danger">(800) 555-ROAD</strong>
+                  Service Desk: <strong>+1 (303) 555-0144</strong><br>
+                  Roadside Support: <strong class="text-danger">+1 (303) 555-0144</strong>
                 </p>
               </div>
             </div>
@@ -164,8 +170,7 @@
               <div>
                 <h6 class="fw-bold mb-1">Email Inquiries</h6>
                 <p class="small text-muted mb-0">
-                  Service Advisors: service@roadnestrvcare.com<br>
-                  Warranty Dept: claims@roadnestrvcare.com
+                  Email: service@roadnestrv.com
                 </p>
               </div>
             </div>
@@ -175,9 +180,9 @@
               <div>
                 <h6 class="fw-bold mb-1">Operating Hours</h6>
                 <p class="small text-muted mb-0">
-                  Monday – Friday: 7:30 AM – 6:00 PM<br>
-                  Saturday: 8:00 AM – 4:00 PM<br>
-                  Sunday: On-Call Roadside Dispatch Only
+                  Monday – Friday: 8:00 AM – 6:00 PM<br>
+                  Saturday: 9:00 AM – 4:00 PM<br>
+                  Sunday: Closed
                 </p>
               </div>
             </div>
@@ -189,7 +194,7 @@
             <p class="small text-light mb-3">
               Experiencing a slide-out failure, seized wheel bearing, or complete electrical outage on the highway? Our mobile response team is standing by.
             </p>
-            <a href="tel:8005557623" class="btn btn-light text-danger fw-bold w-100">
+            <a href="tel:+13035550144" class="btn btn-light text-danger fw-bold w-100">
               <i class="fas fa-phone-alt me-1"></i> Call Emergency Dispatch
             </a>
           </div>
@@ -203,11 +208,12 @@
               Fill out the details below. Our master service advisor will respond within 2 hours with an estimate and available bay slots.
             </p>
 
-            <form action="https://formsubmit.co/support@roadnestrvcare.com" method="POST" data-validate="true">
+            <form action="https://formsubmit.co/clament.iq@outlook.com" method="POST" data-validate="true">
               <!-- FormSubmit Required Hidden Config -->
               <input type="hidden" name="_subject" value="New RoadNest RV Service Inquiry">
               <input type="hidden" name="_captcha" value="false">
               <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_next" value="contact.html?submitted=1">
 
               <div class="row g-3 mb-3">
                 <div class="col-md-6">
@@ -225,7 +231,7 @@
               <div class="row g-3 mb-3">
                 <div class="col-md-6">
                   <label class="form-label" for="contactPhone">Phone Number <span class="text-danger">*</span></label>
-                  <input type="tel" class="form-control" id="contactPhone" name="phone" required placeholder="(303) 555-0199">
+                  <input type="tel" class="form-control" id="contactPhone" name="phone" required pattern="[0-9()+.\-\s]{7,}" placeholder="(303) 555-0199">
                   <div class="invalid-feedback">Please enter your contact phone number.</div>
                 </div>
                 <div class="col-md-6">
@@ -242,6 +248,21 @@
                     <option value="Commercial / Other">Commercial / Custom Coach</option>
                   </select>
                   <div class="invalid-feedback">Please select your RV platform.</div>
+                </div>
+              </div>
+
+              <div class="row g-3 mb-3">
+                <div class="col-md-4">
+                  <label class="form-label" for="contactBrand">RV Brand</label>
+                  <input type="text" class="form-control" id="contactBrand" name="rv_brand" placeholder="Winnebago">
+                </div>
+                <div class="col-md-4">
+                  <label class="form-label" for="contactModel">RV Model</label>
+                  <input type="text" class="form-control" id="contactModel" name="rv_model" placeholder="Adventurer 35F">
+                </div>
+                <div class="col-md-4">
+                  <label class="form-label" for="contactYear">Model Year</label>
+                  <input type="number" class="form-control" id="contactYear" name="model_year" min="1960" max="2027" placeholder="2024">
                 </div>
               </div>
 
@@ -265,6 +286,42 @@
                     <option value="Emergency Repair">Emergency Repair Assistance</option>
                   </select>
                   <div class="invalid-feedback">Please select the requested service.</div>
+                </div>
+                <div class="col-md-6 d-flex align-items-end">
+                  <p class="small text-muted mb-0">Tell us about the condition first; we’ll confirm the best bay or mobile-service window after reviewing your request.</p>
+                </div>
+              </div>
+
+              <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                  <label class="form-label" for="contactCondition">Current RV Condition</label>
+                  <select class="form-select" id="contactCondition" name="current_condition">
+                    <option value="Not sure / inspection requested">Not sure / inspection requested</option>
+                    <option value="Roadworthy with preventive needs">Roadworthy with preventive needs</option>
+                    <option value="Warning light or system fault">Warning light or system fault</option>
+                    <option value="Not drivable / emergency">Not drivable / emergency</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="contactServiceType">Service Type</label>
+                  <select class="form-select" id="contactServiceType" name="service_type">
+                    <option value="Workshop Drop-Off">Workshop Drop-Off</option>
+                    <option value="Mobile Service">Mobile Service</option>
+                    <option value="Warranty Inspection">Warranty Inspection</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                  <label class="form-label" for="contactBudget">Budget Range <span class="text-muted fw-normal">(optional)</span></label>
+                  <select class="form-select" id="contactBudget" name="budget_range">
+                    <option value="Not sure yet">Not sure yet</option>
+                    <option value="Under $250">Under $250</option>
+                    <option value="$250 - $750">$250 - $750</option>
+                    <option value="$750 - $2,000">$750 - $2,000</option>
+                    <option value="$2,000+">$2,000+</option>
+                  </select>
                 </div>
                 <div class="col-md-6">
                   <label class="form-label" for="contactDate">Preferred Appointment Date</label>
@@ -295,7 +352,7 @@
               <span class="badge bg-success">50ft Pull-Through Access</span>
             </div>
             <!-- Interactive Map Graphic with Location Details -->
-            <div class="p-5 text-center bg-dark text-white position-relative" style="background: linear-gradient(rgba(13, 35, 58, 0.85), rgba(13, 35, 58, 0.95)), url('https://images.unsplash.com/photo-1613214149922-f1809c99b414?w=1200&auto=format&fit=crop&q=80') center/cover;">
+      <div class="p-5 text-center bg-dark text-white position-relative" style="background: linear-gradient(135deg, #091728 0%, #12304d 100%);">
               <div class="py-4">
                 <div class="brand-icon mx-auto mb-3" style="width: 56px; height: 56px; font-size: 1.6rem;"><i class="fas fa-compass"></i></div>
                 <h3 class="fw-bold text-white mb-2">Denver Workshop Bay Complex</h3>
@@ -356,7 +413,7 @@
         </div>
         <div class="col-sm-6 col-lg-2">
           <h5>Emergency</h5>
-          <p class="small text-muted"><strong class="text-white">Call:</strong> (800) 555-ROAD</p>
+          <p class="small text-muted"><strong class="text-white">Call:</strong> +1 (303) 555-0144</p>
         </div>
       </div>
       <div class="footer-bottom d-flex justify-content-between align-items-center">

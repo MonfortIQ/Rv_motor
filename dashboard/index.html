@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Owner Dashboard Overview | RoadNest RV Care</title>
   <meta name="description" content="RoadNest RV Owner Maintenance Dashboard. Monitor real-time vehicle telematics, maintenance history, upcoming appointments, and warranty status.">
+  <link rel="canonical" href="index.html">
 
   <!-- Bootstrap 5.3.3 CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
@@ -87,7 +88,7 @@
       <div class="sidebar-footer">
         <div class="d-flex align-items-center justify-content-between">
           <div class="d-flex align-items-center gap-2">
-            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&auto=format&fit=crop&q=80" alt="John Davis" class="rounded-circle" style="width: 36px; height: 36px; object-fit: cover;">
+            <span class="user-avatar-initials" aria-label="John Davis">JD</span>
             <div>
               <div class="fw-bold small">John Davis</div>
               <small class="text-muted" style="font-size: 0.75rem;">Adventurer 35F</small>
@@ -135,7 +136,7 @@
             <h2 class="fw-bold mb-1">Welcome back, John!</h2>
             <p class="text-muted mb-0">Your 2024 Winnebago Adventurer 35F is in <strong class="text-success">Optimal Condition (94% Health)</strong>.</p>
           </div>
-          <div class="d-flex gap-2">
+          <div class="d-flex gap-2 dashboard-quick-actions">
             <a href="book-service.html" class="btn btn-accent"><i class="fas fa-wrench"></i> Schedule Bay Slot</a>
             <a href="maintenance.html" class="btn btn-outline-navy"><i class="fas fa-history"></i> Maintenance History</a>
             <a href="warranty.html" class="btn btn-outline-navy d-none d-xl-inline-flex"><i class="fas fa-shield-alt"></i> Warranty Status</a>
@@ -145,7 +146,7 @@
 
         <!-- Metric KPI Cards -->
         <div class="row g-3 mb-4">
-          <div class="col-sm-6 col-xl-3">
+          <div class="col-sm-6 col-xl-2">
             <div class="metric-card">
               <div>
                 <div class="metric-title">Next Scheduled Service</div>
@@ -156,7 +157,7 @@
             </div>
           </div>
 
-          <div class="col-sm-6 col-xl-3">
+          <div class="col-sm-6 col-xl-2">
             <div class="metric-card">
               <div>
                 <div class="metric-title">Upcoming Appointment</div>
@@ -167,7 +168,7 @@
             </div>
           </div>
 
-          <div class="col-sm-6 col-xl-3">
+          <div class="col-sm-6 col-xl-2">
             <div class="metric-card">
               <div>
                 <div class="metric-title">Warranty Protection</div>
@@ -178,7 +179,7 @@
             </div>
           </div>
 
-          <div class="col-sm-6 col-xl-3">
+          <div class="col-sm-6 col-xl-2">
             <div class="metric-card">
               <div>
                 <div class="metric-title">Outstanding Balance</div>
@@ -186,6 +187,28 @@
                 <div class="metric-trend text-success small"><i class="fas fa-check me-1"></i>All 4 Invoices Settled</div>
               </div>
               <div class="metric-icon-wrap" style="background: rgba(245, 158, 11, 0.12); color: #f59e0b;"><i class="fas fa-receipt"></i></div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-xl-2">
+            <div class="metric-card">
+              <div>
+                <div class="metric-title">RV Health</div>
+                <div class="metric-val text-success">94%</div>
+                <div class="metric-trend text-success small"><i class="fas fa-arrow-up me-1"></i>+3% since last audit</div>
+              </div>
+              <div class="metric-icon-wrap" style="background: rgba(16, 185, 129, 0.12); color: #10b981;"><i class="fas fa-heartbeat"></i></div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-xl-2">
+            <div class="metric-card">
+              <div>
+                <div class="metric-title">Completed Services</div>
+                <div class="metric-val">12</div>
+                <div class="metric-trend text-muted small"><i class="fas fa-check-circle me-1"></i>This ownership year</div>
+              </div>
+              <div class="metric-icon-wrap" style="background: rgba(26, 86, 219, 0.12); color: #1a56db;"><i class="fas fa-tools"></i></div>
             </div>
           </div>
         </div>
@@ -196,7 +219,7 @@
           <div class="col-lg-7">
             <div class="vehicle-showcase-card h-100">
               <div class="position-relative">
-                <img src="https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?w=900&auto=format&fit=crop&q=80" alt="2024 Winnebago Adventurer 35F" class="vehicle-img-thumb">
+                <img src="../assets/images/dashboard/dashboard-my-rv.png" alt="2024 Class A motorhome in a professional service bay" class="vehicle-img-thumb" loading="lazy">
                 <span class="position-absolute top-0 end-0 m-3 badge bg-success px-3 py-2 fw-bold">Primary Rig</span>
               </div>
               <div class="p-4">

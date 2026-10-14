@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="RoadNest RV Care">
+  <defs>
+    <linearGradient id="roadnest-orange" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f97316"/>
+      <stop offset="1" stop-color="#c2410c"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="15" fill="url(#roadnest-orange)"/>
+  <path d="M11 39.5V25.75A5.75 5.75 0 0 1 16.75 20h25.5A10.75 10.75 0 0 1 53 30.75V40H11Z" fill="#102a43"/>
+  <path d="M17 24.5h10.5v10H17zM31.5 24.5h10v10h-10z" fill="#d9f0f7"/>
+  <path d="M45.5 27.25h2.25A4.25 4.25 0 0 1 52 31.5v3h-6.5z" fill="#d9f0f7"/>
+  <path d="M8 39.5h47v4H8z" fill="#f8fafc"/>
+  <circle cx="20" cy="44" r="5.25" fill="#102a43" stroke="#f8fafc" stroke-width="2"/>
+  <circle cx="20" cy="44" r="1.7" fill="#f97316"/>
+  <circle cx="46" cy="44" r="5.25" fill="#102a43" stroke="#f8fafc" stroke-width="2"/>
+  <circle cx="46" cy="44" r="1.7" fill="#f97316"/>
+  <path d="M12 51h40" stroke="#102a43" stroke-width="3" stroke-linecap="round"/>
+</svg>

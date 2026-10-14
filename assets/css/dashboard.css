@@ -3,6 +3,11 @@
    Covers: Owner Portal & Admin Dashboard
    =================================================================== */
 
+:root {
+  --dashboard-header-height: 70px;
+  --dashboard-sidebar-width: 280px;
+}
+
 .dashboard-wrapper {
   display: flex;
   min-height: 100vh;
@@ -95,7 +100,7 @@
   display: flex;
   flex-direction: column;
   min-width: 0;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 .dashboard-topbar {
@@ -393,6 +398,63 @@
   background-color: var(--rn-surface-alt);
 }
 
+/* Responsive shell layers */
+.dashboard-sidebar-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1040;
+  display: none;
+  background: rgba(4, 12, 22, 0.58);
+  opacity: 0;
+  transition: opacity var(--rn-transition-base);
+}
+
+.dashboard-sidebar-backdrop.is-open {
+  display: block;
+  opacity: 1;
+}
+
+@media (max-width: 1100px) {
+  body.dashboard-drawer-open {
+    overflow: hidden;
+  }
+}
+
+.dashboard-topbar > * {
+  min-width: 0;
+}
+
+.dashboard-topbar h4,
+.dashboard-content h1,
+.dashboard-content h2,
+.dashboard-content h3,
+.dashboard-content h4,
+.dashboard-content h5,
+.dashboard-content h6 {
+  overflow-wrap: anywhere;
+}
+
+.dashboard-content canvas {
+  display: block;
+  max-width: 100%;
+}
+
+.dashboard-content [style*="height: 300px"] {
+  height: clamp(220px, 30vw, 320px) !important;
+  max-width: 100%;
+}
+
+.modal-dialog {
+  max-width: min( calc(100% - 24px), 720px);
+}
+
+@media (min-width: 1200px) {
+  .dashboard-content .row > .col-xl-2 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
 /* RTL Adjustments for Dashboard */
 [dir="rtl"] .dashboard-sidebar {
   border-right: none;
@@ -420,21 +482,794 @@
 }
 
 /* Mobile Sidebar Drawer */
-@media (max-width: 991px) {
+@media (max-width: 1100px) {
   .dashboard-sidebar {
     position: fixed;
     top: 0;
     bottom: 0;
-    left: -280px;
+    left: 0;
+    width: min(280px, 88vw);
+    visibility: hidden;
+    transform: translateX(-100%);
+    z-index: 1045;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.26);
   }
+
   .dashboard-sidebar.show {
     left: 0;
+    visibility: visible;
+    transform: translateX(0);
   }
+
   [dir="rtl"] .dashboard-sidebar {
     left: auto;
-    right: -280px;
+    right: 0;
+    transform: translateX(100%);
   }
+
   [dir="rtl"] .dashboard-sidebar.show {
     right: 0;
+    transform: translateX(0);
+  }
+
+  .dashboard-topbar {
+    min-height: 64px;
+    height: auto;
+    padding: 0.65rem 1rem;
+    gap: 0.75rem;
+  }
+
+  .dashboard-topbar h4 {
+    max-width: 42vw;
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+
+  .dashboard-topbar .btn-accent {
+    display: none !important;
+  }
+
+  .dashboard-content {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .metric-card {
+    height: 100%;
+    padding: 1.15rem;
+  }
+
+  .vehicle-img-thumb {
+    height: clamp(180px, 28vw, 240px);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .dashboard-topbar {
+    padding-inline: 0.75rem;
+  }
+
+  .dashboard-topbar .rtl-pill,
+  .dashboard-topbar .utility-btn,
+  .dashboard-topbar .btn-outline-navy {
+    min-width: 40px;
+    min-height: 40px;
+    padding: 0.45rem 0.6rem;
+  }
+
+  .dashboard-topbar .btn-outline-navy[title="Website Home"] span,
+  .dashboard-topbar .btn-outline-navy[title="Website Home"] .label {
+    display: none;
+  }
+
+  .dashboard-content {
+    padding: 1.25rem 0.75rem 2rem;
+  }
+
+  .dashboard-content .row {
+    --bs-gutter-x: 0.85rem;
+    --bs-gutter-y: 0.85rem;
+  }
+
+  .metric-card {
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .metric-val {
+    font-size: 1.45rem;
+  }
+
+  .maintenance-timeline {
+    padding-inline-start: 1.5rem;
+  }
+
+  [dir="rtl"] .maintenance-timeline {
+    padding-inline-start: 0;
+    padding-inline-end: 1.5rem;
+  }
+
+  .wizard-steps {
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 0.25rem 0.25rem 0.75rem;
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+
+  .wizard-step-node {
+    flex: 0 0 76px;
+  }
+
+  .wizard-steps::before {
+    left: 38px;
+    right: auto;
+    width: calc(100% - 76px);
+  }
+
+  .wizard-step-label {
+    font-size: 0.72rem;
+  }
+
+  .modal-dialog {
+    max-height: calc(100dvh - 24px);
+    margin: 0.75rem auto;
+  }
+
+  .modal-content {
+    max-height: calc(100dvh - 24px);
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .dashboard-topbar h4 {
+    display: none;
+  }
+
+  .dashboard-topbar > div:first-child {
+    flex: 1 1 auto;
+  }
+
+  .dashboard-topbar > div:last-child {
+    gap: 0.3rem !important;
+  }
+
+  .sidebar-header {
+    padding: 1rem;
+  }
+
+  .sidebar-menu {
+    padding-inline: 0.65rem;
+  }
+
+  .sidebar-link {
+    min-height: 44px;
+  }
+
+  .table-rn {
+    min-width: 560px;
+  }
+
+  .vehicle-img-thumb {
+    height: auto;
+    aspect-ratio: 16 / 10;
+  }
+}
+
+/* Extra-small dashboard layout: keep controls, telemetry and tables readable
+   instead of squeezing their text into single-character columns. */
+@media (max-width: 575.98px) {
+  .dashboard-wrapper,
+  .dashboard-main,
+  .dashboard-content {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .dashboard-content > .d-flex.justify-content-between {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .dashboard-content > .d-flex.justify-content-between > div:last-child {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    flex-wrap: nowrap !important;
+    gap: 0.65rem !important;
+  }
+
+  .dashboard-content > .d-flex.justify-content-between > div:last-child .btn {
+    width: 100%;
+    min-height: 46px;
+  }
+
+  .vehicle-showcase-card > .p-4 {
+    padding: 1rem !important;
+  }
+
+  .vehicle-showcase-card .d-flex.justify-content-between.align-items-start {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .vehicle-showcase-card .d-flex.justify-content-between.align-items-start .btn {
+    align-self: flex-start;
+  }
+
+  .vehicle-showcase-card .row.g-2 > [class*="col-3"] {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .telemetry-gauge {
+    min-height: 112px;
+    padding: 0.75rem 0.5rem;
+  }
+
+  .telemetry-lbl {
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .dashboard-content .col-lg-5 > .card {
+    padding: 1rem !important;
+  }
+
+  .dashboard-content .col-lg-5 .card .flex-grow-1.position-relative {
+    min-height: 230px !important;
+    height: 230px;
+  }
+
+  .dashboard-content .col-lg-5 .card > .pt-3.border-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.45rem;
+  }
+
+  .dashboard-content .table-responsive {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .dashboard-content .table-rn {
+    width: 760px;
+    min-width: 760px;
+    table-layout: fixed;
+  }
+
+  .dashboard-content .table-rn th,
+  .dashboard-content .table-rn td {
+    white-space: normal;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .dashboard-content .table-rn th:nth-child(1),
+  .dashboard-content .table-rn td:nth-child(1) { width: 125px; }
+
+  .dashboard-content .table-rn th:nth-child(2),
+  .dashboard-content .table-rn td:nth-child(2) { width: 270px; }
+
+  .dashboard-content .table-rn th:nth-child(3),
+  .dashboard-content .table-rn td:nth-child(3) { width: 170px; }
+
+  .dashboard-content .table-rn th:nth-child(4),
+  .dashboard-content .table-rn td:nth-child(4) { width: 150px; }
+}
+
+/* The dashboard is a dense application view; collapse its quick actions
+   anywhere the compact header is active, including narrow tablet previews. */
+@media (max-width: 1100px) {
+  .dashboard-content .dashboard-quick-actions {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    gap: 0.65rem !important;
+  }
+
+  .dashboard-content .dashboard-quick-actions .btn {
+    width: 100% !important;
+    min-height: 46px;
+  }
+
+  /* Keep the six maintenance columns readable in the 1024px dashboard
+     preview; the table scrolls horizontally instead of crushing text. */
+  .dashboard-content .table-responsive {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .dashboard-content .table-rn {
+    width: 950px;
+    min-width: 950px;
+    table-layout: fixed;
+  }
+
+  .dashboard-content .table-rn th,
+  .dashboard-content .table-rn td {
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .dashboard-content .table-rn th:nth-child(1),
+  .dashboard-content .table-rn td:nth-child(1) { width: 135px; }
+
+  .dashboard-content .table-rn th:nth-child(2),
+  .dashboard-content .table-rn td:nth-child(2) { width: 260px; }
+
+  .dashboard-content .table-rn th:nth-child(3),
+  .dashboard-content .table-rn td:nth-child(3) { width: 175px; }
+
+  .dashboard-content .table-rn th:nth-child(4),
+  .dashboard-content .table-rn td:nth-child(4) { width: 165px; }
+
+  .dashboard-content .table-rn th:nth-child(5),
+  .dashboard-content .table-rn td:nth-child(5) { width: 115px; }
+
+  .dashboard-content .table-rn th:nth-child(6),
+  .dashboard-content .table-rn td:nth-child(6) { width: 100px; }
+}
+
+/* Appointment roster becomes stacked record cards on phones. This keeps all
+   fields visible without forcing the whole page into a horizontal scroll. */
+@media (max-width: 575.98px) {
+  .dashboard-content .appointment-status-filters {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    gap: 0.5rem !important;
+  }
+
+  .dashboard-content .appointment-status-filters .btn {
+    width: 100%;
+    padding-inline: 0.45rem;
+  }
+
+  .dashboard-content .table-responsive:has(.appointments-table) {
+    overflow-x: visible;
+  }
+
+  .dashboard-content .appointments-table {
+    width: 100% !important;
+    min-width: 0 !important;
+    table-layout: auto;
+  }
+
+  .dashboard-content .appointments-table thead {
+    display: none;
+  }
+
+  .dashboard-content .appointments-table tbody,
+  .dashboard-content .appointments-table tr,
+  .dashboard-content .appointments-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .dashboard-content .appointments-table tr {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 0.45rem 0.85rem;
+    padding: 1rem;
+    border-bottom: 1px solid var(--rn-border);
+  }
+
+  .dashboard-content .appointments-table td {
+    min-width: 0;
+    padding: 0.25rem 0;
+    border: 0;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .dashboard-content .appointments-table td:nth-child(2),
+  .dashboard-content .appointments-table td:nth-child(3),
+  .dashboard-content .appointments-table td:nth-child(7) {
+    grid-column: 1 / -1;
+  }
+
+  .dashboard-content .appointments-table td:nth-child(6),
+  .dashboard-content .appointments-table td:nth-child(7) {
+    align-self: center;
+  }
+
+  .dashboard-content .appointments-table td:nth-child(7) .btn,
+  .dashboard-content .appointments-table td:nth-child(7) .dropdown {
+    max-width: 100%;
+  }
+
+  .dashboard-content .my-rv-specs > [class*="col-"] {
+    width: 100%;
+  }
+
+  .dashboard-content .my-rv-specs .card,
+  .dashboard-content .my-rv-dimensions {
+    padding: 1rem !important;
+  }
+
+  .dashboard-content .my-rv-specs .card > h5,
+  .dashboard-content .my-rv-dimensions > h5 {
+    font-size: 1.15rem;
+    line-height: 1.25;
+  }
+
+  .dashboard-content .my-rv-specs .d-flex.justify-content-between {
+    display: grid !important;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-items: start;
+    gap: 0.75rem;
+  }
+
+  .dashboard-content .my-rv-specs .d-flex.justify-content-between > * {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .dashboard-content .my-rv-dimensions .row {
+    --bs-gutter-x: 0.7rem;
+    --bs-gutter-y: 0.7rem;
+  }
+
+  .dashboard-content .my-rv-dimensions .row > [class*="col-"] {
+    width: 50%;
+  }
+
+  .dashboard-content .my-rv-dimensions .row > [class*="col-"] > div {
+    min-height: 118px;
+    padding: 0.85rem !important;
+  }
+
+  .dashboard-content .my-rv-dimensions .fs-4 {
+    font-size: 1.45rem !important;
+  }
+}
+
+/* Tablet dashboard: keep the appointment table inside the panel and show
+   every column in the correct order instead of inheriting the wide phone
+   table dimensions. */
+@media (min-width: 576px) and (max-width: 1100px) {
+  .dashboard-content .appointments-table {
+    width: 100% !important;
+    min-width: 0 !important;
+    table-layout: fixed;
+  }
+
+  .dashboard-content .appointments-table th,
+  .dashboard-content .appointments-table td {
+    padding: 0.8rem 0.65rem;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .dashboard-content .appointments-table th:nth-child(1),
+  .dashboard-content .appointments-table td:nth-child(1) { width: 13%; }
+
+  .dashboard-content .appointments-table th:nth-child(2),
+  .dashboard-content .appointments-table td:nth-child(2) { width: 17%; }
+
+  .dashboard-content .appointments-table th:nth-child(3),
+  .dashboard-content .appointments-table td:nth-child(3) { width: 22%; }
+
+  .dashboard-content .appointments-table th:nth-child(4),
+  .dashboard-content .appointments-table td:nth-child(4) { width: 14%; }
+
+  .dashboard-content .appointments-table th:nth-child(5),
+  .dashboard-content .appointments-table td:nth-child(5) { width: 14%; }
+
+  .dashboard-content .appointments-table th:nth-child(6),
+  .dashboard-content .appointments-table td:nth-child(6) { width: 10%; }
+
+  .dashboard-content .appointments-table th:nth-child(7),
+  .dashboard-content .appointments-table td:nth-child(7) { width: 10%; }
+
+  .dashboard-content .appointments-table .status-pill {
+    padding-inline: 0.45rem;
+    font-size: 0.68rem;
+  }
+
+  .dashboard-content .appointments-table td:nth-child(7) .btn {
+    padding-inline: 0.45rem;
+    white-space: normal;
+  }
+}
+
+/* Compact dashboard pages: invoice records and notifications become readable
+   cards on phones instead of narrow clipped table/three-column layouts. */
+@media (max-width: 575.98px) {
+  .dashboard-topbar .dashboard-print-btn {
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    padding: 0 !important;
+    font-size: 0;
+  }
+
+  .dashboard-topbar .dashboard-print-btn i {
+    margin: 0 !important;
+    font-size: 1rem;
+  }
+
+  .dashboard-content .invoice-table {
+    width: 100% !important;
+    min-width: 0 !important;
+    table-layout: auto;
+  }
+
+  .dashboard-content .invoice-table thead {
+    display: none;
+  }
+
+  .dashboard-content .invoice-table tbody,
+  .dashboard-content .invoice-table tr,
+  .dashboard-content .invoice-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .dashboard-content .invoice-table tr {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 0.5rem 0.85rem;
+    padding: 1rem;
+    border-bottom: 1px solid var(--rn-border);
+  }
+
+  .dashboard-content .invoice-table td {
+    min-width: 0;
+    padding: 0.25rem 0;
+    border: 0;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .dashboard-content .invoice-table td:nth-child(3),
+  .dashboard-content .invoice-table td:nth-child(4),
+  .dashboard-content .invoice-table td:nth-child(7) {
+    grid-column: 1 / -1;
+  }
+
+  .dashboard-content .invoice-table td:nth-child(7) .btn {
+    width: 100%;
+  }
+
+  .dashboard-content .notification-card > .d-flex {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.85rem !important;
+  }
+
+  .dashboard-content .notification-card > .d-flex > div.d-flex {
+    display: grid !important;
+    grid-template-columns: 48px minmax(0, 1fr);
+    align-items: start;
+    gap: 0.75rem !important;
+  }
+
+  .dashboard-content .notification-card > .d-flex > .btn,
+  .dashboard-content .notification-card > .d-flex > .badge {
+    justify-self: start;
+    white-space: nowrap;
+    width: max-content;
+    max-width: 100%;
+  }
+
+  .dashboard-content .notification-card h6,
+  .dashboard-content .notification-card p {
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .dashboard-content .warranty-policy-card,
+  .dashboard-content .warranty-components-card {
+    padding: 1rem !important;
+  }
+
+  .dashboard-content .warranty-policy-card .status-pill {
+    font-size: 0.8rem;
+    padding-inline: 0.75rem;
+  }
+
+  .dashboard-content .warranty-components-card .row > [class*="col-"] {
+    width: 100%;
+  }
+}
+
+/* Notification cards: keep the icon visible and reserve a stable column for
+   the copy at every dashboard width. */
+.notification-card {
+  width: 100%;
+  min-width: 0;
+}
+
+.notification-card .notification-icon {
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.notification-card .notification-copy {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.notification-card .notification-action {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+/* Warranty policy header: keep the status and deductible aligned inside the
+   narrow card instead of letting the badge overflow its right edge. */
+.warranty-policy-status {
+  min-width: 0;
+  flex-wrap: wrap;
+}
+
+.warranty-policy-status .status-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  white-space: normal;
+  text-align: center;
+}
+
+.warranty-policy-status .warranty-deductible {
+  white-space: nowrap;
+}
+
+@media (max-width: 575.98px) {
+  .dashboard-content .notification-card > .d-flex {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .dashboard-content .notification-card > .d-flex > div.d-flex {
+    width: 100%;
+    min-width: 0;
+    grid-template-columns: 48px minmax(0, 1fr);
+  }
+
+  .dashboard-content .notification-card .notification-copy {
+    min-width: 0;
+  }
+
+  .dashboard-content .notification-card .notification-action {
+    justify-self: start;
+    width: auto;
+    max-width: 100%;
+  }
+
+  .dashboard-content .warranty-policy-status {
+    flex-wrap: nowrap;
+    gap: 0.5rem !important;
+    width: 100%;
+    align-items: center;
+  }
+
+  .dashboard-content .warranty-policy-status .status-pill {
+    flex: 1 1 auto;
+    min-width: 0;
+    padding-inline: 0.65rem !important;
+    font-size: 0.82rem !important;
+  }
+
+  .dashboard-content .warranty-policy-status .warranty-deductible {
+    flex: 0 1 auto;
+    max-width: 52%;
+    padding-inline: 0.4rem;
+    font-size: 0.72rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+/* ===================================================================
+   Global fixed dashboard header system
+   Owner and admin dashboards share this shell. The topbar stays visible,
+   the desktop sidebar starts below it, and the mobile drawer can still
+   overlay the full viewport when opened.
+   =================================================================== */
+html:has(.dashboard-wrapper) {
+  scroll-padding-top: var(--dashboard-header-height);
+}
+
+.dashboard-wrapper {
+  display: block;
+  min-height: 100vh;
+  padding-top: var(--dashboard-header-height);
+}
+
+.dashboard-sidebar {
+  position: fixed;
+  inset-block: var(--dashboard-header-height) 0;
+  inset-inline-start: 0;
+  width: var(--dashboard-sidebar-width);
+  overflow-y: auto;
+  z-index: 1020;
+}
+
+.dashboard-main {
+  display: flex;
+  min-height: calc(100vh - var(--dashboard-header-height));
+  margin-inline-start: var(--dashboard-sidebar-width);
+  overflow-x: clip;
+}
+
+.dashboard-topbar {
+  position: fixed !important;
+  inset-block-start: 0 !important;
+  inset-inline-start: var(--dashboard-sidebar-width);
+  inset-inline-end: 0;
+  width: auto;
+  height: var(--dashboard-header-height);
+  min-height: var(--dashboard-header-height);
+  z-index: 1030 !important;
+}
+
+[dir="rtl"] .dashboard-sidebar {
+  inset-inline-start: auto;
+  inset-inline-end: 0;
+}
+
+[dir="rtl"] .dashboard-main {
+  margin-inline-start: 0;
+  margin-inline-end: var(--dashboard-sidebar-width);
+}
+
+@media (max-width: 1100px) {
+  :root {
+    --dashboard-header-height: 64px;
+  }
+
+  .dashboard-wrapper {
+    padding-top: var(--dashboard-header-height);
+  }
+
+  .dashboard-sidebar {
+    inset: 0 auto 0 0;
+    width: min(var(--dashboard-sidebar-width), 88vw);
+    visibility: hidden;
+    transform: translateX(-100%);
+    z-index: 1045;
+  }
+
+  .dashboard-sidebar.show {
+    inset-inline-start: 0;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  [dir="rtl"] .dashboard-sidebar {
+    inset: 0 0 0 auto;
+    transform: translateX(100%);
+  }
+
+  [dir="rtl"] .dashboard-sidebar.show {
+    inset-inline-end: 0;
+    transform: translateX(0);
+  }
+
+  .dashboard-main,
+  [dir="rtl"] .dashboard-main {
+    min-height: calc(100vh - var(--dashboard-header-height));
+    margin-inline: 0;
+  }
+
+  .dashboard-topbar {
+    inset-inline: 0;
+    height: var(--dashboard-header-height);
+    min-height: var(--dashboard-header-height);
   }
 }

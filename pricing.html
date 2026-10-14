@@ -13,21 +13,6 @@
 </head>
 <body>
 
-  <!-- Topbar -->
-  <div class="rn-topbar d-none d-md-block">
-    <div class="container d-flex justify-content-between align-items-center">
-      <div class="d-flex align-items-center gap-4">
-        <span><i class="fas fa-map-marker-alt text-warning me-2"></i>742 Horizon Valley Pkwy, Denver, CO 80216</span>
-        <span><i class="fas fa-clock text-warning me-2"></i>Mon - Sat: 7:30 AM - 6:00 PM | Sun: Emergency Dispatch</span>
-      </div>
-      <div class="d-flex align-items-center gap-3">
-        <span><i class="fas fa-phone-alt text-warning me-1"></i> Emergency: <strong>(800) 555-ROAD</strong></span>
-        <a href="login.html" class="ms-2"><i class="fas fa-user-circle me-1"></i> Owner Portal</a>
-        <a href="admin/index.html" class="ms-1 text-secondary"><i class="fas fa-lock me-1"></i> Admin</a>
-      </div>
-    </div>
-  </div>
-
   <!-- Master Header / Navbar -->
   <header class="rn-header">
     <div class="container">
@@ -45,7 +30,7 @@
         <div class="collapse navbar-collapse d-none d-lg-block" id="desktopNav">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="index.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Home
               </a>
               <ul class="dropdown-menu">
@@ -75,6 +60,14 @@
             <li class="nav-item"><a class="nav-link active" href="pricing.html">Pricing</a></li>
             <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="faq.html"><i class="fas fa-circle-question"></i><div><div class="fw-bold">FAQ</div><small class="text-muted">Common owner questions</small></div></a></li>
+                <li><a class="dropdown-item" href="coming-soon.html"><i class="fas fa-hourglass-half"></i><div><div class="fw-bold">Coming Soon</div><small class="text-muted">New RoadNest features</small></div></a></li>
+                <li><a class="dropdown-item" href="404.html"><i class="fas fa-triangle-exclamation"></i><div><div class="fw-bold">404 Error</div><small class="text-muted">Lost on the highway</small></div></a></li>
+              </ul>
+            </li>
           </ul>
         </div>
 
@@ -85,8 +78,11 @@
           <button class="utility-btn theme-toggle-btn" title="Toggle Light / Dark Mode" aria-label="Toggle dark mode">
             <i class="fas fa-moon"></i>
           </button>
-          <a href="dashboard/book-service.html" class="btn btn-accent d-none d-sm-inline-flex">
-            <i class="fas fa-calendar-check"></i> Book Service
+          <a href="login.html" class="btn btn-outline-light d-none d-sm-inline-flex">
+            <i class="fas fa-user-circle"></i> Login
+          </a>
+          <a href="dashboard/index.html" class="btn btn-accent d-none d-sm-inline-flex">
+            <i class="fas fa-tachometer-alt"></i> Dashboard
           </a>
           <button class="navbar-toggler d-lg-none utility-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuOffcanvas" aria-controls="mobileMenuOffcanvas" aria-label="Open navigation menu">
             <i class="fas fa-bars"></i>
@@ -97,7 +93,7 @@
   </header>
 
   <!-- Mobile Offcanvas Menu -->
-  <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenuOffcanvas" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenuOffcanvas" aria-labelledby="mobileMenuLabel">
     <div class="offcanvas-header">
       <div class="d-flex align-items-center gap-2" id="mobileMenuLabel">
         <div class="brand-icon" style="width: 36px; height: 36px; font-size: 1.1rem;">
@@ -127,6 +123,15 @@
         <a class="mobile-nav-link" href="register.html"><i class="fas fa-user-plus me-2 text-warning"></i> Register Vehicle</a>
         <a class="mobile-nav-link" href="dashboard/index.html"><i class="fas fa-tachometer-alt me-2 text-warning"></i> Owner Dashboard</a>
         <a class="mobile-nav-link" href="admin/index.html"><i class="fas fa-shield-alt me-2 text-secondary"></i> Admin Console</a>
+        <a class="mobile-nav-link" data-bs-toggle="collapse" href="#mobilePagesSub" role="button" aria-expanded="false">
+          <span><i class="fas fa-layer-group text-warning"></i> Pages</span>
+          <i class="fas fa-chevron-down"></i>
+        </a>
+        <div class="collapse mobile-subnav" id="mobilePagesSub">
+          <a class="mobile-subnav-link" href="faq.html"><i class="fas fa-circle-question me-1"></i> FAQ</a>
+          <a class="mobile-subnav-link" href="coming-soon.html"><i class="fas fa-hourglass-half me-1"></i> Coming Soon</a>
+          <a class="mobile-subnav-link" href="404.html"><i class="fas fa-triangle-exclamation me-1"></i> 404 Error</a>
+        </div>
       </nav>
 
       <div class="pt-2">
@@ -138,7 +143,8 @@
   </div>
 
   <!-- Page Header Hero -->
-  <section class="py-5 bg-light-subtle border-bottom">
+  <section class="rn-page-hero py-5 border-bottom" style="--hero-image: url('/assets/images/heroes/pricing-hero.png');">
+    <img class="rn-page-hero-image" src="assets/images/heroes/pricing-hero.png" alt="" loading="eager" aria-hidden="true">
     <div class="container text-center py-4">
       <span class="section-subtitle">Fair & Transparent Rates</span>
       <h1 class="display-4 fw-bold mb-3">Transparent RV Care & Inspection Pricing</h1>
@@ -177,10 +183,9 @@
           </div>
         </div>
 
-        <!-- 2. Journey Plus (Featured) -->
+        <!-- 2. Journey Plus -->
         <div class="col-lg-4">
-          <div class="pricing-card featured">
-            <span class="pricing-badge-popular">Most Popular</span>
+          <div class="pricing-card">
             <h3 class="fw-bold mb-1">Journey Plus</h3>
             <p class="text-muted small">For multi-state tours, national park trips, and overlanding.</p>
             <div class="pricing-price">
@@ -203,9 +208,10 @@
           </div>
         </div>
 
-        <!-- 3. Ultimate RV Care -->
+        <!-- 3. Ultimate RV Care (Featured) -->
         <div class="col-lg-4">
-          <div class="pricing-card">
+          <div class="pricing-card featured">
+            <span class="pricing-badge-popular">Most Popular</span>
             <h3 class="fw-bold mb-1">Ultimate RV Care</h3>
             <p class="text-muted small">The definitive 65-point audit for full-timers and cross-country expeditions.</p>
             <div class="pricing-price">
@@ -221,7 +227,7 @@
               <li><i class="fas fa-check-circle"></i> HD Digital Report with Color Photos</li>
               <li><i class="fas fa-check-circle"></i> 1-on-1 Master Tech Debriefing</li>
             </ul>
-            <a href="dashboard/book-service.html" class="btn btn-outline-navy w-100">
+            <a href="dashboard/book-service.html" class="btn btn-accent w-100">
               <i class="fas fa-calendar-check"></i> Book Ultimate Care
             </a>
           </div>
@@ -426,7 +432,7 @@
         </div>
         <div class="col-sm-6 col-lg-2">
           <h5>Emergency</h5>
-          <p class="small text-muted"><strong class="text-white">Call:</strong> (800) 555-ROAD</p>
+          <p class="small text-muted"><strong class="text-white">Call:</strong> +1 (303) 555-0144</p>
         </div>
       </div>
       <div class="footer-bottom d-flex justify-content-between align-items-center">

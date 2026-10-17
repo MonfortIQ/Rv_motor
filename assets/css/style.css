@@ -1927,6 +1927,19 @@ body.dark-theme .rn-page-hero .section-desc {
   font-weight: 800;
 }
 
+/* The global light-theme typography rule also targets every span. Keep the
+   profile initials readable against the navy avatar background. */
+[data-bs-theme="light"] .user-avatar-initials,
+[data-theme="light"] .user-avatar-initials {
+  color: var(--rn-accent) !important;
+}
+
+[data-bs-theme="dark"] .user-avatar-initials,
+[data-theme="dark"] .user-avatar-initials,
+body.dark-theme .user-avatar-initials {
+  color: #ffffff !important;
+}
+
 .sidebar-footer img {
   display: none;
 }

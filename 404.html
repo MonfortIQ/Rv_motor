@@ -14,7 +14,7 @@
 <body class="bg-light-subtle d-flex flex-column min-vh-100">
 
   <!-- Header -->
-  <header class="rn-simple-header py-3 px-4 border-bottom bg-white d-flex justify-content-between align-items-center">
+  <header class="rn-simple-header compact-simple-header py-3 px-4 border-bottom bg-white d-flex justify-content-between align-items-center">
     <a class="navbar-brand" href="index.html">
       <div class="brand-icon" style="width: 38px; height: 38px; font-size: 1.15rem;"><i class="fas fa-caravan"></i></div>
       <div>
@@ -25,9 +25,25 @@
     <div class="d-flex align-items-center gap-2">
       <button class="rtl-pill rtl-toggle-btn"><span class="rtl-label">RTL</span></button>
       <button class="utility-btn theme-toggle-btn"><i class="fas fa-moon"></i></button>
-      <a href="index.html" class="btn btn-accent btn-sm"><i class="fas fa-home me-1"></i> Return Home</a>
+      <button class="navbar-toggler utility-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuOffcanvas" aria-controls="mobileMenuOffcanvas" aria-label="Open navigation menu">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
   </header>
+
+  <!-- Shared mobile navigation menu -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenuOffcanvas" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header">
+      <div class="d-flex align-items-center gap-2" id="mobileMenuLabel">
+        <div class="brand-icon" style="width: 36px; height: 36px; font-size: 1.1rem;">
+          <i class="fas fa-caravan"></i>
+        </div>
+        <span class="fw-bold fs-5">RoadNest Care</span>
+      </div>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body"></div>
+  </div>
 
   <!-- 404 Content -->
   <main class="flex-grow-1 d-flex align-items-center justify-content-center py-5 text-center">

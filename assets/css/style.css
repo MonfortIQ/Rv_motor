@@ -2529,13 +2529,13 @@ body:has(.rn-header):not(:has(.dashboard-wrapper)):not(:has(.auth-header)) {
   }
 
   /* Keep the Coming Soon brand and utility controls on one compact row. */
-  .coming-soon-header {
+  .compact-simple-header {
     flex-wrap: nowrap;
     gap: 0.5rem !important;
     padding: 0.65rem 0.75rem !important;
   }
 
-  .coming-soon-header .navbar-brand {
+  .compact-simple-header .navbar-brand {
     flex: 1 1 auto;
     min-width: 0;
     gap: 0.5rem;
@@ -2543,25 +2543,25 @@ body:has(.rn-header):not(:has(.dashboard-wrapper)):not(:has(.auth-header)) {
     white-space: nowrap;
   }
 
-  .coming-soon-header .navbar-brand .brand-icon {
+  .compact-simple-header .navbar-brand .brand-icon {
     width: 34px !important;
     height: 34px !important;
     font-size: 1rem !important;
   }
 
-  .coming-soon-header .brand-text-sub {
+  .compact-simple-header .brand-text-sub {
     font-size: 0.55rem;
     letter-spacing: 0.08em;
   }
 
-  .coming-soon-header > .d-flex {
+  .compact-simple-header > .d-flex {
     flex: 0 0 auto;
     gap: 0.25rem !important;
   }
 
-  .coming-soon-header .rtl-pill,
-  .coming-soon-header .utility-btn,
-  .coming-soon-header .navbar-toggler {
+  .compact-simple-header .rtl-pill,
+  .compact-simple-header .utility-btn,
+  .compact-simple-header .navbar-toggler {
     width: 34px;
     height: 34px;
     min-height: 34px;

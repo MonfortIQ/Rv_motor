@@ -68,7 +68,7 @@ function initMobileSidebarMenu() {
 
       <a class="mobile-nav-link" href="${rootPath}pricing.html"><i class="fas fa-tags me-2 text-warning"></i> Pricing</a>
       <a class="mobile-nav-link" href="${rootPath}blog.html"><i class="fas fa-newspaper me-2 text-warning"></i> Blog</a>
-      <a class="mobile-nav-link" href="${rootPath}contact.html"><i class="fas fa-envelope me-2 text-warning"></i> Contact</a>
+      <a class="mobile-nav-link" href="${rootPath}contact.html"><i class="fas fa-phone me-2 text-warning"></i> Contact Workshop</a>
       <a class="mobile-nav-link" href="${rootPath}login.html"><i class="fas fa-user-circle me-2 text-warning"></i> Login</a>
       <a class="mobile-nav-link" href="${rootPath}dashboard/index.html"><i class="fas fa-tachometer-alt me-2 text-warning"></i> Dashboard</a>
     </nav>

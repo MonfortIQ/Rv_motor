@@ -730,6 +730,24 @@ html[data-theme="light"] .rn-header .btn-outline-light:hover {
   color: var(--rn-text-muted);
 }
 
+.certification-partner {
+  text-align: center;
+}
+
+@media (max-width: 575.98px) {
+  .certification-partner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    line-height: 1.25;
+  }
+
+  .certification-partner i {
+    margin-right: 0 !important;
+  }
+}
+
 [data-bs-theme="dark"] .hero-adventure,
 [data-theme="dark"] .hero-adventure,
 body.dark-theme .hero-adventure {
@@ -1105,6 +1123,27 @@ body.dark-theme .rn-page-hero .section-desc {
   flex-grow: 1;
 }
 
+/* Keep the Home 2 repair-card feature rows aligned even when the copy above
+   wraps to different heights. */
+.home2-repair-meta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 0.75rem;
+  min-height: 2.75rem;
+  line-height: 1.35;
+}
+
+.home2-repair-meta > span {
+  min-width: 0;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.home2-repair-meta > span:last-child {
+  text-align: right;
+}
+
 /* Keep the blog article grid in normal document flow at tablet widths so
    the sidebar/footer cannot overlap article cards. */
 .blog-listing-section {
@@ -1205,6 +1244,20 @@ body.dark-theme .rn-page-hero .section-desc {
 
 .health-check-card > .progress {
   margin-top: auto;
+}
+
+/* Keep the seasonal card badge and action link readable when their combined
+   width is larger than a narrow phone card. */
+.home2-seasonal-card a {
+  min-width: 0;
+  line-height: 1.35;
+}
+
+@media (max-width: 575.98px) {
+  .home2-seasonal-card .d-flex {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
 }
 
 @media (max-width: 575.98px) {
@@ -1826,6 +1879,34 @@ body.dark-theme .rn-page-hero .section-desc {
   min-height: 3.35rem;
 }
 
+/* Keep Home 2 plan cards equal in height so every action button shares the
+   same baseline, including when a plan's feature text wraps differently. */
+.home2-pricing-grid {
+  align-items: stretch !important;
+}
+
+.home2-pricing-grid > [class*="col-"] {
+  display: flex;
+}
+
+.home2-pricing-grid .pricing-card {
+  width: 100%;
+}
+
+/* Ensure the Home 2 review cards also fill their grid columns and keep the
+   author row anchored to the same bottom line. */
+.home2-testimonial-grid > [class*="col-"] {
+  display: flex;
+}
+
+.home2-testimonial-grid .testimonial-card {
+  width: 100%;
+}
+
+.home2-testimonial-grid .testimonial-author {
+  margin-top: auto;
+}
+
 .avatar-initials,
 .sidebar-footer img {
   flex-shrink: 0;
@@ -2426,4 +2507,84 @@ body:has(.rn-header):not(:has(.dashboard-wrapper)):not(:has(.auth-header)) {
   :root {
     --rn-header-height: 64px;
   }
+}
+
+/* Global light-theme typography: keep site copy consistently black while
+   preserving button backgrounds and the established icon accents. */
+[data-bs-theme="light"],
+[data-theme="light"] {
+  --rn-text-main: #000000;
+  --rn-text-muted: #000000;
+  --rn-text-light: #000000;
+  --rn-footer-text: #000000;
+}
+
+[data-bs-theme="light"] body,
+[data-theme="light"] body,
+[data-bs-theme="light"] body h1,
+[data-theme="light"] body h1,
+[data-bs-theme="light"] body h2,
+[data-theme="light"] body h2,
+[data-bs-theme="light"] body h3,
+[data-theme="light"] body h3,
+[data-bs-theme="light"] body h4,
+[data-theme="light"] body h4,
+[data-bs-theme="light"] body h5,
+[data-theme="light"] body h5,
+[data-bs-theme="light"] body h6,
+[data-theme="light"] body h6,
+[data-bs-theme="light"] body p,
+[data-theme="light"] body p,
+[data-bs-theme="light"] body span,
+[data-theme="light"] body span,
+[data-bs-theme="light"] body a,
+[data-theme="light"] body a,
+[data-bs-theme="light"] body li,
+[data-theme="light"] body li,
+[data-bs-theme="light"] body label,
+[data-theme="light"] body label,
+[data-bs-theme="light"] body small,
+[data-theme="light"] body small,
+[data-bs-theme="light"] body strong,
+[data-theme="light"] body strong {
+  color: #000000;
+}
+
+[data-bs-theme="light"] .section-subtitle,
+[data-theme="light"] .section-subtitle,
+[data-bs-theme="light"] .hero-h1-badge,
+[data-theme="light"] .hero-h1-badge,
+[data-bs-theme="light"] .card-badge-top,
+[data-theme="light"] .card-badge-top,
+[data-bs-theme="light"] .brand-text-sub,
+[data-theme="light"] .brand-text-sub,
+[data-bs-theme="light"] .text-primary,
+[data-theme="light"] .text-primary,
+[data-bs-theme="light"] .text-secondary,
+[data-theme="light"] .text-secondary,
+[data-bs-theme="light"] .text-muted,
+[data-theme="light"] .text-muted,
+[data-bs-theme="light"] .text-warning,
+[data-theme="light"] .text-warning {
+  color: #000000 !important;
+}
+
+[data-bs-theme="light"] i.text-warning,
+[data-theme="light"] i.text-warning {
+  color: var(--rn-warning) !important;
+}
+
+[data-bs-theme="light"] .section-desc,
+[data-theme="light"] .section-desc,
+[data-bs-theme="light"] .card-rn-text,
+[data-theme="light"] .card-rn-text,
+[data-bs-theme="light"] .hero-adventure-meta,
+[data-theme="light"] .hero-adventure-meta,
+[data-bs-theme="light"] .rn-page-hero h1,
+[data-theme="light"] .rn-page-hero h1,
+[data-bs-theme="light"] .rn-page-hero .section-title,
+[data-theme="light"] .rn-page-hero .section-title,
+[data-bs-theme="light"] .rn-page-hero .section-desc,
+[data-theme="light"] .rn-page-hero .section-desc {
+  color: #000000 !important;
 }

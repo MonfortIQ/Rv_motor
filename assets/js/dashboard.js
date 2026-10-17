@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initBookingWizard();
   initDashboardCharts();
   initAppointmentFilters();
+  initAppointmentDropdowns();
   initStoredAppointments();
   window.addEventListener('roadnest:theme-change', initDashboardCharts);
 });
@@ -365,6 +366,45 @@ function initAppointmentFilters() {
       });
     });
   });
+}
+
+/* -------------------------------------------------------------------
+   4b. Appointment action dropdowns
+   Uses a small native toggle so appointment actions work even when the
+   external Bootstrap dropdown script is unavailable or clipped by the table.
+   ------------------------------------------------------------------- */
+function initAppointmentDropdowns() {
+  const dropdowns = document.querySelectorAll('.appointments-table .dropdown');
+  if (!dropdowns.length) return;
+
+  const closeDropdowns = () => {
+    dropdowns.forEach(dropdown => {
+      dropdown.querySelector('.dropdown-menu')?.classList.remove('show');
+      dropdown.querySelector('.dropdown-toggle')?.setAttribute('aria-expanded', 'false');
+    });
+  };
+
+  dropdowns.forEach(dropdown => {
+    const toggle = dropdown.querySelector('.dropdown-toggle');
+    const menu = dropdown.querySelector('.dropdown-menu');
+    if (!toggle || !menu) return;
+
+    toggle.removeAttribute('data-bs-toggle');
+    toggle.addEventListener('click', event => {
+      event.preventDefault();
+      event.stopPropagation();
+
+      const willOpen = !menu.classList.contains('show');
+      closeDropdowns();
+      menu.classList.toggle('show', willOpen);
+      toggle.setAttribute('aria-expanded', String(willOpen));
+    });
+
+    menu.addEventListener('click', event => event.stopPropagation());
+  });
+
+  document.addEventListener('click', closeDropdowns);
+  window.addEventListener('resize', closeDropdowns);
 }
 
 /* -------------------------------------------------------------------

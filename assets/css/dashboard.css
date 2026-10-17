@@ -758,6 +758,61 @@
 
   .dashboard-content .table-rn th:nth-child(4),
   .dashboard-content .table-rn td:nth-child(4) { width: 150px; }
+
+  /* Reserve usable space for status and action labels in the dashboard
+     maintenance table instead of squeezing them into narrow columns. */
+  .dashboard-content .dashboard-maintenance-table {
+    width: 950px;
+    min-width: 950px;
+  }
+
+  .dashboard-content .dashboard-maintenance-table th:nth-child(1),
+  .dashboard-content .dashboard-maintenance-table td:nth-child(1) { width: 115px; }
+
+  .dashboard-content .dashboard-maintenance-table th:nth-child(2),
+  .dashboard-content .dashboard-maintenance-table td:nth-child(2) { width: 235px; }
+
+  .dashboard-content .dashboard-maintenance-table th:nth-child(3),
+  .dashboard-content .dashboard-maintenance-table td:nth-child(3) { width: 165px; }
+
+  .dashboard-content .dashboard-maintenance-table th:nth-child(4),
+  .dashboard-content .dashboard-maintenance-table td:nth-child(4) { width: 150px; }
+
+  .dashboard-content .dashboard-maintenance-table th:nth-child(5),
+  .dashboard-content .dashboard-maintenance-table td:nth-child(5) { width: 130px; }
+
+  .dashboard-content .dashboard-maintenance-table th:nth-child(6),
+  .dashboard-content .dashboard-maintenance-table td:nth-child(6) { width: 120px; }
+
+  .dashboard-content .service-records-table {
+    width: 950px;
+    min-width: 950px;
+  }
+
+  .dashboard-content .service-records-table th:nth-child(1),
+  .dashboard-content .service-records-table td:nth-child(1) { width: 115px; }
+
+  .dashboard-content .service-records-table th:nth-child(2),
+  .dashboard-content .service-records-table td:nth-child(2) { width: 235px; }
+
+  .dashboard-content .service-records-table th:nth-child(3),
+  .dashboard-content .service-records-table td:nth-child(3) { width: 165px; }
+
+  .dashboard-content .service-records-table th:nth-child(4),
+  .dashboard-content .service-records-table td:nth-child(4) { width: 150px; }
+
+  .dashboard-content .service-records-table th:nth-child(5),
+  .dashboard-content .service-records-table td:nth-child(5) { width: 130px; }
+
+  .dashboard-content .service-records-table th:nth-child(6),
+  .dashboard-content .service-records-table td:nth-child(6) { width: 120px; }
+
+  .dashboard-content .dashboard-maintenance-table .status-pill,
+  .dashboard-content .dashboard-maintenance-table td:nth-child(6) .btn {
+    white-space: nowrap;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
 }
 
 /* The dashboard is a dense application view; collapse its quick actions
@@ -1015,7 +1070,7 @@
 
   .dashboard-content .invoice-table tr {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) auto;
     gap: 0.5rem 0.85rem;
     padding: 1rem;
     border-bottom: 1px solid var(--rn-border);
@@ -1031,12 +1086,45 @@
 
   .dashboard-content .invoice-table td:nth-child(3),
   .dashboard-content .invoice-table td:nth-child(4),
+  .dashboard-content .invoice-table td:nth-child(6),
   .dashboard-content .invoice-table td:nth-child(7) {
     grid-column: 1 / -1;
   }
 
+  .dashboard-content .invoice-table td:nth-child(5),
+  .dashboard-content .invoice-table td:nth-child(6) {
+    align-self: center;
+  }
+
+  .dashboard-content .invoice-table td:nth-child(6) {
+    justify-self: start;
+  }
+
+  .dashboard-content .invoice-table td:nth-child(6) .status-pill {
+    display: inline-flex;
+    width: max-content;
+    max-width: 100%;
+    white-space: nowrap;
+    padding-inline: 0.65rem;
+    font-size: 0.72rem;
+  }
+
+  /* Keep compact invoice cards focused on the amount and actions. */
+  .dashboard-content .invoice-table td:nth-child(5) {
+    grid-column: 1 / -1;
+  }
+
+  .dashboard-content .invoice-table td:nth-child(6) {
+    display: none;
+  }
+
   .dashboard-content .invoice-table td:nth-child(7) .btn {
     width: 100%;
+  }
+
+  .dashboard-content .invoice-table td:nth-child(7) {
+    display: grid;
+    gap: 0.5rem;
   }
 
   .dashboard-content .notification-card > .d-flex {
@@ -1107,6 +1195,44 @@
 .notification-card .notification-action {
   flex: 0 0 auto;
   white-space: nowrap;
+}
+
+/* Appointment filters need an explicit active surface so theme-wide text
+   overrides cannot leave white text on a white button. */
+.dashboard-content .appointment-status-filter.active,
+.dashboard-content .appointment-status-filter.btn-accent {
+  background-color: var(--rn-accent) !important;
+  border-color: var(--rn-accent) !important;
+  color: #ffffff !important;
+}
+
+.dashboard-content .appointment-status-filter.active:hover,
+.dashboard-content .appointment-status-filter.btn-accent:hover {
+  background-color: var(--rn-accent-hover) !important;
+  border-color: var(--rn-accent-hover) !important;
+  color: #ffffff !important;
+}
+
+.dashboard-content .appointment-status-filter.btn-outline-navy {
+  background-color: transparent;
+  color: var(--rn-text-main) !important;
+}
+
+/* Keep appointment status labels intact instead of breaking words in the
+   middle when the table becomes compact. */
+.dashboard-content .appointments-table td:nth-child(6),
+.dashboard-content .appointments-table .status-pill {
+  white-space: nowrap;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.dashboard-content .appointments-table .status-pill {
+  display: inline-flex;
+  width: max-content;
+  max-width: 100%;
+  justify-content: center;
+  text-align: center;
 }
 
 /* Warranty policy header: keep the status and deductible aligned inside the
@@ -1271,5 +1397,539 @@ html:has(.dashboard-wrapper) {
     inset-inline: 0;
     height: var(--dashboard-header-height);
     min-height: var(--dashboard-header-height);
+  }
+}
+
+/* Invoice cards need the mobile toolbar in normal flow so the first record's
+   ID and date cannot disappear underneath a fixed header while scrolling. */
+@media (max-width: 767.98px) {
+  html:has(.invoice-table) .dashboard-wrapper {
+    padding-top: 0;
+  }
+
+  html:has(.invoice-table) .dashboard-sidebar {
+    inset-block-start: 0;
+  }
+
+  html:has(.invoice-table) .dashboard-topbar {
+    position: relative !important;
+    inset: auto !important;
+    width: 100%;
+  }
+}
+
+/* Keep the appointments toolbar in normal layout flow so the table header
+   and first row cannot slide underneath the fixed dashboard header. */
+html:has(.appointments-table) .dashboard-wrapper {
+  padding-top: 0;
+}
+
+html:has(.appointments-table) .dashboard-topbar {
+  position: sticky !important;
+  inset: auto !important;
+  top: 0 !important;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+html:has(.appointments-table) .dashboard-sidebar {
+  inset-block-start: var(--dashboard-header-height);
+}
+
+/* Remove the empty strip beside the appointment table and keep all three
+   responsive layers aligned with the card edges. */
+html:has(.appointments-table) .dashboard-content .card:has(.appointments-table),
+html:has(.appointments-table) .dashboard-content .table-responsive,
+html:has(.appointments-table) .dashboard-content .appointments-table {
+  width: 100% !important;
+  max-width: 100%;
+  margin-inline: 0;
+  box-sizing: border-box;
+}
+
+html:has(.appointments-table) .dashboard-content .table-responsive {
+  padding: 0;
+}
+
+/* Let appointment action menus open outside the table/card instead of being
+   clipped by the rounded card and horizontal table wrapper. */
+html:has(.appointments-table) .dashboard-content .card:has(.appointments-table),
+html:has(.appointments-table) .dashboard-content .table-responsive {
+  overflow: visible !important;
+}
+
+html:has(.appointments-table) .appointments-table td:last-child,
+html:has(.appointments-table) .appointments-table td:last-child .dropdown {
+  position: relative;
+  overflow: visible;
+}
+
+html:has(.appointments-table) .appointments-table .dropdown-menu {
+  z-index: 1060;
+}
+
+html:has(.appointments-table) .appointments-table .dropdown-menu.show {
+  display: block;
+  top: calc(100% + 0.35rem);
+  right: 0;
+  left: auto;
+  transform: none !important;
+}
+
+@media (min-width: 1101px) {
+  /* Desktop dashboard sidebars must start at the viewport top so the left
+     rail aligns with the main toolbar on every dashboard page. */
+  html:has(.dashboard-wrapper) .dashboard-sidebar {
+    inset: 0 auto 0 0 !important;
+  }
+
+  html[dir="rtl"]:has(.dashboard-wrapper) .dashboard-sidebar {
+    inset: 0 0 0 auto !important;
+  }
+
+  /* On laptop/desktop the sidebar owns the full-height left rail; it should
+     not begin below the main content toolbar. */
+  html:has(.appointments-table) .dashboard-sidebar {
+    inset: 0 auto 0 0 !important;
+  }
+
+  html[dir="rtl"]:has(.appointments-table) .dashboard-sidebar {
+    inset: 0 0 0 auto !important;
+  }
+}
+
+@media (max-width: 1100px) {
+  html:has(.appointments-table) .dashboard-sidebar,
+  html:has(.appointments-table) .dashboard-sidebar.show {
+    inset: 0 auto 0 0 !important;
+    z-index: 1055 !important;
+  }
+
+  html[dir="rtl"]:has(.appointments-table) .dashboard-sidebar,
+  html[dir="rtl"]:has(.appointments-table) .dashboard-sidebar.show {
+    inset: 0 0 0 auto !important;
+  }
+}
+
+/* Invoice receipt modal: stack the summary and billing details on phones so
+   the receipt never clips against the viewport edges. */
+@media (max-width: 575.98px) {
+  /* Keep wizard navigation buttons side-by-side without squeezing their labels
+     into one character per line on narrow screens. */
+  .wizard-step-pane > .d-flex.justify-content-between {
+    display: grid !important;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .wizard-step-pane > .d-flex.justify-content-between .btn {
+    width: 100%;
+    min-width: 0;
+    min-height: 58px;
+    padding: 0.7rem 0.55rem;
+    font-size: 0.88rem;
+    line-height: 1.25;
+    gap: 0.35rem;
+  }
+
+  .wizard-step-pane > .d-flex.justify-content-between .btn-wizard-prev {
+    white-space: nowrap;
+  }
+
+  /* Align the two confirmation actions and allow labels to wrap at spaces. */
+  #bookingSuccessAlert > .d-flex.justify-content-center {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 0.75rem !important;
+  }
+
+  #bookingSuccessAlert > .d-flex.justify-content-center .btn {
+    width: 100%;
+    min-width: 0;
+    min-height: 72px;
+    padding: 0.7rem 0.5rem;
+    font-size: 0.86rem;
+    line-height: 1.3;
+    white-space: normal;
+    overflow-wrap: normal;
+    word-break: normal;
+    gap: 0.35rem;
+  }
+
+  #bookingSuccessAlert > .p-4 > .d-flex {
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  #bookingSuccessAlert > .p-4 > .d-flex > span {
+    flex: 0 0 40%;
+    min-width: 0;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  #bookingSuccessAlert > .p-4 > .d-flex > strong {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  /* Keep notification cards contained and aligned inside the phone viewport. */
+  .dashboard-content .notification-card {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  .dashboard-content .notification-card > .d-flex {
+    align-items: stretch !important;
+  }
+
+  .dashboard-content .notification-card > .d-flex > div.d-flex {
+    grid-template-columns: 48px minmax(0, 1fr);
+  }
+
+  .dashboard-content .notification-card .notification-action {
+    align-self: flex-start;
+    justify-self: start;
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  #invoiceModal .modal-dialog {
+    width: calc(100% - 1rem);
+    max-width: none;
+    margin: 0.5rem auto;
+  }
+
+  #invoiceModal .modal-content {
+    width: 100%;
+    max-height: calc(100dvh - 1rem);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  #invoiceModal .modal-header {
+    padding: 0.85rem 1rem;
+  }
+
+  #invoiceModal .modal-title {
+    max-width: calc(100% - 2rem);
+    font-size: 0.95rem;
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+  }
+
+  #invoiceModal .modal-body {
+    padding: 1rem !important;
+    min-height: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  }
+
+  #invoiceModal .modal-body > .d-flex {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 0.75rem;
+  }
+
+  #invoiceModal .modal-body > .d-flex > .text-end {
+    width: 100%;
+    text-align: start !important;
+  }
+
+  #invoiceModal .modal-body > .d-flex .badge {
+    display: inline-block;
+    max-width: 100%;
+    white-space: nowrap;
+    font-size: 0.78rem !important;
+  }
+
+  #invoiceModal .modal-body > .row > [class*="col-"] {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: start !important;
+  }
+
+  #invoiceModal .modal-body > .table {
+    width: 100%;
+    table-layout: fixed;
+    font-size: 0.68rem;
+    line-height: 1.35;
+  }
+
+  #invoiceModal .modal-body > .table th,
+  #invoiceModal .modal-body > .table td {
+    padding: 0.45rem 0.3rem;
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  #invoiceModal .modal-body > .table th:first-child,
+  #invoiceModal .modal-body > .table td:first-child {
+    width: 42%;
+  }
+
+  #invoiceModal .modal-body > .table th:nth-child(2),
+  #invoiceModal .modal-body > .table td:nth-child(2) {
+    width: 14%;
+  }
+
+  #invoiceModal .modal-body > .table th:nth-child(3),
+  #invoiceModal .modal-body > .table td:nth-child(3),
+  #invoiceModal .modal-body > .table th:nth-child(4),
+  #invoiceModal .modal-body > .table td:nth-child(4) {
+    width: 22%;
+    white-space: nowrap;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  #invoiceModal .modal-body > .table th:nth-child(2),
+  #invoiceModal .modal-body > .table td:nth-child(2),
+  #invoiceModal .modal-body > .table tfoot td:last-child {
+    white-space: nowrap;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  #invoiceModal .modal-body > .table tfoot th {
+    font-size: 0.7rem;
+    white-space: nowrap;
+  }
+
+  #invoiceModal .modal-body > .table tfoot td:last-child {
+    font-size: 0.78rem !important;
+    padding-inline: 0.2rem;
+    text-align: right;
+  }
+
+  #invoiceModal .modal-footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding: 0.85rem 1rem;
+  }
+
+  #invoiceModal .modal-footer .btn {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1101px) {
+  /* Keep desktop KPI titles, values, and state text compact and aligned. */
+  html:has(.metric-card) .metric-card > div:first-child {
+    min-width: 0;
+  }
+
+  html:has(.metric-card) .metric-card .metric-title {
+    font-size: 0.76rem;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  html:has(.metric-card) .metric-card .metric-val {
+    font-size: 1.35rem !important;
+    line-height: 1.15;
+    white-space: nowrap;
+  }
+
+  html:has(.metric-card) .metric-card .metric-trend {
+    font-size: 0.72rem !important;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+/* Maintenance table status and action labels must remain single-line at every
+   breakpoint; the inherited card word-breaking rule was splitting them. */
+html:has(.dashboard-maintenance-table) .dashboard-maintenance-table .status-pill {
+  display: inline-flex;
+  width: max-content;
+  max-width: none;
+  white-space: nowrap !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+  font-size: 0.72rem;
+  padding-inline: 0.55rem;
+}
+
+html:has(.dashboard-maintenance-table) .dashboard-maintenance-table td:last-child .btn {
+  width: max-content;
+  min-width: max-content;
+  white-space: nowrap !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+  padding-inline: 0.65rem;
+}
+
+html:has(.service-records-table) .service-records-table .status-pill {
+  display: inline-flex;
+  width: max-content;
+  max-width: none;
+  white-space: nowrap !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+  font-size: 0.72rem;
+  padding-inline: 0.55rem;
+}
+
+html:has(.service-records-table) .service-records-table td:last-child .btn {
+  width: max-content;
+  min-width: max-content;
+  white-space: nowrap !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+  padding-inline: 0.65rem;
+}
+
+/* Keep all chassis/towing specification boxes equal-height when one label
+   wraps to a second line. */
+.dashboard-content .my-rv-dimensions .row > [class*="col-"] {
+  display: flex;
+}
+
+.dashboard-content .my-rv-dimensions .row > [class*="col-"] > div {
+  width: 100%;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Stretch warranty component cards evenly within each grid row. */
+.dashboard-content .warranty-components-card .row > [class*="col-"] {
+  display: flex;
+}
+
+.dashboard-content .warranty-components-card .row > [class*="col-"] > div {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 576px) and (max-width: 1100px) {
+  /* Align the label/value pairs consistently in the two My RV spec cards. */
+  .dashboard-content .my-rv-specs .card > .d-flex.justify-content-between {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    align-items: start;
+    column-gap: 0.85rem;
+  }
+
+  .dashboard-content .my-rv-specs .card > .d-flex.justify-content-between > * {
+    min-width: 0;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .dashboard-content .my-rv-specs .card > .d-flex.justify-content-between > strong {
+    text-align: end;
+  }
+
+  .dashboard-content .my-rv-hero .row.g-3 > [class*="col-"] {
+    display: flex;
+  }
+
+  .dashboard-content .my-rv-hero .row.g-3 > [class*="col-"] > div {
+    width: 100%;
+    min-height: 104px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .dashboard-content .my-rv-hero .row.g-3 .fs-4 {
+    font-size: 1.18rem !important;
+    line-height: 1.25;
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 1101px) {
+  /* Compact desktop user footer: two avatars, profile details, and logout
+     remain balanced in the fixed 280px sidebar. */
+  html:has(.dashboard-wrapper) .sidebar-footer {
+    padding: 1rem 0.75rem;
+  }
+
+  html:has(.dashboard-wrapper) .sidebar-footer > .d-flex {
+    min-width: 0;
+    gap: 0.65rem !important;
+  }
+
+  html:has(.dashboard-wrapper) .sidebar-footer > .d-flex > .d-flex.align-items-center.gap-2 {
+    display: grid !important;
+    grid-template-columns: 36px 36px minmax(0, 1fr);
+    min-width: 0;
+    flex: 1 1 auto;
+    gap: 0.45rem !important;
+  }
+
+  html:has(.dashboard-wrapper) .sidebar-footer > .d-flex > .d-flex.align-items-center.gap-2::before {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  html:has(.dashboard-wrapper) .sidebar-footer .user-avatar-initials {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  html:has(.dashboard-wrapper) .sidebar-footer > .d-flex > .d-flex.align-items-center.gap-2 > div {
+    grid-column: 3;
+    grid-row: 1;
+    min-width: 0;
+  }
+
+  html:has(.dashboard-wrapper) .sidebar-footer .fw-bold.small,
+  html:has(.dashboard-wrapper) .sidebar-footer small {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  html:has(.dashboard-wrapper) .sidebar-footer small {
+    font-size: 0.7rem !important;
+  }
+
+  html:has(.dashboard-wrapper) .sidebar-footer > .d-flex > a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+}
+
+/* Remove the decorative RV initials circle from every dashboard footer. */
+html:has(.dashboard-wrapper) .sidebar-footer .d-flex.align-items-center.gap-2::before {
+  display: none !important;
+  content: none !important;
+}
+
+@media (min-width: 1101px) {
+  html:has(.dashboard-wrapper) .sidebar-footer > .d-flex > .d-flex.align-items-center.gap-2 {
+    grid-template-columns: 36px minmax(0, 1fr);
+  }
+
+  html:has(.dashboard-wrapper) .sidebar-footer .user-avatar-initials {
+    grid-column: 1;
+  }
+
+  html:has(.dashboard-wrapper) .sidebar-footer > .d-flex > .d-flex.align-items-center.gap-2 > div {
+    grid-column: 2;
   }
 }

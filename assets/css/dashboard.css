@@ -1311,6 +1311,22 @@ html:has(.dashboard-wrapper) {
   scroll-padding-top: var(--dashboard-header-height);
 }
 
+/* Keep the dashboard shell aligned as one RTL layout.  The public pages use
+   the document direction directly, but the fixed dashboard rail and content
+   area also need matching inline edges once the sidebar moves to the right. */
+html[dir="rtl"]:has(.dashboard-wrapper) .dashboard-wrapper,
+html[dir="rtl"]:has(.dashboard-wrapper) .dashboard-sidebar,
+html[dir="rtl"]:has(.dashboard-wrapper) .dashboard-main,
+html[dir="rtl"]:has(.dashboard-wrapper) .dashboard-topbar,
+html[dir="rtl"]:has(.dashboard-wrapper) .dashboard-content {
+  direction: rtl;
+}
+
+html[dir="rtl"]:has(.dashboard-wrapper) .dashboard-content,
+html[dir="rtl"]:has(.dashboard-wrapper) .dashboard-topbar {
+  text-align: right;
+}
+
 .dashboard-wrapper {
   display: block;
   min-height: 100vh;
@@ -1350,8 +1366,8 @@ html:has(.dashboard-wrapper) {
 }
 
 [dir="rtl"] .dashboard-main {
-  margin-inline-start: 0;
-  margin-inline-end: var(--dashboard-sidebar-width);
+  margin-inline-start: var(--dashboard-sidebar-width);
+  margin-inline-end: 0;
 }
 
 @media (max-width: 1100px) {
@@ -1397,6 +1413,18 @@ html:has(.dashboard-wrapper) {
     inset-inline: 0;
     height: var(--dashboard-header-height);
     min-height: var(--dashboard-header-height);
+  }
+}
+
+@media (min-width: 1101px) {
+  html[dir="rtl"]:has(.dashboard-wrapper) .dashboard-main {
+    margin-inline-start: var(--dashboard-sidebar-width);
+    margin-inline-end: 0;
+  }
+
+  html[dir="rtl"]:has(.dashboard-wrapper) .dashboard-topbar {
+    inset-inline-start: var(--dashboard-sidebar-width);
+    inset-inline-end: 0;
   }
 }
 

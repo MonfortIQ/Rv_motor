@@ -176,8 +176,8 @@ html[data-theme="dark"] {
 .auth-visual::after {
   z-index: 1;
   background:
-    linear-gradient(90deg, rgba(5, 15, 25, 0.78) 0%, rgba(5, 15, 25, 0.42) 54%, rgba(5, 15, 25, 0.24) 100%),
-    linear-gradient(180deg, rgba(5, 15, 25, 0.12), rgba(5, 15, 25, 0.76));
+    linear-gradient(90deg, rgba(5, 15, 25, 0.86) 0%, rgba(5, 15, 25, 0.62) 54%, rgba(5, 15, 25, 0.42) 100%),
+    linear-gradient(180deg, rgba(5, 15, 25, 0.16), rgba(5, 15, 25, 0.82));
 }
 
 .auth-visual-content {
@@ -278,6 +278,33 @@ html[data-theme="dark"] {
   color: #ffffff;
   font-family: var(--rn-font-heading);
   font-size: 0.9rem;
+}
+
+/* The shared light-theme typography rules are intentionally broad. Keep the
+   image-backed login hero on its own high-contrast text treatment. */
+html[data-bs-theme="light"] .auth-visual h1,
+html[data-theme="light"] .auth-visual h1 {
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.55);
+}
+
+html[data-bs-theme="light"] .auth-visual-copy,
+html[data-theme="light"] .auth-visual-copy {
+  color: rgba(255, 255, 255, 0.94);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+html[data-bs-theme="light"] .auth-trust-list li,
+html[data-theme="light"] .auth-trust-list li {
+  color: #ffffff;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+html[data-bs-theme="light"] .auth-visual-badge,
+html[data-theme="light"] .auth-visual-badge,
+html[data-bs-theme="light"] .auth-visual-badge strong,
+html[data-theme="light"] .auth-visual-badge strong {
+  color: #ffffff;
 }
 
 .auth-form-panel {
@@ -538,6 +565,58 @@ html[dir="rtl"] .auth-select {
 .auth-submit:disabled {
   cursor: wait;
   opacity: 0.72;
+}
+
+.auth-social-divider {
+  margin: 1.25rem 0 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--auth-muted);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.auth-social-divider::before,
+.auth-social-divider::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: var(--auth-border);
+}
+
+.auth-social-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.auth-social-btn {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  border: 1px solid var(--auth-border);
+  border-radius: 10px;
+  background: var(--auth-form-bg);
+  color: var(--auth-text);
+  font: 800 0.82rem/1 var(--rn-font-heading);
+  cursor: pointer;
+  transition: border-color var(--rn-transition-fast), color var(--rn-transition-fast), background-color var(--rn-transition-fast), transform var(--rn-transition-fast);
+}
+
+.auth-social-btn i {
+  font-size: 1rem;
+}
+
+.auth-social-btn:hover,
+.auth-social-btn:focus-visible {
+  border-color: var(--rn-accent);
+  color: var(--rn-accent);
+  outline: none;
+  transform: translateY(-1px);
 }
 
 .auth-switch {

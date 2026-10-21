@@ -169,8 +169,16 @@
             submit.disabled = false;
             submit.innerHTML = '<span>Sign In to Owner Portal</span><i class="fas fa-arrow-right" aria-hidden="true"></i>';
           }
-          showStatus(loginStatus, 'Login successful. Your fields were reset.', 'success');
+          showStatus(loginStatus, 'Login successful.', 'success');
         }, 350);
+      });
+
+      document.querySelectorAll('[data-auth-provider]').forEach(button => {
+        button.addEventListener('click', event => {
+          event.preventDefault();
+          const provider = button.dataset.authProvider || 'Social';
+          showStatus(loginStatus, `${provider} sign-in successful.`, 'success');
+        });
       });
     }
 

@@ -144,7 +144,6 @@ function initSiteFooter() {
               <li><a href="${rootPath}faq.html">Frequently Asked Questions</a></li>
               <li><a href="${rootPath}contact.html">Contact Workshop</a></li>
               <li><a href="${rootPath}coming-soon.html">Mobile Van Dispatch</a></li>
-              <li><a href="${rootPath}404.html">404 Error Screen</a></li>
             </ul>
           </div>
 
@@ -716,6 +715,14 @@ function initFormSubmitForms() {
       showFormStatus(form, '', 'loading');
 
       try {
+        if (form.dataset.demoSubmit === 'true') {
+          form.reset();
+          form.classList.remove('was-validated');
+          delete form.dataset.submitting;
+          showFormStatus(form, '<strong>Request received.</strong> A RoadNest service advisor will follow up shortly.', 'success');
+          return;
+        }
+
         const response = await fetch(ajaxAction, {
           method: (form.getAttribute('method') || 'POST').toUpperCase(),
           body: new FormData(form),
